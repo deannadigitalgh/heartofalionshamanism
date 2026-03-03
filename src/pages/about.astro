@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "About Dee | Deanna Stennett, L.Ac., MA - Shamanic Practitioner";
+const seoDescription = "Learn about Deanna Stennett's shamanic journey, training with Sandra Ingerman & Foundation for Shamanic Studies, and 30+ years of healing practice in Northern Georgia.";
+
+const credentials = [
+  {
+    title: "Licensed Acupuncturist",
+    details: "Georgia Licensed Acupuncturist (L.Ac., MA), Nationally Certified with NCCAOM"
+  },
+  {
+    title: "Foundation for Shamanic Studies",
+    details: "Graduate of the three-year advanced program in Shamanic Studies"
+  },
+  {
+    title: "Sandra Ingerman Training",
+    details: "Completed Sandra Ingerman's two-year Shamanic Teachers' Training Program"
+  },
+  {
+    title: "Tom Cowan Celtic Shamanism",
+    details: "Graduate of Tom Cowan's two-year program in Celtic Shamanism"
+  },
+  {
+    title: "Ordained Minister",
+    details: "Ordained with Open Ministry, offering rites of passage ceremonies including weddings and funerals"
+  },
+  {
+    title: "Author",
+    details: "Written 'Poetry of the Body: Stories About Acupuncture Points' - available on Amazon in paperback and Kindle"
+  }
+];
+
+const journeyPoints = [
+  {
+    year: "1995",
+    title: "Began Shamanic Practice",
+    description: "Started studying shamanism with the Foundation for Shamanic Studies after learning about it in acupuncture school from Eliot Cowan, author of Plant Spirit Medicine."
+  },
+  {
+    year: "1997-2020",
+    title: "Led Journey Group in Maryland",
+    description: "Founded and led a shamanic journey/drumming group that met weekly in her office for over two decades, until the pandemic closed it."
+  },
+  {
+    year: "1997-Present",
+    title: "Taught Eight Two-Year Training Programs",
+    description: "Has taught eight comprehensive two-year shamanism training programs throughout the Eastern US, training dozens of practitioners."
+  },
+  {
+    year: "2021",
+    title: "Moved to Northern Georgia",
+    description: "Relocated to the southern Appalachian mountains of North Georgia, living in Morganton and continuing her healing work in Ellijay and Blairsville."
+  },
+  {
+    year: "2021-Present",
+    title: "Heart Of A Lion Shamanism",
+    description: "Continues offering shamanic healing sessions, workshops, and training programs throughout Northern Georgia, including the original Wild Women Workshop based on Clarissa Pinkola Estes' work."
+  }
+];
+
+const teachers = [
+  {
+    name: "Michael Harner",
+    organization: "Foundation for Shamanic Studies",
+    description: "Learned core shamanism from Michael Harner, who studied with Tungus shamans who escaped persecution during the Soviet Union era."
+  },
+  {
+    name: "Sandra Ingerman",
+    books: ["Soul Retrieval", "Medicine for the Earth"],
+    description: "Studied since 1995 with Sandra Ingerman, renowned shamanic practitioner and author of many influential books on soul retrieval and shamanic healing."
+  },
+  {
+    name: "Tom Cowan",
+    focus: "Celtic Shamanism",
+    description: "Completed two-year program in Celtic Shamanism with Tom Cowan, exploring the shamanic traditions of Celtic cultures."
+  },
+  {
+    name: "2 Moons (Laquita)",
+    tribe: "Cherokee",
+    description: "Trained weekly one-on-one for five years. During final years, performed healing work on her own teacher to have abilities assessed post-graduation."
+  }
+];
+
+const personalStories = [
+  {
+    title: "Early Connection",
+    story: "Dee originally met her power animal when he came to her in a dream when she was sleeping in the crib. She's been connected to the spirit world since she was at least 2 years old."
+  },
+  {
+    title: "JFK Encounter",
+    story: "She talked to the spirit of JFK when she was 5 years old. Without knowing it, she recognized his New England accent."
+  },
+  {
+    title: "Teacher Validation",
+    story: "One of her teachers, 2 Moons (Laquita, Cherokee), vouches for her shamanic abilities, stating she should have been trained much sooner due to her natural gifts."
+  }
+];
+
+const bookInfo = {
+  title: "Poetry of the Body: Stories About Acupuncture Points",
+  subtitle: "Stories about acupuncture points",
+  description: "Deanna's book contains shamanism and acupuncture, featuring personal stories and patient stories relating to acupuncture points, seasons, and nature. Written for the layperson.",
+  availableOn: ["Amazon Paperback", "Amazon Kindle"]
+};
+
+const specializations = [
+  {
+    title: "Soul Retrieval",
+    description: "Helping clients retrieve lost soul parts caused by trauma, illness, or life challenges to restore wholeness and vitality."
+  },
+  {
+    title: "Power Animal Connection",
+    description: "Guiding individuals to meet their power/totem animal through shamanic journeying for ongoing spiritual support and guidance."
+  },
+  {
+    title: "Energy Clearing",
+    description: "Removing stagnant or negative energy patterns that block healing, relationships, and personal growth."
+  },
+  {
+    title: "Spirit Guidance",
+    description: "Facilitating communication with spirit guides, ancestors, and nature spirits for wisdom and direction in life decisions."
+  },
+  {
+    title: "Rites of Passage Ceremonies",
+    description: "Creating sacred ceremonies for weddings, funerals, coming-of-age celebrations, and other significant life transitions."
+  }
+];
+
+const contactInfo = {
+  phone: "410-961-9033",
+  email: "spiritpoint4u@gmail.com"
+};
+---
+
+<Layout title={seoTitle} seoDescription={seoDescription}>
+	<!-- Hero Section -->
+	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
+		<div class="container" style="text-align: center; max-width: 900px;">
+			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Deanna Stennett, L.Ac., MA</h1>
+			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+				Shamanic Practitioner & Teacher | Licensed Acupuncturist | Author
+			</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session</a>
+				<a href="/services" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">View Services</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bio Section -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #8B1E3F;">About Deanna</h2>
+			
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+				Deanna Slate Stennett is a Georgia Licensed Acupuncturist with offices in Ellijay and Blairsville, and a shamanic practitioner dedicated to helping people awaken their inner wisdom and connect with the healing power of the spirit world.
+			</p>
+			
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+				Deanna learned about shamanism in acupuncture school from a shaman, herbalist and acupuncturist by the name of Eliot Cowan, author of <em>Plant Spirit Medicine</em>. After acupuncture school she began studying with the Foundation for Shamanic Studies and completed their advanced 3-year program. She has also studied with Sandra Ingerman (author of many books, including <em>Soul Retrieval</em> and <em>Medicine for the Earth</em>) since 1995.
+			</p>
+
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+				Deanna has been practicing and teaching shamanism since 1995. She offers classes, workshops and healing sessions. Deanna has used shamanic journeying to meet with the spirits of the Acupuncture Points which her book <em>Poetry of the Body: Stories About Acupuncture Points</em> focuses on. It is available on Amazon and written for the lay person.
+			</p>
+
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A;">
+				Deanna Stennett is a lover of animals, nature, natural healing, art, poetry, and being a loving, compassionate healing presence on the Earth.
+			</p>
+		</div>
+	</section>
+
+	<!-- Credentials Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Credentials & Training</h2>
+			
+			<div style="display: grid; gap: 1.5rem;">
+				{credentials.map(cred => (
+					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+						<h3 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">{cred.title}</h3>
+						<p style="color: #5A5A5A; line-height: 1.6;">{cred.details}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Journey Timeline -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Deanna's Shamanic Journey</h2>
+			
+			<div style="position: relative; padding-left: 2rem;">
+				<div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #D4AF37;"></div>
+				
+				{journeyPoints.map(point => (
+					<div style="margin-bottom: 3rem; position: relative;">
+						<div style="position: absolute; left: -2.5rem; top: 0.25rem; width: 12px; height: 12px; background-color: #8B1E3F; border-radius: 50%;"></div>
+						
+						<span style="display: inline-block; background-color: #D4AF37; color: white; padding: 0.25rem 1rem; border-radius: 20px; font-weight: bold; margin-bottom: 0.5rem;">{point.year}</span>
+						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 0.75rem;">{point.title}</h3>
+						<p style="color: #5A5A5A; line-height: 1.6;">{point.description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Teachers Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Shamanic Teachers & Lineage</h2>
+			
+			<div style="display: grid; gap: 2rem;">
+				{teachers.map(teacher => (
+					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem;">{teacher.name}</h3>
+						{teacher.organization && <p style="font-weight: bold; color: #8B1E3F; margin-bottom: 0.5rem;">{teacher.organization}</p>}
+						<p style="color: #5A5A5A; line-height: 1.6;">{teacher.description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Personal Stories Section -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Personal Shamanic Stories</h2>
+			
+			<div style="display: grid; gap: 2rem;">
+				{personalStories.map(story => (
+					<div style="background-color: #F5EBE0; padding: 2rem; border-radius: 12px; border-left: 4px solid #D4AF37;">
+						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 1rem;">{story.title}</h3>
+						<p style="font-size: 1.125rem; line-height: 1.8; color: #5A5A5A;">{story.story}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Book Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Author</h2>
+			
+			<div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+				<h3 style="font-size: 2rem; color: #D4AF37; margin-bottom: 0.5rem;">{bookInfo.title}</h3>
+				<p style="font-style: italic; color: #8B1E3F; font-size: 1.25rem; margin-bottom: 1.5rem;">"{bookInfo.subtitle}"</p>
+				
+				<p style="color: #5A5A5A; line-height: 1.8; max-width: 700px; margin: 0 auto 2rem;">
+					{bookInfo.description}
+				</p>
+				
+				<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+					{bookInfo.availableOn.map(source => (
+						<span style="background-color: #F5EBE0; padding: 0.75rem 1.5rem; border-radius: 8px; color: #8B1E3F; font-weight: bold;">
+							📚 Available on {source}
+						</span>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Specializations Section -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Areas of Specialization</h2>
+			
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+				{specializations.map(spec => (
+					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem;">{spec.title}</h3>
+						<p style="color: #5A5A5A; line-height: 1.6;">{spec.description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="section section--dark">
+		<div class="container" style="max-width: 900px; text-align: center;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Connect with Deanna</h2>
+			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+				Ready to begin your shamanic journey? Contact Deanna today.
+			</p>
+			
+			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "About Deanna Stennett - Heart Of A Lion Shamanism",
+			"description": "Learn about Deanna Stennett's shamanic journey, training with Sandra Ingerman & Foundation for Shamanic Studies, and 30+ years of healing practice.",
+			"url": "https://heartofalionshamanism.com/about"
+		}
+	</script>
+</Layout>

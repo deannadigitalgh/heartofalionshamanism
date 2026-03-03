@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Heart Of A Lion Shamanism | Shamanic Healing & Workshops in Northern Georgia";
+const seoDescription = "Transformative shamanic healing sessions and workshops in Blue Ridge, Ellijay, Jasper & Blairsville GA with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.";
+
+const services = [
+  {
+    title: "Individual Healing Sessions",
+    description: "Personalized shamanic healing tailored to your unique needs. Includes soul retrieval, energy clearing, power animal connection, and spirit guidance.",
+    price: "$150-200 (60 min)",
+    icon: "🌙"
+  },
+  {
+    title: "Learn to Journey Workshops",
+    description: "Five-hour introductory workshop teaching the ancient art of shamanic journeying. Meet your power animal and discover the invisible worlds.",
+    price: "$50-65",
+    icon: "🥁"
+  },
+  {
+    title: "Wild Women Series",
+    description: "Six-part transformative series for women exploring wild archetypes through shamanic journeying, art, poetry, song, and dance.",
+    price: "$540 total ($90/session)",
+    icon: "🦁"
+  },
+  {
+    title: "Special Ceremonies",
+    description: "New Moon, Full Moon, Solstice celebrations, rites of passage ceremonies including weddings and funerals.",
+    price: "Varies by ceremony",
+    icon: "✨"
+  }
+];
+
+const testimonials = [
+  {
+    text: "Deanna's shamanic work opened doors I didn't know existed. Her guidance helped me connect with my power animal and find clarity in a time of confusion.",
+    author: "M.S., Ellijay, GA"
+  },
+  {
+    text: "The Learn to Journey workshop was life-changing. Deanna creates such a safe, sacred space for transformation. I've been journeying regularly since then.",
+    author: "K.M., Blue Ridge, GA"
+  }
+];
+
+const faqs = [
+  {
+    question: "What is shamanic healing?",
+    answer: "Shamanism is the oldest known spiritual healing system on the planet, dating back 40-100 thousand years. It's a non-religious practice based on traveling to invisible worlds to retrieve information and healing for change in any area of life."
+  },
+  {
+    question: "Do I need prior experience?",
+    answer: "No! All workshops are designed for beginners. Deanna has been teaching shamanism since 1995 and creates a welcoming, accessible environment for all levels."
+  },
+  {
+    question: "How do I know if shamanic healing is right for me?",
+    answer: "If you're seeking deeper spiritual connection, personal transformation, or healing from life challenges, shamanic work can be profoundly beneficial. Many clients report increased clarity, emotional release, and a stronger sense of purpose."
+  }
+];
+
+const contactInfo = {
+  phone: "410-961-9033",
+  email: "spiritpoint4u@gmail.com",
+  address: "284 Cozy Valley Lane, Talking Rock, GA 30175"
+};
+---
+
+<Layout title={seoTitle} seoDescription={seoDescription}>
+	<!-- Hero Section -->
+	<section style="background: linear-gradient(135deg, #1A1A2E 0%, #8B1E3F 100%); color: white; padding: 6rem 0;">
+		<div class="container" style="text-align: center; max-width: 900px;">
+			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #D4AF37;">Awaken Your Inner Lion</h1>
+			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+				Transformative shamanic healing and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA
+			</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 2.5rem;">Book a Session</a>
+				<a href="/workshops" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 2.5rem;">View Workshops</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px; text-align: center;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Welcome to Heart Of A Lion Shamanism</h2>
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 2rem;">
+				Shamanism is a spiritual practice that is not religiously affiliated with any one belief system. It is the oldest known spiritual healing system on the planet, dating back 40-100 thousand years based on archaeological studies.
+			</p>
+			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A;">
+				Deanna Stennett has been practicing and teaching shamanism since 1995, offering classes, workshops, and healing sessions throughout the Eastern US. Now in Northern Georgia, she continues her sacred work helping people awaken to a world on a different dimension where they can find anything they want and learn how to live in harmony with the world, themselves, and others.
+			</p>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="section">
+		<div class="container">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Shamanic Offerings</h2>
+			
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+				{services.map(service => (
+					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+						<div style="font-size: 3rem; margin-bottom: 1rem;">{service.icon}</div>
+						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 1rem;">{service.title}</h3>
+						<p style="color: #5A5A5A; margin-bottom: 1rem;">{service.description}</p>
+						<p style="font-weight: bold; color: #D4AF37;">{service.price}</p>
+					</div>
+				))}
+			</div>
+
+			<!-- CTA -->
+			<div style="text-align: center; background-color: #F5EBE0; padding: 3rem; border-radius: 12px;">
+				<h3 style="font-size: 2rem; margin-bottom: 1rem; color: #8B1E3F;">Ready to Begin Your Journey?</h3>
+				<p style="font-size: 1.25rem; margin-bottom: 2rem; color: #5A5A5A;">Contact Deanna today to schedule your first session or workshop</p>
+				<a href="#contact" class="btn btn--primary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Get in Touch</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section class="section section--light">
+		<div class="container">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Client Stories</h2>
+			
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+				{testimonials.map(testimonial => (
+					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<p style="font-size: 1.125rem; line-height: 1.8; color: #5A5A5A; font-style: italic;">"{testimonial.text}"</p>
+						<p style="margin-top: 1rem; font-weight: bold; color: #8B1E3F;">— {testimonial.author}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+			
+			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+				{faqs.map(faq => (
+					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
+						<p style="color: #5A5A5A; line-height: 1.6;">{faq.answer}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="section section--dark">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Contact Deanna</h2>
+			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9;">
+				Ready to begin your shamanic journey? Fill out the form below or call/text directly.
+			</p>
+
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+				<div style="text-align: center;">
+					<div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
+					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Phone</h3>
+					<p style="font-size: 1.25rem; opacity: 0.9;">{contactInfo.phone}</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="font-size: 3rem; margin-bottom: 1rem;">✉️</div>
+					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Email</h3>
+					<p style="font-size: 1.25rem; opacity: 0.9;"><a href={`mailto:${contactInfo.email}`} style="color: white;">{contactInfo.email}</a></p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
+					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Location</h3>
+					<p style="font-size: 1.25rem; opacity: 0.9;">{contactInfo.address}</p>
+				</div>
+			</div>
+
+			<!-- Contact Form -->
+			<div style="background-color: white; padding: 3rem; border-radius: 12px; color: #2C2C2C;">
+				<h3 style="text-align: center; font-size: 1.75rem; margin-bottom: 2rem; color: #8B1E3F;">Send Deanna a Message</h3>
+				
+				<form action="https://formspree.io/f/spiritpoint4u@gmail.com" method="POST">
+					<div style="display: grid; gap: 1.5rem;">
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+							<div>
+								<label for="firstName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">First Name *</label>
+								<input type="text" id="firstName" name="first_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your first name" />
+							</div>
+							
+							<div>
+								<label for="lastName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Last Name *</label>
+								<input type="text" id="lastName" name="last_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your last name" />
+							</div>
+						</div>
+						
+						<div>
+							<label for="email" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Email Address *</label>
+							<input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="your@email.com" />
+						</div>
+						
+						<div>
+							<label for="phone" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Phone Number *</label>
+							<input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="(123) 456-7890" />
+						</div>
+						
+						<div>
+							<label for="message" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">How Can I Help You? *</label>
+							<textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
+						</div>
+						
+						<button type="submit" class="btn btn--primary" style="width: 100%; padding: 1.25rem; font-size: 1.25rem;">Send Message</button>
+					</div>
+				</form>
+
+				<p style="text-align: center; margin-top: 1.5rem; color: #5A5A5A; font-size: 0.875rem;">
+					Deanna will respond to your message within 24 hours. For immediate assistance, please call or text directly.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Service Area SEO Section -->
+	<section class="section section--light">
+		<div class="container" style="text-align: center;">
+			<h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Serving Northern Georgia</h2>
+			<p style="font-size: 1.125rem; color: #5A5A5A; max-width: 800px; margin: 0 auto 2rem;">
+				Heart Of A Lion Shamanism serves clients throughout Northern Georgia, including Blue Ridge, Ellijay, Jasper, Blairsville, and surrounding communities. Deanna travels to clients by appointment for in-home sessions when needed.
+			</p>
+			
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="/blue-ridge-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Blue Ridge, GA</a>
+				<a href="/ellijay-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Ellijay, GA</a>
+				<a href="/jasper-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Jasper, GA</a>
+				<a href="/blairsville-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Blairsville, GA</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Book Now CTA -->
+	<section class="section">
+		<div class="container" style="text-align: center; background-color: #8B1E3F; color: white; padding: 4rem 2rem; border-radius: 12px;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Begin Your Transformation Today</h2>
+			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95;">
+				Shamanic healing can bring profound change to your life. Take the first step toward transformation.
+			</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session Now</a>
+				<a href={`tel:${contactInfo.phone}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Call {contactInfo.phone}</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup for Homepage -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "Heart Of A Lion Shamanism - Home",
+			"description": "Shamanic healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.",
+			"url": "https://heartofalionshamanism.com"
+		}
+	</script>
+</Layout>

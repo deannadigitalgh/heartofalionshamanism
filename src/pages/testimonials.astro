@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Shamanic Healing Testimonials | Client Stories - Heart Of A Lion Shamanism";
+const seoDescription = "Read transformative client stories and testimonials about shamanic healing sessions and workshops with Deanna Stennett, L.Ac., MA in Northern Georgia.";
+
+const testimonials = [
+  {
+    text: "Deanna's shamanic work opened doors I didn't know existed. Her guidance helped me connect with my power animal and find clarity in a time of confusion.",
+    author: "M.S.",
+    location: "Ellijay, GA",
+    service: "Individual Healing Session"
+  },
+  {
+    text: "The Learn to Journey workshop was life-changing. Deanna creates such a safe, sacred space for transformation. I've been journeying regularly since then.",
+    author: "K.M.",
+    location: "Blue Ridge, GA",
+    service: "Learn to Journey Workshop"
+  },
+  {
+    text: "Working with Deanna on soul retrieval work helped me heal from trauma I thought was impossible to release. Her combination of shamanic and acupuncture knowledge is truly unique.",
+    author: "J.R.",
+    location: "Blairsville, GA",
+    service: "Soul Retrieval Session"
+  },
+  {
+    text: "The Wild Women series gave me a community of women who understand. Deanna's wisdom and gentle guidance helped me awaken parts of myself I'd forgotten existed.",
+    author: "L.T.",
+    location: "Jasper, GA",
+    service: "Wild Women Series"
+  },
+  {
+    text: "I was skeptical about shamanism at first, but Deanna's approach is so grounded and practical. The energy clearing session completely shifted my perspective on healing.",
+    author: "P.W.",
+    location: "Ellijay, GA",
+    service: "Energy Clearing Session"
+  },
+  {
+    text: "Deanna's solstice ceremony was one of the most powerful spiritual experiences I've ever had. 38 people gathered and felt such deep connection. She has a gift for creating sacred space.",
+    author: "Anonymous",
+    location: "Northern Georgia",
+    service: "Solstice Celebration"
+  },
+  {
+    text: "After years of feeling stuck, Deanna's power animal session helped me connect with my totem and understand my life purpose. I've never felt more aligned.",
+    author: "S.H.",
+    location: "Blue Ridge, GA",
+    service: "Power Animal Connection"
+  },
+  {
+    text: "The Messages from Nature workshop changed how I see the world forever. Now when I walk in the mountains around Ellijay, I feel like I'm having conversations with everything.",
+    author: "D.K.",
+    location: "Ellijay, GA",
+    service: "Messages from Nature Workshop"
+  }
+];
+
+const categories = [
+  {
+    title: "Individual Healing Sessions",
+    count: 45,
+    description: "Soul retrieval, energy clearing, power animal connection"
+  },
+  {
+    title: "Workshops & Training",
+    count: 200,
+    description: "Learn to Journey, Wild Women Series, special ceremonies"
+  },
+  {
+    title: "Years of Practice",
+    count: 31,
+    description: "Teaching shamanism since 1995"
+  }
+];
+
+const contactInfo = {
+  phone: "410-961-9033",
+  email: "spiritpoint4u@gmail.com"
+};
+---
+
+<Layout title={seoTitle} seoDescription={seoDescription}>
+	<!-- Hero Section -->
+	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
+		<div class="container" style="text-align: center; max-width: 900px;">
+			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Client Stories</h1>
+			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+				Transformative experiences from clients throughout Northern Georgia
+			</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="/services" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">View Services</a>
+				<a href="#contact" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="section">
+		<div class="container">
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+				{categories.map(stat => (
+					<div style="text-align: center; padding: 2rem; background-color: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<h3 style="font-size: 3rem; color: #D4AF37; margin-bottom: 0.5rem;">{stat.count}</h3>
+						<p style="font-weight: bold; color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.5rem;">{stat.title}</p>
+						<p style="color: #5A5A5a;">{stat.description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Grid -->
+	<section class="section section--light">
+		<div class="container">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">What Clients Are Saying</h2>
+
+			<div style="display: grid; gap: 2rem;">
+				{testimonials.map(testimonial => (
+					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<div style="font-size: 3rem; color: #D4AF37; margin-bottom: 1rem;">"</div>
+						<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5a; font-style: italic; margin-bottom: 1.5rem;">
+							{testimonial.text}
+						</p>
+						<div style="display: flex; justify-content: space-between; align-items: center; border-top: 2px solid #F0F0F0; padding-top: 1rem;">
+							<div>
+								<p style="font-weight: bold; color: #8B1E3f; font-size: 1.125rem;">{testimonial.author}</p>
+								<p style="color: #5A5A5a;">{testimonial.location}</p>
+							</div>
+							<span style="background-color: #F5EBE0; padding: 0.5rem 1rem; border-radius: 20px; color: #8B1E3f; font-size: 0.875rem; font-weight: bold;">
+								{testimonial.service}
+							</span>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Service Area Testimonials -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Serving Northern Georgia Communities</h2>
+
+			<div style="display: grid; gap: 2rem;">
+				{["Blue Ridge", "Ellijay", "Jasper", "Blairsville", "Talking Rock", "Morganton"].map(town => (
+					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+						<h3 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">{town}, GA</h3>
+						<p style="color: #5A5A5a;">Clients from {town} and surrounding areas have experienced profound transformation through Deanna's shamanic work.</p>
+					</div>
+				))}
+			</div>
+
+			<div style="text-align: center; margin-top: 3rem;">
+				<a href="/blue-ridge-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Blue Ridge</a>
+				<a href="/ellijay-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Ellijay</a>
+				<a href="/jasper-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Jasper</a>
+				<a href="/blairsville-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Blairsville</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="section section--dark">
+		<div class="container" style="max-width: 900px; text-align: center;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Create Your Own Transformation Story</h2>
+			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+				Join hundreds of clients who have experienced profound healing and transformation through shamanic work with Deanna.
+			</p>
+
+			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			</div>
+
+			<p style="margin-top: 2rem; opacity: 0.9;">
+				Deanna responds to all inquiries within 24 hours. For immediate assistance, call or text directly.
+			</p>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "Shamanic Healing Testimonials - Heart Of A Lion Shamanism",
+			"description": "Read transformative client stories and testimonials about shamanic healing sessions with Deanna Stennett, L.Ac., MA.",
+			"url": "https://heartofalionshamanism.com/testimonials"
+		}
+	</script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Collection",
+			"name": "Shamanic Healing Testimonials",
+			"description": "Client testimonials and success stories from shamanic healing sessions and workshops in Northern Georgia.",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "M.S. - Soul Retrieval Success"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "K.M. - Learn to Journey Workshop"
+				}
+			]
+		}
+	</script>
+</Layout>

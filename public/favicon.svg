@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lion Heart Symbol -->
+  <circle cx="32" cy="32" r="30" fill="#8B1E3F"/>
+  <path d="M32 15C32 15 42 22 42 32C42 40 36 45 32 48C28 45 22 40 22 32C22 22 32 15 32 15Z" fill="#D4AF37"/>
+  <path d="M32 18C32 18 39 23 39 30C39 36 35 40 32 43C29 40 25 36 25 30C25 23 32 18 32 18Z" fill="#FFFFFF"/>
+</svg>

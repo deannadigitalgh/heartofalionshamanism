@@ -1,0 +1,320 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Shamanic Workshops & Training | Deanna Stennett - Northern Georgia";
+const seoDescription = "Upcoming shamanic workshops and training programs in Blue Ridge, Ellijay & Blairsville GA. Learn to journey, Wild Women series, special ceremonies.";
+
+const upcomingWorkshops = [
+  {
+    title: "Learn to Journey Workshop",
+    date: "April 18, 2026",
+    time: "12-4 pm",
+    location: "563 Gainesville Hwy., Blairsville, GA 30512",
+    price: "$50 in advance, $65 at door ($2 credit card fee)",
+    description: "Five-hour introductory workshop teaching the ancient art of shamanic journeying. Meet your power animal and discover the invisible worlds.",
+    includes: [
+      "Overview of shamanism and its history",
+      "Understanding the shamanic view of illness and healing",
+      "Learn to do a shamanic journey",
+      "Meet your power (or totem) animal",
+      "Connection with nature spirits",
+      "Post-workshop food and community gathering"
+    ],
+    registration: "Pre-register at 410-961-9033 or spiritpoint4u@gmail.com to save $5 and ensure space",
+    limit: "Limited to 20 participants for intimate experience"
+  },
+  {
+    title: "Messages from Nature Workshop",
+    date: "March 29, 2025",
+    time: "12-5 pm",
+    location: "284 Cozy Valley Lane, Talking Rock, GA 30175",
+    price: "$60 in advance, $65 at door ($2 credit card fee)",
+    description: "Explore the messages from the Creator through nature using shamanic journeying and intuition. Never look at a tree or flower the same way again.",
+    includes: [
+      "Shamanic journeying techniques",
+      "Intuition development exercises",
+      "Nature spirit communication",
+      "Outdoor ceremony (weather permitting)",
+      "Shared meal with other participants"
+    ],
+    registration: "Contact 410-961-9033 or spiritpoint4u@gmail.com to register",
+    limit: "Limited space available - pre-register to save $5"
+  }
+];
+
+const series = [
+  {
+    title: "Wild Women Series",
+    description: "Six-part transformative series for women exploring wild archetypes through shamanic journeying, art, poetry, song, and dance. Based on Clarissa Pinkola Estes' work.",
+    schedule: "The 2nd Saturday of each month from April through September",
+    dates: ["April 8, 2023", "May 13, 2023", "June 10, 2023", "July 8, 2023", "August 12, 2023", "September 9, 2023"],
+    time: "First 5 meetings: 10am-5pm (hour lunch break). 6th meeting: 1pm-9pm with potluck dinner.",
+    location: "Inner Awakenings, 1650 Tate Rd., Blairsville, Georgia 30512",
+    price: "$540 total ($90/session) if paid in full, or $100 per session",
+    includes: [
+      "Shamanic journeys to explore wild archetypes",
+      "Creative expression (art, song, dance)",
+      "Poetry and storytelling",
+      "Ceremony and ritual work",
+      "Healing friendships and support building",
+      "Outdoor fire ceremony at final meeting"
+    ],
+    idealFor: ["Women seeking to awaken their wildness", "Connecting with intuitive self", "Building community with other women"],
+    requirements: [
+      "Participants must be fully committed to attending each meeting",
+      "If you miss more than one meeting, you cannot continue",
+      "Bring your own bag lunch for first 5 meetings",
+      "Potluck dinner for final meeting"
+    ],
+    registration: "Call or text Deanna at 410-961-9033. Or register at Inner Awakenings with Karen Wilkins at 706-347-0528.",
+    limit: "Limited to 12 women, first come first serve"
+  }
+];
+
+const pastWorkshops = [
+  {
+    title: "Learn to Journey Course",
+    date: "October 2021",
+    location: "Mountain Light Unitarian Universalist Church (MLUUC), Ellijay",
+    note: "First shamanic Learn to Journey course since moving to Northern Georgia. Well attended."
+  },
+  {
+    title: "Solstice Celebration",
+    date: "Summer Solstice 2021",
+    location: "Mountain Light Unitarian Universalist Church (MLUUC), Ellijay",
+    note: "Co-led with 38 people gathering to honor the return of the sun."
+  }
+];
+
+const faqs = [
+  {
+    question: "What should I bring to a workshop?",
+    answer: "Wear comfortable clothing that allows movement. Bring an open heart and mind. Some workshops include outdoor time, so dress appropriately for weather. A water bottle and snacks are recommended. For creative workshops, bring art supplies if you have them."
+  },
+  {
+    question: "Do I need prior experience?",
+    answer: "No! All workshops are designed for beginners. Deanna has been teaching since 1995 and creates a welcoming, accessible environment for all levels of experience."
+  },
+  {
+    question: "What if I can't attend after registering?",
+    answer: "For the Wild Women Series, participants must be fully committed. If you miss more than one meeting, you cannot continue. For single workshops, please contact Deanna as soon as possible if you need to cancel."
+  },
+  {
+    question: "Are there dietary restrictions for shared meals?",
+    answer: "Please let Deanna know of any dietary restrictions when registering. Workshops with shared meals aim to accommodate various needs."
+  }
+];
+
+const contactInfo = {
+  phone: "410-961-9033",
+  email: "spiritpoint4u@gmail.com"
+};
+---
+
+<Layout title={seoTitle} seoDescription={seoDescription}>
+	<!-- Hero Section -->
+	<section style="background: linear-gradient(135deg, #D4AF37 0%, #8B1E3F 100%); color: white; padding: 6rem 0;">
+		<div class="container" style="text-align: center; max-width: 900px;">
+			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Shamanic Workshops & Training</h1>
+			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+				Transformative group experiences in Northern Georgia with Deanna Stennett, L.Ac., MA
+			</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="#upcoming" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Upcoming Workshops</a>
+				<a href="#series" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Series Programs</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Upcoming Workshops Section -->
+	<section id="upcoming" class="section">
+		<div class="container">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #8B1E3F;">Upcoming Workshops</h2>
+			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; color: #5A5A5a; max-width: 800px; margin-left: auto; margin-right: auto;">
+				Join Deanna for transformative workshops designed to awaken your inner wisdom and connect you with the healing power of shamanism.
+			</p>
+
+			<div style="display: grid; gap: 2rem;">
+				{upcomingWorkshops.map(workshop => (
+					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+							<h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 0;">{workshop.title}</h3>
+							<div style="text-align: right;">
+								<p style="font-weight: bold; color: #8B1E3F; font-size: 1.5rem;">{workshop.price}</p>
+								<p style="color: #5A5A5a; margin-top: 0.25rem;">{workshop.time}</p>
+							</div>
+						</div>
+
+						<div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
+							<p style="color: #5A5A5a;"><strong>📅 Date:</strong> {workshop.date}</p>
+							<p style="color: #5A5A5a;"><strong>🕐 Time:</strong> {workshop.time}</p>
+							<p style="color: #5A5A5a;"><strong>📍 Location:</strong> {workshop.location}</p>
+						</div>
+
+						<p style="font-size: 1.125rem; color: #5A5A5a; line-height: 1.8; margin-bottom: 1.5rem;">
+							{workshop.description}
+						</p>
+
+						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
+						<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+							{workshop.includes.map(item => (
+								<li style="display: flex; align-items: center; color: #5A5A5a;">
+									<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+								</li>
+							))}
+						</ul>
+
+						{workshop.limit && (
+							<p style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+								<strong>⚠️ {workshop.limit}</strong>
+							</p>
+						)}
+
+						<div style="background-color: #E8F4FD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+							<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">📞 Registration</h4>
+							<p style="color: #5A5A5a; line-height: 1.6;">{workshop.registration}</p>
+						</div>
+
+						<div style="text-align: center;">
+							<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: 1rem 2rem; font-size: 1.125rem;">📞 Call to Register</a>
+							<p style="margin-top: 1rem; color: #5A5A5a;">or email {contactInfo.email}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Series Programs Section -->
+	<section id="series" class="section section--light">
+		<div class="container">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Series Programs</h2>
+
+			{series.map(series => (
+				<div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+					<h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 1rem;">{series.title}</h3>
+
+					<p style="font-size: 1.25rem; color: #5A5A5a; line-height: 1.8; margin-bottom: 2rem;">
+						{series.description}
+					</p>
+
+					<div style="display: grid; gap: 1.5rem; margin-bottom: 2rem;">
+						<p style="color: #5A5A5a;"><strong>📅 Schedule:</strong> {series.schedule}</p>
+						{series.dates && (
+							<div style="background-color: #F5EBE0; padding: 1.5rem; border-radius: 8px;">
+								<p style="font-weight: bold; color: #8B1E3f; margin-bottom: 0.75rem;">Workshop Dates:</p>
+								<ul style="list-style: none; display: grid; gap: 0.5rem;">
+									{series.dates.map(date => (
+										<li style="color: #5A5A5a;">• {date}</li>
+									))}
+								</ul>
+							</div>
+						)}
+
+						<p style="color: #5A5A5a;"><strong>🕐 Time:</strong> {series.time}</p>
+						<p style="color: #5A5A5a;"><strong>📍 Location:</strong> {series.location}</p>
+						<p style="font-weight: bold; color: #D4AF37; font-size: 1.25rem;">💰 Price: {series.price}</p>
+					</div>
+
+					<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
+					<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+						{series.includes.map(item => (
+							<li style="display: flex; align-items: center; color: #5A5A5a;">
+								<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+							</li>
+						))}
+					</ul>
+
+					{series.idealFor && (
+						<p style="background-color: #E8F4FD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+							<strong>✨ Ideal For:</strong> {series.idealFor.join(" • ")}
+						</p>
+					)}
+
+					{series.requirements && (
+						<div style="background-color: #FFF3CD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+							<h4 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.75rem;">⚠️ Requirements</h4>
+							<ul style="list-style: none; display: grid; gap: 0.5rem;">
+								{series.requirements.map(req => (
+									<li style="color: #5A5A5a;">• {req}</li>
+								))}
+							</ul>
+						</div>
+					)}
+
+					<div style="background-color: #E8F4FD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">📞 Registration</h4>
+						<p style="color: #5A5A5a; line-height: 1.6;">{series.registration}</p>
+					</div>
+
+					<div style="text-align: center;">
+						<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: 1rem 2rem; font-size: 1.125rem;">📞 Call to Register</a>
+						<p style="margin-top: 1rem; color: #5A5A5a;">or email {contactInfo.email}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<!-- Past Workshops Section -->
+	<section class="section">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Recent Workshops</h2>
+
+			<div style="display: grid; gap: 2rem;">
+				{pastWorkshops.map(workshop => (
+					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">{workshop.title}</h3>
+						<p style="color: #5A5A5a;"><strong>Date:</strong> {workshop.date}</p>
+						<p style="color: #5A5A5a;"><strong>Location:</strong> {workshop.location}</p>
+						{workshop.note && <p style="margin-top: 1rem; color: #8B1E3f; font-style: italic;">{workshop.note}</p>}
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px;">
+			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Frequently Asked Questions</h2>
+
+			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+				{faqs.map(faq => (
+					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
+						<p style="color: #5A5A5a; line-height: 1.6;">{faq.answer}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="section section--dark">
+		<div class="container" style="max-width: 900px; text-align: center;">
+			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Register for a Workshop</h2>
+			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+				Spaces are limited for all workshops. Contact Deanna today to secure your spot.
+			</p>
+
+			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			</div>
+
+			<p style="margin-top: 2rem; opacity: 0.9;">Pre-register to save $5 on most workshops!</p>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "Shamanic Workshops & Training - Heart Of A Lion Shamanism",
+			"description": "Upcoming shamanic workshops and training programs in Northern Georgia with Deanna Stennett, L.Ac., MA.",
+			"url": "https://heartofalionshamanism.com/workshops"
+		}
+	</script>
+</Layout>

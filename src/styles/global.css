@@ -1,0 +1,189 @@
+/* Global Styles - Heart Of A Lion Shamanism */
+
+:root {
+  /* Shamanic Color Palette - Deep Reds (Lion Heart), Earth Tones, Gold Accents */
+  --color-primary: #8B1E3F;      /* Deep red - lion's heart */
+  --color-secondary: #D4AF37;    /* Gold accent */
+  --color-earth-1: #5C4033;      /* Earth brown */
+  --color-earth-2: #8B7355;      /* Lighter earth tone */
+  --color-sage: #9CAF88;         /* Natural green for balance */
+  --color-night: #1A1A2E;        /* Deep night sky blue-black */
+  
+  /* Neutrals */
+  --color-bg-light: #FDFBF7;     /* Warm off-white */
+  --color-text-dark: #2C2C2C;    /* Dark text */
+  --color-text-muted: #5A5A5A;   /* Muted text */
+  
+  /* Typography */
+  --font-heading: 'Georgia', serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-night);
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+.section--light {
+  background-color: var(--color-bg-light);
+}
+
+.section--dark {
+  background-color: var(--color-night);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #6B1530;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 30, 63, 0.3);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-night);
+}
+
+.btn--secondary:hover {
+  background-color: #B8941F;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Mobile CTA Bar */
+.mobile-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-cta-bar__link {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-cta-bar__link--call {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.mobile-cta-bar__link--book {
+  background-color: var(--color-secondary);
+  color: var(--color-night);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+}

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
+		<title>{Astro.frontmatter.title || "Heart Of A Lion Shamanism | Deanna Stennett, L.Ac., MA"}</title>
+		<meta name="title" content={Astro.frontmatter.seoTitle || "Heart Of A Lion Shamanism | Deanna Stennett, L.Ac., MA"} />
+		<meta name="description" content={Astro.frontmatter.seoDescription || "Shamanic healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation."} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={Astro.frontmatter.seoTitle || "Heart Of A Lion Shamanism | Deanna Stennett, L.Ac., MA"} />
+		<meta property="og:description" content={Astro.frontmatter.seoDescription || "Shamanic healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA."} />
+		<meta property="og:image" content="/heart-of-lion-og.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={Astro.frontmatter.seoTitle || "Heart Of A Lion Shamanism | Deanna Stennett, L.Ac., MA"} />
+		<meta property="twitter:description" content={Astro.frontmatter.seoDescription || "Shamanic healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA."} />
+		<meta property="twitter:image" content="/heart-of-lion-og.jpg" />
+
+		<!-- Schema Markup -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LocalBusiness",
+				"name": "Heart Of A Lion Shamanism",
+				"alternateName": "Deanna Stennett, L.Ac., MA - Shamanic Practitioner",
+				"description": "Shamanic healing sessions and workshops in Northern Georgia. Deanna Stennett offers shamanic journeying, energy work, soul retrieval, and transformative ceremonies.",
+				"url": "https://heartofalionshamanism.com",
+				"telephone": "+1-410-961-9033",
+				"email": "spiritpoint4u@gmail.com",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "284 Cozy Valley Lane",
+					"addressLocality": "Talking Rock",
+					"addressRegion": "GA",
+					"postalCode": "30175",
+					"addressCountry": "US"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 34.8296,
+					"longitude": -84.5531
+				},
+				"areaServed": [
+					{
+						"@type": "City",
+						"name": "Blue Ridge",
+						"addressRegion": "GA"
+					},
+					{
+						"@type": "City",
+						"name": "Ellijay",
+						"addressRegion": "GA"
+					},
+					{
+						"@type": "City",
+						"name": "Jasper",
+						"addressRegion": "GA"
+					},
+					{
+						"@type": "City",
+						"name": "Blairsville",
+						"addressRegion": "GA"
+					}
+				],
+				"priceRange": "$$",
+				"openingHoursSpecification": [
+					{
+						"@type": "OpeningHoursSpecification",
+						"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+						"opens": "09:00",
+						"closes": "17:00"
+					}
+				],
+				"sameAs": [
+					"https://www.facebook.com/",
+					"https://www.instagram.com/"
+				]
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Deanna Stennett",
+				"alternateName": "AA, Deanna Slate Stennett",
+				"description": "Georgia Licensed Acupuncturist (L.Ac., MA), Nationally Certified with NCCAOM. Shamanic practitioner trained by Foundation for Shamanic Studies, Sandra Ingerman, and Tom Cowan.",
+				"url": "https://heartofalionshamanism.com",
+				"jobTitle": "Shamanic Practitioner & Teacher",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Heart Of A Lion Shamanism"
+				},
+				"knowsAbout": [
+					"Shamanic Healing",
+					"Soul Retrieval",
+					"Energy Work",
+					"Shamanic Journeying",
+					"Medicine Wheel Ceremonies",
+					"Spirit Animal Communication",
+				 "Acupuncture",
+				 "NAET Allergy Elimination Technique"
+				],
+				"hasOccupation": {
+					"@type": "Occupation",
+					"name": "Licensed Acupuncturist",
+					"occupationLocation": {
+						"@type": "StateProvince",
+						"name": "Georgia"
+					},
+					"skills": ["Five Element Acupuncture", "NAET", "Pain Relief", "Immune System Support"]
+				}
+			}
+		</script>
+
+		<style>
+			html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+			
+			/* Mobile CTA Bar */
+			.mobile-cta-bar {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				background-color: white;
+				box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+				z-index: 1000;
+			}
+			
+			.mobile-cta-bar__link {
+				flex: 1;
+				padding: 1rem;
+				text-align: center;
+				font-weight: 600;
+				font-size: 1rem;
+				transition: background-color 0.2s ease;
+			}
+			
+			.mobile-cta-bar__link--call {
+				background-color: #8B1E3F;
+				color: white;
+			}
+			
+			.mobile-cta-bar__link--book {
+				background-color: #D4AF37;
+				color: #1A1A2E;
+			}
+			
+			@media (min-width: 768px) {
+				.mobile-cta-bar { display: none; }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav style="background-color: #1A1A2E; padding: 1rem 0;">
+			<div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+				<a href="/" style="color: white; font-family: Georgia, serif; font-size: 1.5rem; font-weight: bold;">
+					🦁 Heart Of A Lion Shamanism
+				</a>
+				
+				<div style="display: flex; gap: 2rem;">
+					<a href="/about" style="color: white; text-decoration: none; transition: color 0.2s;">About Dee</a>
+					<a href="/services" style="color: white; text-decoration: none; transition: color 0.2s;">Services</a>
+					<a href="/workshops" style="color: white; text-decoration: none; transition: color 0.2s;">Workshops</a>
+					<a href="/testimonials" style="color: white; text-decoration: none; transition: color 0.2s;">Testimonials</a>
+					<a href="#contact" style="color: #D4AF37; text-decoration: none; font-weight: bold;">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<slot />
+
+		<!-- Mobile CTA Bar -->
+		<div class="mobile-cta-bar">
+			<a href="tel:4109619033" class="mobile-cta-bar__link mobile-cta-bar__link--call">📞 Call Now</a>
+			<a href="#contact" class="mobile-cta-bar__link mobile-cta-bar__link--book">Book Session</a>
+		</div>
+
+		<!-- Footer -->
+		<footer style="background-color: #1A1A2E; color: white; padding: 3rem 0; margin-top: 4rem;">
+			<div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+				<div>
+					<h3 style="color: #D4AF37; margin-bottom: 1rem;">Heart Of A Lion Shamanism</h3>
+					<p style="opacity: 0.9;">Deanna Stennett, L.Ac., MA<br />
+					Nationall Certified NCCAOM<br />
+					Shamanic Practitioner & Teacher</p>
+				</div>
+				
+				<div>
+					<h3 style="color: #D4AF37; margin-bottom: 1rem;">Services</h3>
+					<ul style="list-style: none; opacity: 0.9;">
+						<li><a href="/services#individual" style="color: white;">Individual Healing Sessions</a></li>
+						<li><a href="/services#workshops" style="color: white;">Group Workshops</a></li>
+						<li><a href="/services#journey" style="color: white;">Learn to Journey Training</a></li>
+						<li><a href="/services#ceremonies" style="color: white;">Special Ceremonies</a></li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 style="color: #D4AF37; margin-bottom: 1rem;">Service Areas</h3>
+					<ul style="list-style: none; opacity: 0.9;">
+						<li><a href="/blue-ridge-ga" style="color: white;">Blue Ridge, GA</a></li>
+						<li><a href="/ellijay-ga" style="color: white;">Ellijay, GA</a></li>
+						<li><a href="/jasper-ga" style="color: white;">Jasper, GA</a></li>
+						<li><a href="/blairsville-ga" style="color: white;">Blairsville, GA</a></li>
+					</ul>
+				</div>
+				
+				<div id="contact">
+					<h3 style="color: #D4AF37; margin-bottom: 1rem;">Contact</h3>
+					<p style="opacity: 0.9;">📞 410-961-9033<br />
+					✉️ spiritpoint4u@gmail.com<br />
+					📍 284 Cozy Valley Lane, Talking Rock, GA 30175</p>
+				</div>
+			</div>
+			
+			<div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.7;">
+				<p>&copy; {new Date().getFullYear()} Heart Of A Lion Shamanism. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<style>
+			nav a:hover { color: #D4AF37 !important; }
+			footer a:hover { color: #D4AF37 !important; }
+		</style>
+	</body>
+</html>

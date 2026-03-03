@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1200" height="630"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Gradient background
+    const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+    gradient.addColorStop(0, '#8B1E3F');
+    gradient.addColorStop(1, '#D4AF37');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 1200, 630);
+    
+    // Text
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = 'bold 72px Georgia, serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Heart Of A Lion Shamanism', 600, 280);
+    
+    ctx.font = '42px Helvetica Neue, Arial, sans-serif';
+    ctx.fillStyle = '#FDFBF7';
+    ctx.fillText('Deanna Stennett, L.Ac., MA', 600, 350);
+    
+    ctx.font = '32px Georgia, serif';
+    ctx.fillStyle = '#D4AF37';
+    ctx.fillText('Shamanic Healing & Workshops in Northern Georgia', 600, 420);
+  </script>
+</body>
+</html>
