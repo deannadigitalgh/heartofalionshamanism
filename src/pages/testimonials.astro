@@ -81,15 +81,15 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Client Stories</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Client Stories</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Transformative experiences from clients throughout Northern Georgia
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="/services" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">View Services</a>
-				<a href="#contact" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session</a>
+			<div class="hero__actions">
+				<a href="/services" class="btn btn--secondary btn--lg">View Services</a>
+				<a href="#contact" class="btn btn--outline btn--lg">Book a Session</a>
 			</div>
 		</div>
 	</section>
@@ -97,12 +97,12 @@ const contactInfo = {
 	<!-- Stats Section -->
 	<section class="section">
 		<div class="container">
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+			<div class="grid grid--3" style="gap: var(--spacing-8);">
 				{categories.map(stat => (
-					<div style="text-align: center; padding: 2rem; background-color: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<h3 style="font-size: 3rem; color: #D4AF37; margin-bottom: 0.5rem;">{stat.count}</h3>
-						<p style="font-weight: bold; color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.5rem;">{stat.title}</p>
-						<p style="color: #5A5A5a;">{stat.description}</p>
+					<div class="stat-card">
+						<h3 style="font-size: var(--text-5xl); color: var(--color-gold-500); margin-bottom: var(--spacing-2);">{stat.count}</h3>
+						<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">{stat.title}</p>
+						<p>{stat.description}</p>
 					</div>
 				))}
 			</div>
@@ -112,21 +112,21 @@ const contactInfo = {
 	<!-- Testimonials Grid -->
 	<section class="section section--light">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">What Clients Are Saying</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">What Clients Are Saying</h2>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="testimonials-grid">
 				{testimonials.map(testimonial => (
-					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<div style="font-size: 3rem; color: #D4AF37; margin-bottom: 1rem;">"</div>
-						<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5a; font-style: italic; margin-bottom: 1.5rem;">
+					<div class="testimonial-card">
+						<span style="font-size: 4rem; color: var(--color-gold-500); margin-bottom: var(--spacing-3); display: block;">"</span>
+						<p class="mb-6" style="font-size: var(--text-lg); line-height: 1.8; font-style: italic;">
 							{testimonial.text}
 						</p>
-						<div style="display: flex; justify-content: space-between; align-items: center; border-top: 2px solid #F0F0F0; padding-top: 1rem;">
+						<div class="testimonial-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 2px solid var(--color-bg-secondary); padding-top: var(--spacing-4);">
 							<div>
-								<p style="font-weight: bold; color: #8B1E3f; font-size: 1.125rem;">{testimonial.author}</p>
-								<p style="color: #5A5A5a;">{testimonial.location}</p>
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-base);">{testimonial.author}</p>
+								<p>{testimonial.location}</p>
 							</div>
-							<span style="background-color: #F5EBE0; padding: 0.5rem 1rem; border-radius: 20px; color: #8B1E3f; font-size: 0.875rem; font-weight: bold;">
+							<span class="service-badge" style="background-color: var(--color-bg-secondary); padding: var(--spacing-2) var(--spacing-4); border-radius: var(--radius-full); color: var(--color-primary-800); font-size: var(--text-sm); font-weight: var(--font-semibold);">
 								{testimonial.service}
 							</span>
 						</div>
@@ -139,40 +139,40 @@ const contactInfo = {
 	<!-- Service Area Testimonials -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Serving Northern Georgia Communities</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Serving Northern Georgia Communities</h2>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{["Blue Ridge", "Ellijay", "Jasper", "Blairsville", "Talking Rock", "Morganton"].map(town => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">{town}, GA</h3>
-						<p style="color: #5A5A5a;">Clients from {town} and surrounding areas have experienced profound transformation through Deanna's shamanic work.</p>
+					<div class="community-card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">{town}, GA</h3>
+						<p>Clients from {town} and surrounding areas have experienced profound transformation through Deanna's shamanic work.</p>
 					</div>
 				))}
 			</div>
 
-			<div style="text-align: center; margin-top: 3rem;">
-				<a href="/blue-ridge-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Blue Ridge</a>
-				<a href="/ellijay-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Ellijay</a>
-				<a href="/jasper-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Jasper</a>
-				<a href="/blairsville-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem; margin: 0.5rem;">Blairsville</a>
+			<div class="text-center mt-8">
+				<a href="/blue-ridge-ga" class="service-area-link">Blue Ridge</a>
+				<a href="/ellijay-ga" class="service-area-link">Ellijay</a>
+				<a href="/jasper-ga" class="service-area-link">Jasper</a>
+				<a href="/blairsville-ga" class="service-area-link">Blairsville</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container" style="max-width: 900px; text-align: center;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Create Your Own Transformation Story</h2>
-			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+		<div class="container text-center" style="max-width: 900px;">
+			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Create Your Own Transformation Story</h2>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Join hundreds of clients who have experienced profound healing and transformation through shamanic work with Deanna.
 			</p>
 
-			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			<div class="hero__actions" style="margin-top: var(--spacing-10);">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
 			</div>
 
-			<p style="margin-top: 2rem; opacity: 0.9;">
+			<p class="mt-6" style="opacity: 0.9;">
 				Deanna responds to all inquiries within 24 hours. For immediate assistance, call or text directly.
 			</p>
 		</div>

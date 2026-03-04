@@ -135,15 +135,15 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Deanna Stennett, L.Ac., MA</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Deanna Stennett, L.Ac., MA</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Shamanic Practitioner & Teacher | Licensed Acupuncturist | Author
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session</a>
-				<a href="/services" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">View Services</a>
+			<div class="hero__actions">
+				<a href="#contact" class="btn btn--secondary btn--lg">Book a Session</a>
+				<a href="/services" class="btn btn--outline btn--lg">View Services</a>
 			</div>
 		</div>
 	</section>
@@ -151,21 +151,21 @@ const contactInfo = {
 	<!-- Bio Section -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #8B1E3F;">About Deanna</h2>
+			<h2 class="mb-6" style="color: var(--color-primary-800); font-size: var(--text-3xl);">About Deanna</h2>
 			
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+			<p class="lead mb-4">
 				Deanna Slate Stennett is a Georgia Licensed Acupuncturist with offices in Ellijay and Blairsville, and a shamanic practitioner dedicated to helping people awaken their inner wisdom and connect with the healing power of the spirit world.
 			</p>
 			
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+			<p class="lead mb-4">
 				Deanna learned about shamanism in acupuncture school from a shaman, herbalist and acupuncturist by the name of Eliot Cowan, author of <em>Plant Spirit Medicine</em>. After acupuncture school she began studying with the Foundation for Shamanic Studies and completed their advanced 3-year program. She has also studied with Sandra Ingerman (author of many books, including <em>Soul Retrieval</em> and <em>Medicine for the Earth</em>) since 1995.
 			</p>
 
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 1.5rem;">
+			<p class="lead mb-4">
 				Deanna has been practicing and teaching shamanism since 1995. She offers classes, workshops and healing sessions. Deanna has used shamanic journeying to meet with the spirits of the Acupuncture Points which her book <em>Poetry of the Body: Stories About Acupuncture Points</em> focuses on. It is available on Amazon and written for the lay person.
 			</p>
 
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A;">
+			<p class="lead">
 				Deanna Stennett is a lover of animals, nature, natural healing, art, poetry, and being a loving, compassionate healing presence on the Earth.
 			</p>
 		</div>
@@ -174,13 +174,13 @@ const contactInfo = {
 	<!-- Credentials Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Credentials & Training</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Credentials & Training</h2>
 			
-			<div style="display: grid; gap: 1.5rem;">
+			<div class="grid" style="gap: var(--spacing-6);">
 				{credentials.map(cred => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">{cred.title}</h3>
-						<p style="color: #5A5A5A; line-height: 1.6;">{cred.details}</p>
+					<div class="card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">{cred.title}</h3>
+						<p style="line-height: 1.6;">{cred.details}</p>
 					</div>
 				))}
 			</div>
@@ -190,18 +190,17 @@ const contactInfo = {
 	<!-- Journey Timeline -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Deanna's Shamanic Journey</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Deanna's Shamanic Journey</h2>
 			
-			<div style="position: relative; padding-left: 2rem;">
-				<div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background-color: #D4AF37;"></div>
+			<div class="timeline-container">
+				<div class="timeline-line"></div>
 				
 				{journeyPoints.map(point => (
-					<div style="margin-bottom: 3rem; position: relative;">
-						<div style="position: absolute; left: -2.5rem; top: 0.25rem; width: 12px; height: 12px; background-color: #8B1E3F; border-radius: 50%;"></div>
-						
-						<span style="display: inline-block; background-color: #D4AF37; color: white; padding: 0.25rem 1rem; border-radius: 20px; font-weight: bold; margin-bottom: 0.5rem;">{point.year}</span>
-						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 0.75rem;">{point.title}</h3>
-						<p style="color: #5A5A5A; line-height: 1.6;">{point.description}</p>
+					<div class="timeline-item">
+						<span class="timeline-dot"></span>
+						<span class="timeline-year">{point.year}</span>
+						<h3 style="color: var(--color-primary-800); font-size: var(--text-xl); margin-bottom: var(--spacing-3);">{point.title}</h3>
+						<p>{point.description}</p>
 					</div>
 				))}
 			</div>
@@ -211,14 +210,14 @@ const contactInfo = {
 	<!-- Teachers Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Shamanic Teachers & Lineage</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Shamanic Teachers & Lineage</h2>
 			
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{teachers.map(teacher => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem;">{teacher.name}</h3>
-						{teacher.organization && <p style="font-weight: bold; color: #8B1E3F; margin-bottom: 0.5rem;">{teacher.organization}</p>}
-						<p style="color: #5A5A5A; line-height: 1.6;">{teacher.description}</p>
+					<div class="card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-xl); margin-bottom: var(--spacing-4);">{teacher.name}</h3>
+						{teacher.organization && <p style="font-weight: var(--font-semibold); color: var(--color-primary-800); margin-bottom: var(--spacing-2);">{teacher.organization}</p>}
+						<p>{teacher.description}</p>
 					</div>
 				))}
 			</div>
@@ -228,13 +227,13 @@ const contactInfo = {
 	<!-- Personal Stories Section -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Personal Shamanic Stories</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Personal Shamanic Stories</h2>
 			
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{personalStories.map(story => (
-					<div style="background-color: #F5EBE0; padding: 2rem; border-radius: 12px; border-left: 4px solid #D4AF37;">
-						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 1rem;">{story.title}</h3>
-						<p style="font-size: 1.125rem; line-height: 1.8; color: #5A5A5A;">{story.story}</p>
+					<div class="story-card">
+						<h3 style="color: var(--color-primary-800); font-size: var(--text-xl); margin-bottom: var(--spacing-4);">{story.title}</h3>
+						<p style="font-size: var(--text-lg); line-height: 1.8;">{story.story}</p>
 					</div>
 				))}
 			</div>
@@ -244,21 +243,19 @@ const contactInfo = {
 	<!-- Book Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Author</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Author</h2>
 			
-			<div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
-				<h3 style="font-size: 2rem; color: #D4AF37; margin-bottom: 0.5rem;">{bookInfo.title}</h3>
-				<p style="font-style: italic; color: #8B1E3F; font-size: 1.25rem; margin-bottom: 1.5rem;">"{bookInfo.subtitle}"</p>
+			<div class="card text-center" style="padding: var(--spacing-10);">
+				<h3 style="font-size: var(--text-3xl); color: var(--color-gold-500); margin-bottom: var(--spacing-2);">{bookInfo.title}</h3>
+				<p style="font-style: italic; color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-6);">"{bookInfo.subtitle}"</p>
 				
-				<p style="color: #5A5A5A; line-height: 1.8; max-width: 700px; margin: 0 auto 2rem;">
+				<p style="line-height: 1.8; max-width: 700px; margin: 0 auto var(--spacing-8);">
 					{bookInfo.description}
 				</p>
 				
-				<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<div class="service-area-links" style="margin-top: var(--spacing-6);">
 					{bookInfo.availableOn.map(source => (
-						<span style="background-color: #F5EBE0; padding: 0.75rem 1.5rem; border-radius: 8px; color: #8B1E3F; font-weight: bold;">
-							📚 Available on {source}
-						</span>
+						<span class="service-area-link">📚 Available on {source}</span>
 					))}
 				</div>
 			</div>
@@ -268,13 +265,13 @@ const contactInfo = {
 	<!-- Specializations Section -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: #8B1E3F;">Areas of Specialization</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Areas of Specialization</h2>
 			
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+			<div class="grid grid--3" style="gap: var(--spacing-8);">
 				{specializations.map(spec => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem;">{spec.title}</h3>
-						<p style="color: #5A5A5A; line-height: 1.6;">{spec.description}</p>
+					<div class="card card--icon">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-xl); margin-bottom: var(--spacing-4);">{spec.title}</h3>
+						<p>{spec.description}</p>
 					</div>
 				))}
 			</div>
@@ -283,15 +280,15 @@ const contactInfo = {
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container" style="max-width: 900px; text-align: center;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Connect with Deanna</h2>
-			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+		<div class="container text-center" style="max-width: 900px;">
+			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Connect with Deanna</h2>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Ready to begin your shamanic journey? Contact Deanna today.
 			</p>
 			
-			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			<div class="hero__actions" style="margin-top: var(--spacing-10);">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
 			</div>
 		</div>
 	</section>

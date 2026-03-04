@@ -38,15 +38,15 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Shamanic Healing Near Me - Blairsville, GA</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Near Me - Blairsville, GA</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Transformative shamanic healing sessions and workshops serving Blairsville and surrounding Northern Georgia communities
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session</a>
-				<a href="/services" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">View Services</a>
+			<div class="hero__actions">
+				<a href="#contact" class="btn btn--secondary btn--lg">Book a Session</a>
+				<a href="/services" class="btn btn--outline btn--lg">View Services</a>
 			</div>
 		</div>
 	</section>
@@ -54,75 +54,73 @@ const contactInfo = {
 	<!-- Local SEO Content -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #8B1E3F;">Shamanic Healing Services in Blairsville, Georgia</h2>
+			<h2 class="mb-6" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Shamanic Healing Services in Blairsville, Georgia</h2>
 
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5a; margin-bottom: 1.5rem;">
+			<p class="lead mb-4">
 				Are you searching for <strong>"shamanic healing near me"</strong> in Blairsville, GA? Deanna Stennett, L.Ac., MA brings over 30 years of shamanic practice to the Blairsville community, offering transformative healing sessions and workshops that awaken your inner wisdom and connect you with the healing power of the spirit world.
 			</p>
 
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5a; margin-bottom: 1.5rem;">
+			<p class="lead mb-4">
 				Blairsville, the county seat of Union County and gateway to North Georgia's mountains, provides a beautiful setting for shamanic work that honors nature and spirit. Deanna serves clients throughout Northern Georgia, including Blairsville, Ellijay, Blue Ridge, Jasper, and surrounding communities.
 			</p>
 
-			<h3 style="color: #D4AF37; font-size: 1.75rem; margin-top: 2rem; margin-bottom: 1rem;">Why Choose Shamanic Healing in Blairsville?</h3>
+			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Why Choose Shamanic Healing in Blairsville?</h3>
 
-			<ul style="list-style: none; display: grid; gap: 1rem; margin-bottom: 2rem;">
-				<li style="display: flex; align-items: start;">
-					<span style="color: #D4AF37; font-size: 1.5rem; margin-right: 1rem;">🦁</span>
+			<ul class="local-list" style="list-style: none; display: grid; gap: var(--spacing-4); margin-bottom: var(--spacing-8);">
+				<li class="local-list__item" style="display: flex; align-items: start;">
+					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🦁</span>
 					<div>
-						<strong style="color: #8B1E3f;">Deep Spiritual Connection:</strong> Connect with your power animal, spirit guides, and nature spirits in the sacred mountains of Blairsville.
+						<strong style="color: var(--color-primary-800);">Deep Spiritual Connection:</strong> Connect with your power animal, spirit guides, and nature spirits in the sacred mountains of Blairsville.
 					</div>
 				</li>
-				<li style="display: flex; align-items: start;">
-					<span style="color: #D4AF37; font-size: 1.5rem; margin-right: 1rem;">🏔️</span>
+				<li class="local-list__item" style="display: flex; align-items: start;">
+					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🏔️</span>
 					<div>
-						<strong style="color: #8B1E3f;">Nature-Based Healing:</strong> The natural beauty of Blairsville's mountain setting enhances shamanic work, creating powerful opportunities for transformation.
+						<strong style="color: var(--color-primary-800);">Nature-Based Healing:</strong> The natural beauty of Blairsville's mountain setting enhances shamanic work, creating powerful opportunities for transformation.
 					</div>
 				</li>
-				<li style="display: flex; align-items: start;">
-					<span style="color: #D4AF37; font-size: 1.5rem; margin-right: 1rem;">🎓</span>
+				<li class="local-list__item" style="display: flex; align-items: start;">
+					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🎓</span>
 					<div>
-						<strong style="color: #8B1E3f;">Experienced Practitioner:</strong> Deanna has been practicing and teaching shamanism since 1995, with training from Sandra Ingerman, Foundation for Shamanic Studies, and Tom Cowan.
+						<strong style="color: var(--color-primary-800);">Experienced Practitioner:</strong> Deanna has been practicing and teaching shamanism since 1995, with training from Sandra Ingerman, Foundation for Shamanic Studies, and Tom Cowan.
 					</div>
 				</li>
-				<li style="display: flex; align-items: start;">
-					<span style="color: #D4AF37; font-size: 1.5rem; margin-right: 1rem;">🏠</span>
+				<li class="local-list__item" style="display: flex; align-items: start;">
+					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🏠</span>
 					<div>
-						<strong style="color: #8B1E3f;">Flexible Service Options:</strong> Sessions available at Deanna's offices in Blairsville/Ellijay or by appointment for in-home visits throughout Blairsville area.
+						<strong style="color: var(--color-primary-800);">Flexible Service Options:</strong> Sessions available at Deanna's offices in Blairsville/Ellijay or by appointment for in-home visits throughout Blairsville area.
 					</div>
 				</li>
 			</ul>
 
-			<h3 style="color: #D4AF37; font-size: 1.75rem; margin-top: 2rem; margin-bottom: 1rem;">Services Available Near You</h3>
+			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Services Available Near You</h3>
 
-			<div style="display: grid; gap: 1.5rem; margin-bottom: 2rem;">
-				<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-					<h4 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">Individual Healing Sessions</h4>
-					<p style="color: #5A5A5a;">Soul retrieval, energy clearing, power animal connection - personalized shamanic healing tailored to your needs.</p>
+			<div class="grid grid--3" style="gap: var(--spacing-6); margin-bottom: var(--spacing-8);">
+				<div class="card service-card">
+					<h4 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">Individual Healing Sessions</h4>
+					<p>Soul retrieval, energy clearing, power animal connection - personalized shamanic healing tailored to your needs.</p>
 				</div>
 
-				<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-					<h4 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">Learn to Journey Workshops</h4>
-					<p style="color: #5A5A5a;">Five-hour introductory workshops teaching the ancient art of shamanic journeying. Meet your power animal and discover invisible worlds.</p>
+				<div class="card service-card">
+					<h4 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">Learn to Journey Workshops</h4>
+					<p>Five-hour introductory workshops teaching the ancient art of shamanic journeying. Meet your power animal and discover invisible worlds.</p>
 				</div>
 
-				<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-					<h4 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.5rem;">Special Ceremonies</h4>
-					<p style="color: #5A5A5a;">New Moon, Full Moon, Solstice celebrations and rites of passage ceremonies for weddings, funerals, and life transitions.</p>
+				<div class="card service-card">
+					<h4 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">Special Ceremonies</h4>
+					<p>New Moon, Full Moon, Solstice celebrations and rites of passage ceremonies for weddings, funerals, and life transitions.</p>
 				</div>
 			</div>
 
-			<h3 style="color: #D4AF37; font-size: 1.75rem; margin-top: 2rem; margin-bottom: 1rem;">Serving Blairsville and Surrounding Communities</h3>
+			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Serving Blairsville and Surrounding Communities</h3>
 
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5a; margin-bottom: 1.5rem;">
+			<p class="mb-6">
 				Deanna serves clients throughout Northern Georgia, making shamanic healing accessible to residents of Blairsville and nearby towns including Ellijay, Blue Ridge, Jasper, Talking Rock, Morganton, Helen, and Gainesville.
 			</p>
 
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+			<div class="service-area-links" style="margin-top: var(--spacing-6);">
 				{nearbyTowns.map(town => (
-					<span style="background-color: #F5EBE0; padding: 0.75rem 1.5rem; border-radius: 20px; color: #8B1E3f; font-weight: bold;">
-						📍 {town}, GA
-					</span>
+					<span class="service-area-link">📍 {town}, GA</span>
 				))}
 			</div>
 		</div>
@@ -131,13 +129,13 @@ const contactInfo = {
 	<!-- FAQ Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Frequently Asked Questions - Blairsville Area</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions - Blairsville Area</h2>
 
-			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+			<div class="faq-list">
 				{faqs.map(faq => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
-						<p style="color: #5A5A5a; line-height: 1.6;">{faq.answer}</p>
+					<div class="faq-item">
+						<h3 class="faq-question">{faq.question}</h3>
+						<p class="faq-answer">{faq.answer}</p>
 					</div>
 				))}
 			</div>
@@ -146,18 +144,18 @@ const contactInfo = {
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container" style="max-width: 900px; text-align: center;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Book Your Blairsville Area Session</h2>
-			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+		<div class="container text-center" style="max-width: 900px;">
+			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your Blairsville Area Session</h2>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or workshop in the Blairsville area.
 			</p>
 
-			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			<div class="hero__actions" style="margin-top: var(--spacing-10);">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
 			</div>
 
-			<p style="margin-top: 2rem; opacity: 0.9;">
+			<p class="mt-6" style="opacity: 0.9;">
 				In-home sessions available by appointment throughout Blairsville and surrounding communities.
 			</p>
 		</div>
@@ -171,8 +169,7 @@ const contactInfo = {
 			"name": "Shamanic Healing Near Me - Blairsville GA",
 			"description": "Shamanic healing sessions and workshops in Blairsville, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses.",
 			"url": "https://heartofalionshamanism.com/blairsville-ga"
-		}
-	</script>
+		</script>
 
 	<script type="application/ld+json">
 		{

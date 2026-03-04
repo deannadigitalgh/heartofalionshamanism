@@ -66,27 +66,27 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #1A1A2E 0%, #8B1E3F 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #D4AF37;">Awaken Your Inner Lion</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content">
+			<h1 class="hero__title">Awaken Your Inner Lion</h1>
+			<p class="hero__subtitle">
 				Transformative shamanic healing and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 2.5rem;">Book a Session</a>
-				<a href="/workshops" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 2.5rem;">View Workshops</a>
+			<div class="hero__actions">
+				<a href="#contact" class="btn btn--secondary btn--lg">Book a Session</a>
+				<a href="/workshops" class="btn btn--outline btn--lg">View Workshops</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- About Section -->
 	<section class="section section--light">
-		<div class="container" style="max-width: 900px; text-align: center;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Welcome to Heart Of A Lion Shamanism</h2>
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A; margin-bottom: 2rem;">
+		<div class="container text-center" style="max-width: 900px;">
+			<h2 class="mb-6">Welcome to Heart Of A Lion Shamanism</h2>
+			<p class="lead mb-6">
 				Shamanism is a spiritual practice that is not religiously affiliated with any one belief system. It is the oldest known spiritual healing system on the planet, dating back 40-100 thousand years based on archaeological studies.
 			</p>
-			<p style="font-size: 1.25rem; line-height: 1.8; color: #5A5A5A;">
+			<p class="lead">
 				Deanna Stennett has been practicing and teaching shamanism since 1995, offering classes, workshops, and healing sessions throughout the Eastern US. Now in Northern Georgia, she continues her sacred work helping people awaken to a world on a different dimension where they can find anything they want and learn how to live in harmony with the world, themselves, and others.
 			</p>
 		</div>
@@ -95,24 +95,24 @@ const contactInfo = {
 	<!-- Services Section -->
 	<section class="section">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Shamanic Offerings</h2>
+			<h2 class="text-center mb-8">Shamanic Offerings</h2>
 			
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+			<div class="grid grid--3" style="margin-bottom: var(--spacing-10);">
 				{services.map(service => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
-						<div style="font-size: 3rem; margin-bottom: 1rem;">{service.icon}</div>
-						<h3 style="color: #8B1E3F; font-size: 1.5rem; margin-bottom: 1rem;">{service.title}</h3>
-						<p style="color: #5A5A5A; margin-bottom: 1rem;">{service.description}</p>
-						<p style="font-weight: bold; color: #D4AF37;">{service.price}</p>
+					<div class="card card--icon">
+						<span class="card__icon">{service.icon}</span>
+						<h3 class="card__title">{service.title}</h3>
+						<p class="card__description">{service.description}</p>
+						<p style="font-weight: var(--font-semibold); color: var(--color-gold-500); margin-top: var(--spacing-2);">{service.price}</p>
 					</div>
 				))}
 			</div>
 
 			<!-- CTA -->
-			<div style="text-align: center; background-color: #F5EBE0; padding: 3rem; border-radius: 12px;">
-				<h3 style="font-size: 2rem; margin-bottom: 1rem; color: #8B1E3F;">Ready to Begin Your Journey?</h3>
-				<p style="font-size: 1.25rem; margin-bottom: 2rem; color: #5A5A5A;">Contact Deanna today to schedule your first session or workshop</p>
-				<a href="#contact" class="btn btn--primary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Get in Touch</a>
+			<div class="featured">
+				<h3 style="font-size: var(--text-3xl); margin-bottom: var(--spacing-4); color: var(--color-gold-500);">Ready to Begin Your Journey?</h3>
+				<p class="featured__subtitle" style="margin-bottom: var(--spacing-6);">Contact Deanna today to schedule your first session or workshop</p>
+				<a href="#contact" class="btn btn--primary btn--lg">Get in Touch</a>
 			</div>
 		</div>
 	</section>
@@ -120,13 +120,13 @@ const contactInfo = {
 	<!-- Testimonials Section -->
 	<section class="section section--light">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Client Stories</h2>
+			<h2 class="text-center mb-8">Client Stories</h2>
 			
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+			<div class="testimonials-grid">
 				{testimonials.map(testimonial => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<p style="font-size: 1.125rem; line-height: 1.8; color: #5A5A5A; font-style: italic;">"{testimonial.text}"</p>
-						<p style="margin-top: 1rem; font-weight: bold; color: #8B1E3F;">— {testimonial.author}</p>
+					<div class="testimonial-card">
+						<p class="testimonial-card__quote">"{testimonial.text}"</p>
+						<p class="testimonial-card__author">— {testimonial.author}</p>
 					</div>
 				))}
 			</div>
@@ -136,13 +136,13 @@ const contactInfo = {
 	<!-- FAQ Section -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+			<h2 class="text-center mb-8">Frequently Asked Questions</h2>
 			
-			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+			<div class="faq-list">
 				{faqs.map(faq => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
-						<p style="color: #5A5A5A; line-height: 1.6;">{faq.answer}</p>
+					<div class="faq-item">
+						<h3 class="faq-question">{faq.question}</h3>
+						<p class="faq-answer">{faq.answer}</p>
 					</div>
 				))}
 			</div>
@@ -152,69 +152,67 @@ const contactInfo = {
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Contact Deanna</h2>
-			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9;">
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500);">Contact Deanna</h2>
+			<p class="text-center lead mb-8">
 				Ready to begin your shamanic journey? Fill out the form below or call/text directly.
 			</p>
 
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-				<div style="text-align: center;">
-					<div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
-					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Phone</h3>
-					<p style="font-size: 1.25rem; opacity: 0.9;">{contactInfo.phone}</p>
+			<div class="contact-info-grid" style="margin-bottom: var(--spacing-10);">
+				<div class="contact-card">
+					<span class="contact-icon">📞</span>
+					<h3 class="contact-title">Phone</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{contactInfo.phone}</p>
 				</div>
 				
-				<div style="text-align: center;">
-					<div style="font-size: 3rem; margin-bottom: 1rem;">✉️</div>
-					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Email</h3>
-					<p style="font-size: 1.25rem; opacity: 0.9;"><a href={`mailto:${contactInfo.email}`} style="color: white;">{contactInfo.email}</a></p>
+				<div class="contact-card">
+					<span class="contact-icon">✉️</span>
+					<h3 class="contact-title">Email</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${contactInfo.email}`} style="color: white;">{contactInfo.email}</a></p>
 				</div>
 				
-				<div style="text-align: center;">
-					<div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
-					<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">Location</h3>
-					<p style="font-size: 1.25rem; opacity: 0.9;">{contactInfo.address}</p>
+				<div class="contact-card">
+					<span class="contact-icon">📍</span>
+					<h3 class="contact-title">Location</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{contactInfo.address}</p>
 				</div>
 			</div>
 
 			<!-- Contact Form -->
-			<div style="background-color: white; padding: 3rem; border-radius: 12px; color: #2C2C2C;">
-				<h3 style="text-align: center; font-size: 1.75rem; margin-bottom: 2rem; color: #8B1E3F;">Send Deanna a Message</h3>
+			<div class="card" style="padding: var(--spacing-10);">
+				<h3 class="text-center mb-6" style="color: var(--color-primary-800); font-size: var(--text-2xl);">Send Deanna a Message</h3>
 				
 				<form action="https://formspree.io/f/spiritpoint4u@gmail.com" method="POST">
-					<div style="display: grid; gap: 1.5rem;">
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-							<div>
-								<label for="firstName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">First Name *</label>
-								<input type="text" id="firstName" name="first_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your first name" />
-							</div>
-							
-							<div>
-								<label for="lastName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Last Name *</label>
-								<input type="text" id="lastName" name="last_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your last name" />
-							</div>
+					<div class="grid grid--2" style="gap: var(--spacing-5); margin-bottom: var(--spacing-5);">
+						<div class="form-group">
+							<label for="firstName" class="form-label">First Name *</label>
+							<input type="text" id="firstName" name="first_name" required class="form-input" placeholder="Your first name" />
 						</div>
 						
-						<div>
-							<label for="email" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Email Address *</label>
-							<input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="your@email.com" />
+						<div class="form-group">
+							<label for="lastName" class="form-label">Last Name *</label>
+							<input type="text" id="lastName" name="last_name" required class="form-input" placeholder="Your last name" />
 						</div>
-						
-						<div>
-							<label for="phone" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Phone Number *</label>
-							<input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="(123) 456-7890" />
-						</div>
-						
-						<div>
-							<label for="message" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">How Can I Help You? *</label>
-							<textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
-						</div>
-						
-						<button type="submit" class="btn btn--primary" style="width: 100%; padding: 1.25rem; font-size: 1.25rem;">Send Message</button>
 					</div>
+					
+					<div class="form-group">
+						<label for="email" class="form-label">Email Address *</label>
+						<input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com" />
+					</div>
+					
+					<div class="form-group">
+						<label for="phone" class="form-label">Phone Number *</label>
+						<input type="tel" id="phone" name="phone" required class="form-input" placeholder="(123) 456-7890" />
+					</div>
+					
+					<div class="form-group">
+						<label for="message" class="form-label">How Can I Help You? *</label>
+						<textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
+					</div>
+					
+					<button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
 				</form>
 
-				<p style="text-align: center; margin-top: 1.5rem; color: #5A5A5A; font-size: 0.875rem;">
+				<p class="text-center mt-6 text-muted" style="font-size: var(--text-sm);">
 					Deanna will respond to your message within 24 hours. For immediate assistance, please call or text directly.
 				</p>
 			</div>
@@ -223,32 +221,30 @@ const contactInfo = {
 
 	<!-- Service Area SEO Section -->
 	<section class="section section--light">
-		<div class="container" style="text-align: center;">
-			<h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Serving Northern Georgia</h2>
-			<p style="font-size: 1.125rem; color: #5A5A5A; max-width: 800px; margin: 0 auto 2rem;">
+		<div class="container text-center">
+			<h2 style="font-size: var(--text-3xl); margin-bottom: var(--spacing-6);">Serving Northern Georgia</h2>
+			<p style="font-size: var(--text-lg); color: var(--color-text-muted); max-width: 800px; margin: 0 auto var(--spacing-8);">
 				Heart Of A Lion Shamanism serves clients throughout Northern Georgia, including Blue Ridge, Ellijay, Jasper, Blairsville, and surrounding communities. Deanna travels to clients by appointment for in-home sessions when needed.
 			</p>
 			
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="/blue-ridge-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Blue Ridge, GA</a>
-				<a href="/ellijay-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Ellijay, GA</a>
-				<a href="/jasper-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Jasper, GA</a>
-				<a href="/blairsville-ga" class="btn btn--secondary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Blairsville, GA</a>
+			<div class="service-area-links">
+				<a href="/blue-ridge-ga" class="service-area-link">Blue Ridge, GA</a>
+				<a href="/ellijay-ga" class="service-area-link">Ellijay, GA</a>
+				<a href="/jasper-ga" class="service-area-link">Jasper, GA</a>
+				<a href="/blairsville-ga" class="service-area-link">Blairsville, GA</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Book Now CTA -->
-	<section class="section">
-		<div class="container" style="text-align: center; background-color: #8B1E3F; color: white; padding: 4rem 2rem; border-radius: 12px;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Begin Your Transformation Today</h2>
-			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95;">
-				Shamanic healing can bring profound change to your life. Take the first step toward transformation.
-			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#contact" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Book a Session Now</a>
-				<a href={`tel:${contactInfo.phone}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Call {contactInfo.phone}</a>
-			</div>
+	<section class="container" style="text-align: center; background-color: var(--color-primary-800); color: white; padding: var(--spacing-16) var(--spacing-6); border-radius: var(--radius-xl); margin: var(--spacing-20) 0;">
+		<h2 style="font-size: var(--text-4xl); margin-bottom: var(--spacing-4); color: var(--color-gold-500);">Begin Your Transformation Today</h2>
+		<p class="featured__subtitle" style="margin-bottom: var(--spacing-6);">
+			Shamanic healing can bring profound change to your life. Take the first step toward transformation.
+		</p>
+		<div class="hero__actions">
+			<a href="#contact" class="btn btn--secondary btn--lg">Book a Session Now</a>
+			<a href={`tel:${contactInfo.phone}`} class="btn btn--outline btn--lg">Call {contactInfo.phone}</a>
 		</div>
 	</section>
 

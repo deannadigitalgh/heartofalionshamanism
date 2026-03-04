@@ -159,15 +159,15 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Shamanic Healing Services</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Services</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Transformative healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#individual" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Individual Sessions</a>
-				<a href="#workshops" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Workshops</a>
+			<div class="hero__actions">
+				<a href="#individual" class="btn btn--secondary btn--lg">Individual Sessions</a>
+				<a href="/workshops" class="btn btn--outline btn--lg">Workshops</a>
 			</div>
 		</div>
 	</section>
@@ -175,40 +175,40 @@ const contactInfo = {
 	<!-- Individual Sessions Section -->
 	<section id="individual" class="section">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #8B1E3F;">Individual Healing Sessions</h2>
-			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; color: #5A5A5A; max-width: 800px; margin-left: auto; margin-right: auto;">
+			<h2 class="text-center mb-4" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Individual Healing Sessions</h2>
+			<p class="lead text-center mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">
 				Personalized shamanic healing tailored to your unique needs and intentions. Each session creates a sacred space for deep transformation and restoration.
 			</p>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{individualSessions.map(session => (
-					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-							<h3 style="color: #D4AF37; font-size: 1.75rem; margin-bottom: 0;">{session.title}</h3>
-							<div style="text-align: right;">
-								<p style="font-weight: bold; color: #8B1E3F; font-size: 1.25rem;">{session.price}</p>
-								<p style="color: #5A5A5A;">{session.duration}</p>
+					<div class="card service-card">
+						<div class="service-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-6);">
+							<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: 0;">{session.title}</h3>
+							<div class="service-price" style="text-align: right;">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg);">{session.price}</p>
+								<p style="color: var(--color-text-muted);">{session.duration}</p>
 							</div>
 						</div>
 
-						<p style="font-size: 1.125rem; color: #5A5A5A; line-height: 1.8; margin-bottom: 1.5rem;">
+						<p class="mb-4" style="font-size: var(--text-lg); line-height: 1.8;">
 							{session.description}
 						</p>
 
-						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
-						<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+						<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
 							{session.includes.map(item => (
-								<li style="display: flex; align-items: center; color: #5A5A5A;">
-									<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+								<li class="service-list__item" style="display: flex; align-items: center;">
+									<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
 								</li>
 							))}
 						</ul>
 
-						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Ideal For:</h4>
-						<p style="color: #5A5A5a;">{session.idealFor.join(" • ")}</p>
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Ideal For:</h4>
+						<p>{session.idealFor.join(" • ")}</p>
 
-						<div style="margin-top: 2rem; text-align: center;">
-							<a href="#contact" class="btn btn--primary" style="padding: 1rem 2rem;">Book This Session</a>
+						<div class="mt-6 text-center">
+							<a href="#contact" class="btn btn--primary">Book This Session</a>
 						</div>
 					</div>
 				))}
@@ -219,59 +219,59 @@ const contactInfo = {
 	<!-- Workshops Section -->
 	<section id="workshops" class="section section--light">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #8B1E3F;">Workshops & Training</h2>
-			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; color: #5A5A5a; max-width: 800px; margin-left: auto; margin-right: auto;">
+			<h2 class="text-center mb-4" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Workshops & Training</h2>
+			<p class="lead text-center mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">
 				Transformative group experiences designed to awaken your inner wisdom and connect you with the healing power of shamanism.
 			</p>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{workshops.map(workshop => (
-					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-							<h3 style="color: #D4AF37; font-size: 1.75rem; margin-bottom: 0;">{workshop.title}</h3>
-							<div style="text-align: right;">
-								<p style="font-weight: bold; color: #8B1E3F; font-size: 1.25rem;">{workshop.price}</p>
-								<p style="color: #5A5A5a;">{workshop.duration}</p>
+					<div class="card workshop-card">
+						<div class="service-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-6);">
+							<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: 0;">{workshop.title}</h3>
+							<div class="service-price" style="text-align: right;">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg);">{workshop.price}</p>
+								<p style="color: var(--color-text-muted);">{workshop.duration}</p>
 							</div>
 						</div>
 
-						<p style="font-size: 1.125rem; color: #5A5A5a; line-height: 1.8; margin-bottom: 1.5rem;">
+						<p class="mb-4" style="font-size: var(--text-lg); line-height: 1.8;">
 							{workshop.description}
 						</p>
 
 						{workshop.location && (
-							<p style="color: #5A5A5a; margin-bottom: 1rem;"><strong>📍 {workshop.location}</strong></p>
+							<p class="mb-4"><strong>📍 {workshop.location}</strong></p>
 						)}
 
-						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
-						<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+						<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
 							{workshop.includes.map(item => (
-								<li style="display: flex; align-items: center; color: #5A5A5a;">
-									<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+								<li class="service-list__item" style="display: flex; align-items: center;">
+									<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
 								</li>
 							))}
 						</ul>
 
 						{workshop.nextDate && (
-							<p style="background-color: #F5EBE0; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+							<p class="info-box" style="background-color: var(--color-bg-secondary); padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
 								<strong>📅 Next Date:</strong> {workshop.nextDate}
 							</p>
 						)}
 
 						{workshop.registration && (
-							<p style="background-color: #E8F4FD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+							<p class="info-box" style="background-color: #E8F4FD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
 								<strong>📞 Registration:</strong> {workshop.registration}
 							</p>
 						)}
 
 						{workshop.note && (
-							<p style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+							<p class="info-box" style="background-color: #FFF3CD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
 								<strong>⚠️ Note:</strong> {workshop.note}
 							</p>
 						)}
 
-						<div style="margin-top: 2rem; text-align: center;">
-							<a href="#contact" class="btn btn--primary" style="padding: 1rem 2rem;">Register for This Workshop</a>
+						<div class="mt-6 text-center">
+							<a href="#contact" class="btn btn--primary">Register for This Workshop</a>
 						</div>
 					</div>
 				))}
@@ -282,15 +282,15 @@ const contactInfo = {
 	<!-- Ceremonies Section -->
 	<section id="ceremonies" class="section">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Special Ceremonies</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Special Ceremonies</h2>
 
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+			<div class="grid grid--3" style="gap: var(--spacing-8);">
 				{ceremonies.map(ceremony => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
-						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 1rem;">{ceremony.title}</h3>
-						<p style="color: #5A5A5a; line-height: 1.6; margin-bottom: 1rem;">{ceremony.description}</p>
-						<p style="font-weight: bold; color: #8B1E3f; margin-bottom: 0.5rem;">{ceremony.frequency}</p>
-						<p style="color: #D4AF37; font-size: 1.25rem;">{ceremony.price}</p>
+					<div class="card card--icon ceremony-card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-xl); margin-bottom: var(--spacing-4);">{ceremony.title}</h3>
+						<p style="line-height: 1.6; margin-bottom: var(--spacing-2);">{ceremony.description}</p>
+						<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); margin-bottom: var(--spacing-2);">{ceremony.frequency}</p>
+						<p style="color: var(--color-gold-500); font-size: var(--text-lg);">{ceremony.price}</p>
 					</div>
 				))}
 			</div>
@@ -300,13 +300,13 @@ const contactInfo = {
 	<!-- FAQ Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Frequently Asked Questions</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions</h2>
 
-			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+			<div class="faq-list">
 				{faqs.map(faq => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
-						<p style="color: #5A5A5a; line-height: 1.6;">{faq.answer}</p>
+					<div class="faq-item">
+						<h3 class="faq-question">{faq.question}</h3>
+						<p class="faq-answer">{faq.answer}</p>
 					</div>
 				))}
 			</div>
@@ -316,74 +316,72 @@ const contactInfo = {
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Book Your Session or Workshop</h2>
-			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9;">
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your Session or Workshop</h2>
+			<p class="lead text-center mb-8" style="opacity: 0.95;">
 				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or register for a workshop.
 			</p>
 
-			<div style="display: grid; gap: 2rem; max-width: 600px; margin: 0 auto;">
-				<div style="background-color: white; padding: 3rem; border-radius: 12px; color: #2C2C2C;">
-					<h3 style="text-align: center; font-size: 1.75rem; margin-bottom: 2rem; color: #8B1E3F;">Send Deanna a Message</h3>
+			<div class="grid grid--2" style="gap: var(--spacing-8); max-width: 600px; margin: 0 auto;">
+				<div class="card" style="padding: var(--spacing-10);">
+					<h3 class="text-center mb-6" style="color: var(--color-primary-800); font-size: var(--text-2xl);">Send Deanna a Message</h3>
 
 					<form action="https://formspree.io/f/spiritpoint4u@gmail.com" method="POST">
-						<div style="display: grid; gap: 1.5rem;">
-							<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-								<div>
-									<label for="firstName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">First Name *</label>
-									<input type="text" id="firstName" name="first_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your first name" />
-								</div>
-
-								<div>
-									<label for="lastName" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Last Name *</label>
-									<input type="text" id="lastName" name="last_name" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Your last name" />
-								</div>
+						<div class="grid grid--2" style="gap: var(--spacing-5); margin-bottom: var(--spacing-6);">
+							<div class="form-group">
+								<label for="firstName" class="form-label">First Name *</label>
+								<input type="text" id="firstName" name="first_name" required class="form-input" placeholder="Your first name" />
 							</div>
 
-							<div>
-								<label for="email" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Email Address *</label>
-								<input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="your@email.com" />
+							<div class="form-group">
+								<label for="lastName" class="form-label">Last Name *</label>
+								<input type="text" id="lastName" name="last_name" required class="form-input" placeholder="Your last name" />
 							</div>
-
-							<div>
-								<label for="phone" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Phone Number *</label>
-								<input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="(123) 456-7890" />
-							</div>
-
-							<div>
-								<label for="serviceType" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Interested In *</label>
-								<select id="serviceType" name="service_type" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;">
-									<option value="">Select a service...</option>
-									<option value="Individual Healing Session">Individual Healing Session</option>
-									<option value="Energy Clearing">Energy Clearing Session</option>
-									<option value="Power Animal Connection">Power Animal Connection</option>
-									<option value="Learn to Journey Workshop">Learn to Journey Workshop</option>
-									<option value="Wild Women Series">Wild Women Series</option>
-									<option value="Messages from Nature Workshop">Messages from Nature Workshop</option>
-									<option value="Special Ceremony">Special Ceremony</option>
-									<option value="Other">Other</option>
-								</select>
-							</div>
-
-							<div>
-								<label for="message" style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #2C2C2C;">Message *</label>
-								<textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.75rem; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1rem;" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
-							</div>
-
-							<button type="submit" class="btn btn--primary" style="width: 100%; padding: 1.25rem; font-size: 1.25rem;">Send Message</button>
 						</div>
+
+						<div class="form-group">
+							<label for="email" class="form-label">Email Address *</label>
+							<input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com" />
+						</div>
+
+						<div class="form-group">
+							<label for="phone" class="form-label">Phone Number *</label>
+							<input type="tel" id="phone" name="phone" required class="form-input" placeholder="(123) 456-7890" />
+						</div>
+
+						<div class="form-group">
+							<label for="serviceType" class="form-label">Interested In *</label>
+							<select id="serviceType" name="service_type" required class="form-input">
+								<option value="">Select a service...</option>
+								<option value="Individual Healing Session">Individual Healing Session</option>
+								<option value="Energy Clearing">Energy Clearing Session</option>
+								<option value="Power Animal Connection">Power Animal Connection</option>
+								<option value="Learn to Journey Workshop">Learn to Journey Workshop</option>
+								<option value="Wild Women Series">Wild Women Series</option>
+								<option value="Messages from Nature Workshop">Messages from Nature Workshop</option>
+								<option value="Special Ceremony">Special Ceremony</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="message" class="form-label">Message *</label>
+							<textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
+						</div>
+
+						<button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
 					</form>
 
-					<p style="text-align: center; margin-top: 1.5rem; color: #5A5A5a; font-size: 0.875rem;">
+					<p class="text-center mt-6 text-muted" style="font-size: var(--text-sm);">
 						Deanna will respond to your message within 24 hours. For immediate assistance, please call or text directly.
 					</p>
 				</div>
 
-				<div style="text-align: center;">
-					<p style="font-size: 1.25rem; margin-bottom: 1rem;"><strong>📞 Phone/Text:</strong></p>
-					<a href={`tel:${contactInfo.phone}`} style="font-size: 1.75rem; color: #D4AF37; font-weight: bold;">{contactInfo.phone}</a>
+				<div class="contact-info-card" style="text-align: center;">
+					<p style="font-size: var(--text-lg); margin-bottom: var(--spacing-3);"><strong>📞 Phone/Text:</strong></p>
+					<a href={`tel:${contactInfo.phone}`} style="font-size: var(--text-2xl); color: var(--color-gold-500); font-weight: var(--font-bold);">{contactInfo.phone}</a>
 
-					<p style="font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.5rem;"><strong>✉️ Email:</strong></p>
-					<a href={`mailto:${contactInfo.email}`} style="font-size: 1.25rem; color: #D4AF37;">{contactInfo.email}</a>
+					<p style="font-size: var(--text-lg); margin-top: var(--spacing-6); margin-bottom: var(--spacing-2);"><strong>✉️ Email:</strong></p>
+					<a href={`mailto:${contactInfo.email}`} style="font-size: var(--text-lg); color: var(--color-gold-500);">{contactInfo.email}</a>
 				</div>
 			</div>
 		</div>

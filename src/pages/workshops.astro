@@ -113,15 +113,15 @@ const contactInfo = {
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section style="background: linear-gradient(135deg, #D4AF37 0%, #8B1E3F 100%); color: white; padding: 6rem 0;">
-		<div class="container" style="text-align: center; max-width: 900px;">
-			<h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: #1A1A2E;">Shamanic Workshops & Training</h1>
-			<p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Workshops & Training</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Transformative group experiences in Northern Georgia with Deanna Stennett, L.Ac., MA
 			</p>
-			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-				<a href="#upcoming" class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">Upcoming Workshops</a>
-				<a href="#series" class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">Series Programs</a>
+			<div class="hero__actions">
+				<a href="#upcoming" class="btn btn--secondary btn--lg">Upcoming Workshops</a>
+				<a href="/series" class="btn btn--outline btn--lg">Series Programs</a>
 			</div>
 		</div>
 	</section>
@@ -129,55 +129,55 @@ const contactInfo = {
 	<!-- Upcoming Workshops Section -->
 	<section id="upcoming" class="section">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #8B1E3F;">Upcoming Workshops</h2>
-			<p style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem; color: #5A5A5a; max-width: 800px; margin-left: auto; margin-right: auto;">
+			<h2 class="text-center mb-4" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Upcoming Workshops</h2>
+			<p class="lead text-center mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">
 				Join Deanna for transformative workshops designed to awaken your inner wisdom and connect you with the healing power of shamanism.
 			</p>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{upcomingWorkshops.map(workshop => (
-					<div style="background-color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-							<h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 0;">{workshop.title}</h3>
-							<div style="text-align: right;">
-								<p style="font-weight: bold; color: #8B1E3F; font-size: 1.5rem;">{workshop.price}</p>
-								<p style="color: #5A5A5a; margin-top: 0.25rem;">{workshop.time}</p>
+					<div class="card workshop-card">
+						<div class="service-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-6);">
+							<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: 0;">{workshop.title}</h3>
+							<div class="service-price" style="text-align: right;">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-xl);">{workshop.price}</p>
+								<p style="color: var(--color-text-muted); margin-top: var(--spacing-1);">{workshop.time}</p>
 							</div>
 						</div>
 
-						<div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
-							<p style="color: #5A5A5a;"><strong>📅 Date:</strong> {workshop.date}</p>
-							<p style="color: #5A5A5a;"><strong>🕐 Time:</strong> {workshop.time}</p>
-							<p style="color: #5A5A5a;"><strong>📍 Location:</strong> {workshop.location}</p>
+						<div class="workshop-meta" style="display: grid; gap: var(--spacing-4); margin-bottom: var(--spacing-6);">
+							<p><strong>📅 Date:</strong> {workshop.date}</p>
+							<p><strong>🕐 Time:</strong> {workshop.time}</p>
+							<p><strong>📍 Location:</strong> {workshop.location}</p>
 						</div>
 
-						<p style="font-size: 1.125rem; color: #5A5A5a; line-height: 1.8; margin-bottom: 1.5rem;">
+						<p class="mb-4" style="font-size: var(--text-lg); line-height: 1.8;">
 							{workshop.description}
 						</p>
 
-						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
-						<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+						<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
 							{workshop.includes.map(item => (
-								<li style="display: flex; align-items: center; color: #5A5A5a;">
-									<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+								<li class="service-list__item" style="display: flex; align-items: center;">
+									<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
 								</li>
 							))}
 						</ul>
 
 						{workshop.limit && (
-							<p style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+							<p class="warning-box" style="background-color: #FFF3CD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
 								<strong>⚠️ {workshop.limit}</strong>
 							</p>
 						)}
 
-						<div style="background-color: #E8F4FD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-							<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">📞 Registration</h4>
-							<p style="color: #5A5A5a; line-height: 1.6;">{workshop.registration}</p>
+						<div class="info-box" style="background-color: #E8F4FD; padding: var(--spacing-6); border-radius: var(--radius-md); margin-bottom: var(--spacing-8);">
+							<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">📞 Registration</h4>
+							<p style="line-height: 1.6;">{workshop.registration}</p>
 						</div>
 
-						<div style="text-align: center;">
-							<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: 1rem 2rem; font-size: 1.125rem;">📞 Call to Register</a>
-							<p style="margin-top: 1rem; color: #5A5A5a;">or email {contactInfo.email}</p>
+						<div class="text-center">
+							<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: var(--spacing-4) var(--spacing-8); font-size: var(--text-lg);">📞 Call to Register</a>
+							<p class="mt-6 text-muted">or email {contactInfo.email}</p>
 						</div>
 					</div>
 				))}
@@ -188,68 +188,68 @@ const contactInfo = {
 	<!-- Series Programs Section -->
 	<section id="series" class="section section--light">
 		<div class="container">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Series Programs</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Series Programs</h2>
 
 			{series.map(series => (
-				<div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-					<h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 1rem;">{series.title}</h3>
+				<div class="card series-card">
+					<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: var(--spacing-4);">{series.title}</h3>
 
-					<p style="font-size: 1.25rem; color: #5A5A5a; line-height: 1.8; margin-bottom: 2rem;">
+					<p class="mb-6" style="font-size: var(--text-lg); line-height: 1.8;">
 						{series.description}
 					</p>
 
-					<div style="display: grid; gap: 1.5rem; margin-bottom: 2rem;">
-						<p style="color: #5A5A5a;"><strong>📅 Schedule:</strong> {series.schedule}</p>
+					<div class="series-details" style="display: grid; gap: var(--spacing-6); margin-bottom: var(--spacing-8);">
+						<p><strong>📅 Schedule:</strong> {series.schedule}</p>
 						{series.dates && (
-							<div style="background-color: #F5EBE0; padding: 1.5rem; border-radius: 8px;">
-								<p style="font-weight: bold; color: #8B1E3f; margin-bottom: 0.75rem;">Workshop Dates:</p>
-								<ul style="list-style: none; display: grid; gap: 0.5rem;">
+							<div class="dates-box" style="background-color: var(--color-bg-secondary); padding: var(--spacing-6); border-radius: var(--radius-md);">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); margin-bottom: var(--spacing-3);">Workshop Dates:</p>
+								<ul class="dates-list" style="list-style: none; display: grid; gap: var(--spacing-2);">
 									{series.dates.map(date => (
-										<li style="color: #5A5A5a;">• {date}</li>
+										<li style="color: var(--color-text-muted);">• {date}</li>
 									))}
 								</ul>
 							</div>
 						)}
 
-						<p style="color: #5A5A5a;"><strong>🕐 Time:</strong> {series.time}</p>
-						<p style="color: #5A5A5a;"><strong>📍 Location:</strong> {series.location}</p>
-						<p style="font-weight: bold; color: #D4AF37; font-size: 1.25rem;">💰 Price: {series.price}</p>
+						<p><strong>🕐 Time:</strong> {series.time}</p>
+						<p><strong>📍 Location:</strong> {series.location}</p>
+						<p style="font-weight: var(--font-semibold); color: var(--color-gold-500); font-size: var(--text-lg);">💰 Price: {series.price}</p>
 					</div>
 
-					<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">Includes:</h4>
-					<ul style="list-style: none; display: grid; gap: 0.5rem; margin-bottom: 1.5rem;">
+					<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+					<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
 						{series.includes.map(item => (
-							<li style="display: flex; align-items: center; color: #5A5A5a;">
-								<span style="color: #D4AF37; margin-right: 0.75rem;">✓</span> {item}
+							<li class="service-list__item" style="display: flex; align-items: center;">
+								<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
 							</li>
 						))}
 					</ul>
 
 					{series.idealFor && (
-						<p style="background-color: #E8F4FD; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+						<p class="info-box" style="background-color: #E8F4FD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
 							<strong>✨ Ideal For:</strong> {series.idealFor.join(" • ")}
 						</p>
 					)}
 
 					{series.requirements && (
-						<div style="background-color: #FFF3CD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-							<h4 style="color: #D4AF37; font-size: 1.25rem; margin-bottom: 0.75rem;">⚠️ Requirements</h4>
-							<ul style="list-style: none; display: grid; gap: 0.5rem;">
+						<div class="requirements-box" style="background-color: #FFF3CD; padding: var(--spacing-6); border-radius: var(--radius-md); margin-bottom: var(--spacing-8);">
+							<h4 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">⚠️ Requirements</h4>
+							<ul class="requirements-list" style="list-style: none; display: grid; gap: var(--spacing-2);">
 								{series.requirements.map(req => (
-									<li style="color: #5A5A5a;">• {req}</li>
+									<li style="color: var(--color-text-muted);">• {req}</li>
 								))}
 							</ul>
 						</div>
 					)}
 
-					<div style="background-color: #E8F4FD; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-						<h4 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">📞 Registration</h4>
-						<p style="color: #5A5A5a; line-height: 1.6;">{series.registration}</p>
+					<div class="info-box" style="background-color: #E8F4FD; padding: var(--spacing-6); border-radius: var(--radius-md); margin-bottom: var(--spacing-8);">
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">📞 Registration</h4>
+						<p style="line-height: 1.6;">{series.registration}</p>
 					</div>
 
-					<div style="text-align: center;">
-						<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: 1rem 2rem; font-size: 1.125rem;">📞 Call to Register</a>
-						<p style="margin-top: 1rem; color: #5A5A5a;">or email {contactInfo.email}</p>
+					<div class="text-center">
+						<a href={`tel:${contactInfo.phone}`} class="btn btn--primary" style="padding: var(--spacing-4) var(--spacing-8); font-size: var(--text-lg);">📞 Call to Register</a>
+						<p class="mt-6 text-muted">or email {contactInfo.email}</p>
 					</div>
 				</div>
 			))}
@@ -259,15 +259,15 @@ const contactInfo = {
 	<!-- Past Workshops Section -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Recent Workshops</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Recent Workshops</h2>
 
-			<div style="display: grid; gap: 2rem;">
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
 				{pastWorkshops.map(workshop => (
-					<div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-						<h3 style="color: #D4AF37; font-size: 1.5rem; margin-bottom: 0.5rem;">{workshop.title}</h3>
-						<p style="color: #5A5A5a;"><strong>Date:</strong> {workshop.date}</p>
-						<p style="color: #5A5A5a;"><strong>Location:</strong> {workshop.location}</p>
-						{workshop.note && <p style="margin-top: 1rem; color: #8B1E3f; font-style: italic;">{workshop.note}</p>}
+					<div class="card past-workshop-card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-xl); margin-bottom: var(--spacing-2);">{workshop.title}</h3>
+						<p><strong>Date:</strong> {workshop.date}</p>
+						<p><strong>Location:</strong> {workshop.location}</p>
+						{workshop.note && <p class="mt-4" style="color: var(--color-primary-800); font-style: italic;">{workshop.note}</p>}
 					</div>
 				))}
 			</div>
@@ -277,13 +277,13 @@ const contactInfo = {
 	<!-- FAQ Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #8B1E3F;">Frequently Asked Questions</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions</h2>
 
-			<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+			<div class="faq-list">
 				{faqs.map(faq => (
-					<div style="background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-						<h3 style="color: #8B1E3F; font-size: 1.25rem; margin-bottom: 0.75rem;">{faq.question}</h3>
-						<p style="color: #5A5A5a; line-height: 1.6;">{faq.answer}</p>
+					<div class="faq-item">
+						<h3 class="faq-question">{faq.question}</h3>
+						<p class="faq-answer">{faq.answer}</p>
 					</div>
 				))}
 			</div>
@@ -292,18 +292,18 @@ const contactInfo = {
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container" style="max-width: 900px; text-align: center;">
-			<h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #D4AF37;">Register for a Workshop</h2>
-			<p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+		<div class="container text-center" style="max-width: 900px;">
+			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Register for a Workshop</h2>
+			<p class="lead mb-6" style="opacity: 0.95;">
 				Spaces are limited for all workshops. Contact Deanna today to secure your spot.
 			</p>
 
-			<div style="display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn" style="background-color: white; color: #8B1E3F; font-size: 1.25rem; padding: 1.25rem 3rem;">✉️ {contactInfo.email}</a>
+			<div class="hero__actions" style="margin-top: var(--spacing-10);">
+				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
+				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
 			</div>
 
-			<p style="margin-top: 2rem; opacity: 0.9;">Pre-register to save $5 on most workshops!</p>
+			<p class="mt-6" style="opacity: 0.9;">Pre-register to save $5 on most workshops!</p>
 		</div>
 	</section>
 
