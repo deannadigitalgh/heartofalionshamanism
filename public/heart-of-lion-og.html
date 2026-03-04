@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Of A Lion Shamanism - OG Image</title>
   <style>
     body { margin: 0; padding: 0; }
     canvas { display: block; }
@@ -12,26 +15,49 @@
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     
-    // Gradient background
+    // Gradient background - Deep red to gold (lion heart colors)
     const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
     gradient.addColorStop(0, '#8B1E3F');
     gradient.addColorStop(1, '#D4AF37');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 1200, 630);
     
-    // Text
+    // Add subtle texture overlay (optional - for depth)
+    ctx.globalAlpha = 0.05;
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, 1200, 630);
+    ctx.globalAlpha = 1.0;
+    
+    // Main title - Heart Of A Lion Shamanism
     ctx.fillStyle = '#FFFFFF';
     ctx.font = 'bold 72px Georgia, serif';
     ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
     ctx.fillText('Heart Of A Lion Shamanism', 600, 280);
     
+    // Subtitle - Deanna Stennett credentials
     ctx.font = '42px Helvetica Neue, Arial, sans-serif';
     ctx.fillStyle = '#FDFBF7';
     ctx.fillText('Deanna Stennett, L.Ac., MA', 600, 350);
     
+    // Tagline - Services description
     ctx.font = '32px Georgia, serif';
     ctx.fillStyle = '#D4AF37';
     ctx.fillText('Shamanic Healing & Workshops in Northern Georgia', 600, 420);
+    
+    // Add decorative elements (lion heart symbol approximation)
+    ctx.strokeStyle = '#FFFFFF';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(600, 150, 80, 0, Math.PI * 2);
+    ctx.stroke();
+    
+    // Add website URL at bottom
+    ctx.font = '24px Helvetica Neue, Arial, sans-serif';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.globalAlpha = 0.8;
+    ctx.fillText('heartofalionshamanism.com', 600, 550);
+    ctx.globalAlpha = 1.0;
   </script>
 </body>
 </html>

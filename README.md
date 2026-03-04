@@ -22,7 +22,7 @@ Build a second static website using the same Astro + Cloudflare Pages stack that
 heart-of-a-lion-shamanism/
 ├── public/                       # Static assets (IMPLEMENTED ✅)
 │   ├── bg/
-│   │   ├── blueridge1.jpg        # Northern Georgia mountain background image
+│   │   ├── BlueRidgeMountainsBackground1.jpg        # Northern Georgia mountain background image
 │   │   └── credits.txt           # Image attribution
 │   ├── favicon.ico               # 32x32 & 64x64 ICO format
 │   ├── favicon.svg               # SVG favicon (primary)
@@ -299,18 +299,21 @@ All content extracted from Documents folder and reorganized into structured mark
 
 ---
 
-## 🎨 Assets Implemented
+## 🎨 Assets Implemented ✅
 
 All assets from `/public/` folder have been successfully integrated into the site:
 
-| Asset | Location | Usage |
-|-------|----------|-------|
-| `favicon.svg` | `<head>` in Layout.astro | Primary favicon for modern browsers |
-| `icon256.png` | `<head>` in Layout.astro | Apple Touch Icon (iOS devices) |
-| `icon64.png` | `<head>` in Layout.astro | 32x32 PNG favicon fallback |
-| `favicon.ico` | `<head>` in Layout.astro | Legacy browser support |
-| `logo-med.svg` | Navbar | Medium logo variant with text - 40px height |
-| `icon.svg` | Footer | Tiny logo variant - 27px height, smaller for footer |
+| Asset | Location | Usage | Status |
+|-------|----------|-------|--------|
+| `favicon.svg` | `<head>` in Layout.astro | Primary favicon for modern browsers | ✅ Implemented |
+| `icon256.png` | `<head>` in Layout.astro | Apple Touch Icon (iOS devices) | ✅ Implemented |
+| `icon64.png` | `<head>` in Layout.astro | 32x32 PNG favicon fallback | ✅ Implemented |
+| `favicon.ico` | `<head>` in Layout.astro | Legacy browser support | ✅ Implemented |
+| `logo-large.svg` | Navbar (replaces logo-med) | Large logo variant with text - 53px height | ✅ IMPLEMENTED ✅ UPDATED |
+| `icon.svg` | Footer | Tiny logo variant - 27px height, smaller for footer | ✅ Implemented |
+| `AA-headshot-dee.jpg` | Homepage + About page hero + Footer | Professional headshot of Deanna Stennett | ✅ IMPLEMENTED ✅ UPDATED |
+| `bg/BlueRidgeMountainsBackground1.jpg` | Global hero on all pages | Northern Georgia mountain landscape background | ✅ Implemented |
+| `heart-of-lion-og.html` | Social sharing (canvas-based) | Open Graph image generator | ⚠️ Needs static PNG version for proper social sharing |
 
 ### Asset Implementation Details:
 
@@ -321,18 +324,29 @@ All assets from `/public/` folder have been successfully integrated into the sit
 - Fallbacks: PNG formats for compatibility
 
 **Logo Usage:**
-- **Navbar**: `logo-med.svg` (40px height) + text "Heart Of A Lion Shamanism" - clickable link to homepage
+- **Navbar**: `logo-large.svg` (53px height) + text "Heart Of A Lion Shamanism" - clickable link to homepage ✅ UPDATED
 - **Footer**: `icon.svg` (27px height) + heading "Heart Of A Lion Shamanism" - smaller, appropriate for footer layout
 - Both logos have proper alt text (`alt=""`) for accessibility (decorative images)
 - Text provides semantic meaning and SEO value
 - Hover effects on navbar logo (opacity transition)
 
+**Headshot Implementation:**
+- **Homepage About Section**: Large circular portrait with gold border (250x250px desktop, 180x180px mobile) ✅ NEW
+- **About Page Hero**: Circular portrait with gold border (200x200px desktop, 150x150px mobile) ✅ UPDATED
+- **Footer**: Smaller circular headshot (80x80px) with gold border next to practice name
+- Provides authentic visual identity and builds trust with visitors
+
 **Background Image:**
-- Northern Georgia mountain landscape (`blueridge1.jpg`)
+- Northern Georgia mountain landscape (`BlueRidgeMountainsBackground1.jpg`)
 - Applied to **ALL pages** via global hero section
 - Transparent gradient overlay (70% opacity) for text readability
 - Fixed background attachment creates premium parallax effect on scroll
-- Attribution maintained in `credits.txt` file
+- Attribution maintained in `credits.txt` file: [Pinterest Source](https://www.pinterest.com/pin/307511480775968023/)
+
+**Open Graph Image:**
+- Canvas-based generator (`heart-of-lion-og.html`) creates dynamic OG image
+- Features gradient background (deep red to gold), brand name, credentials, and tagline
+- ⚠️ **Action Required**: Generate static PNG version for proper social media sharing (browsers can't render canvas in meta tags)
 
 ---
 
@@ -445,9 +459,19 @@ For technical support or questions about the website:
 - **SVG Files:** 4 (logo variants, favicon)
 - **PNG Files:** 3 (favicon sizes, Apple Touch Icon)
 - **ICO File:** 1 (legacy browser support)
-- **JPG Image:** 1 (hero background)
+- **JPG Image:** 2 (hero background + headshot)
+- **HTML File:** 1 (OG image generator - needs static conversion)
 
 All assets are properly optimized and implemented for maximum compatibility across devices and browsers.
+
+### Asset Optimization Notes:
+
+✅ **Favicon**: SVG format ensures crisp display at any size  
+✅ **Headshot**: JPG format balances quality and file size for portrait photography  
+✅ **Background Image**: Optimized JPG with gradient overlay for text readability  
+⚠️ **OG Image**: Currently canvas-based HTML - needs static PNG conversion for social media platforms  
+
+---
 
 ---
 

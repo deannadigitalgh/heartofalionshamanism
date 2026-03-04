@@ -317,7 +317,7 @@ a:hover {
 
 /* Remove duplicate background from hero-cta in index page */
 .hero--bg {
-  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/BlueRidgeMountainsBackground1.jpg');
 }
 
 /* Grid Layouts */
@@ -558,7 +558,7 @@ a:hover {
 
 .navbar__logo img {
   height: auto;
-  max-height: 40px;
+  max-height: 53px;
   width: auto;
   transition: opacity var(--transition-base);
 }
@@ -573,6 +573,16 @@ a:hover {
   font-weight: var(--font-bold);
   color: var(--color-primary-800);
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar__logo img {
+    max-height: 45px;
+  }
+  
+  .navbar__logo-text {
+    font-size: var(--text-base);
+  }
 }
 
 .navbar__nav {
@@ -722,7 +732,7 @@ a:hover {
 .global-hero {
   position: relative;
   padding: var(--spacing-12) 0;
-  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/BlueRidgeMountainsBackground1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -766,7 +776,7 @@ a:hover {
 .hero {
   position: relative;
   padding: var(--spacing-20) 0;
-  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/BlueRidgeMountainsBackground1.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -777,6 +787,36 @@ a:hover {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 var(--spacing-6);
+}
+
+/* About Page Hero Image */
+.about-hero-image {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .about-hero-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Homepage About Section Headshot */
+.homepage-headshot {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .homepage-headshot {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .hero__title {
