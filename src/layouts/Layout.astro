@@ -8,7 +8,11 @@ import '../styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon - Multiple sizes for better compatibility -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/icon256.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/icon64.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- Primary Meta Tags -->
@@ -135,7 +139,8 @@ import '../styles/global.css';
 		<nav class="navbar" aria-label="Main navigation">
 			<div class="navbar__container">
 				<a href="/" class="navbar__logo" aria-label="Heart Of A Lion Shamanism Home">
-					🦁 Heart Of A Lion Shamanism
+					<img src="/logo-med.svg" alt="" width="120" height="40" />
+					<span class="navbar__logo-text">Heart Of A Lion Shamanism</span>
 				</a>
 				
 				<button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu">
@@ -152,10 +157,18 @@ import '../styles/global.css';
 			</div>
 		</nav>
 
-		<!-- Main Content -->
-		<main id="main-content">
-			<slot />
-		</main>
+	<!-- Global Hero Background (appears on all pages) -->
+	<section class="global-hero" aria-hidden="true">
+		<div class="global-hero__content">
+			<h1 class="global-hero__title">Heart Of A Lion Shamanism</h1>
+			<p class="global-hero__subtitle">Deanna Stennett, L.Ac., MA - Shamanic Practitioner & Teacher</p>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<main id="main-content">
+		<slot />
+	</main>
 
 		<!-- Mobile CTA Bar -->
 		<div class="mobile-cta-bar" role="navigation" aria-label="Mobile actions">
@@ -173,12 +186,13 @@ import '../styles/global.css';
 		<footer class="site-footer" aria-label="Site footer">
 			<div class="container">
 				<div class="footer-grid">
-					<div class="footer-section">
-						<h3 class="footer-title">Heart Of A Lion Shamanism</h3>
-						<p class="footer-text">Deanna Stennett, L.Ac., MA<br />
-						Nationally Certified NCCAOM<br />
-						Shamanic Practitioner & Teacher</p>
-					</div>
+				<div class="footer-section">
+					<img src="/icon.svg" alt="" width="80" height="27" style="margin-bottom: var(--spacing-3);" />
+					<h3 class="footer-title">Heart Of A Lion Shamanism</h3>
+					<p class="footer-text">Deanna Stennett, L.Ac., MA<br />
+					Nationally Certified NCCAOM<br />
+					Shamanic Practitioner & Teacher</p>
+				</div>
 					
 					<div class="footer-section">
 						<h3 class="footer-title">Services</h3>

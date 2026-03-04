@@ -266,6 +266,19 @@ a:hover {
 /* Section Spacing */
 .section {
   padding: var(--spacing-20) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary-800) 0%, var(--color-gold-500) 100%);
+  opacity: 0.3;
 }
 
 .section--md {
@@ -295,6 +308,16 @@ a:hover {
 .section--dark h3,
 .section--dark p {
   color: white;
+}
+
+/* Hero CTA Section */
+.hero-cta {
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.03) 0%, rgba(139, 30, 63, 0.05) 100%);
+}
+
+/* Remove duplicate background from hero-cta in index page */
+.hero--bg {
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
 }
 
 /* Grid Layouts */
@@ -527,11 +550,29 @@ a:hover {
 }
 
 .navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+}
+
+.navbar__logo img {
+  height: auto;
+  max-height: 40px;
+  width: auto;
+  transition: opacity var(--transition-base);
+}
+
+.navbar__logo:hover img {
+  opacity: 0.9;
+}
+
+.navbar__logo-text {
   font-family: var(--font-heading);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   font-weight: var(--font-bold);
   color: var(--color-primary-800);
-  text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar__nav {
@@ -677,10 +718,57 @@ a:hover {
    HERO SECTIONS
    ============================================ */
 
+/* Global Hero Background (appears on all pages) */
+.global-hero {
+  position: relative;
+  padding: var(--spacing-12) 0;
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+.global-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%);
+  z-index: 1;
+}
+
+.global-hero__content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+  z-index: 2;
+}
+
+.global-hero__title {
+  font-size: clamp(1.75rem, 4vw, var(--text-4xl));
+  color: var(--color-gold-500);
+  margin-bottom: var(--spacing-3);
+  line-height: 1.2;
+}
+
+.global-hero__subtitle {
+  font-size: clamp(0.9rem, 1.8vw, var(--text-base));
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* Regular Hero Section (homepage only) */
 .hero {
   position: relative;
-  padding: var(--spacing-24) 0;
-  background: linear-gradient(135deg, var(--color-night-900) 0%, var(--color-primary-800) 100%);
+  padding: var(--spacing-20) 0;
+  background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/blueridge1.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
 }
@@ -692,14 +780,14 @@ a:hover {
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 6vw, var(--text-6xl));
+  font-size: clamp(2rem, 5vw, var(--text-5xl));
   color: var(--color-gold-500);
   margin-bottom: var(--spacing-5);
   line-height: 1.1;
 }
 
 .hero__subtitle {
-  font-size: clamp(1.25rem, 3vw, var(--text-xl));
+  font-size: clamp(1.1rem, 2.5vw, var(--text-lg));
   opacity: 0.95;
   margin-bottom: var(--spacing-8);
   line-height: 1.6;
