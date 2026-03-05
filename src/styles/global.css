@@ -399,16 +399,19 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-/* Outline Button */
+/* Outline Button - Dark Night with White Text for Better Contrast */
 .btn--outline {
   background-color: transparent;
-  border: 2px solid var(--color-primary-800);
-  color: var(--color-primary-800);
+  border: 2px solid var(--color-night-900);
+  color: var(--color-night-900);
+  font-weight: var(--font-semibold);
 }
 
 .btn--outline:hover {
-  background-color: var(--color-primary-800);
-  color: white;
+  background-color: white;
+  color: var(--color-night-900);
+  border-color: white;
+  box-shadow: var(--shadow-lg);
 }
 
 /* Button Sizes */

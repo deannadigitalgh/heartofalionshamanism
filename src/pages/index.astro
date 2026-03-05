@@ -4,6 +4,10 @@ import Layout from '../layouts/Layout.astro';
 const seoTitle = "Heart Of A Lion Shamanism | Shamanic Healing & Workshops in Northern Georgia";
 const seoDescription = "Transformative shamanic healing sessions and workshops in Blue Ridge, Ellijay, Jasper & Blairsville GA with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.";
 
+// Global Hero Section - Only appears on homepage
+const globalHeroTitle = "Heart Of A Lion Shamanism";
+const globalHeroSubtitle = "Deanna Stennett, L.Ac., MA - Shamanic Practitioner & Teacher";
+
 const services = [
   {
     title: "Individual Healing Sessions",
@@ -65,17 +69,11 @@ const contactInfo = {
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
-	<!-- Hero CTA (below global hero) -->
-	<section class="hero-cta" style="padding: var(--spacing-16) 0; background-color: var(--color-bg-secondary);">
-		<div class="container text-center">
-			<h2 class="mb-4" style="font-size: var(--text-3xl); color: var(--color-primary-800);">Awaken Your Inner Lion</h2>
-			<p class="lead mb-6" style="max-width: 700px; margin-left: auto; margin-right: auto;">
-				Transformative shamanic healing and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA
-			</p>
-			<div class="hero__actions">
-				<a href="#contact" class="btn btn--primary btn--lg">Book a Session</a>
-				<a href="/workshops" class="btn btn--secondary btn--lg">View Workshops</a>
-			</div>
+	<!-- Global Hero Background - Homepage Only -->
+	<section class="global-hero" aria-hidden="true">
+		<div class="global-hero__content">
+			<h1 class="global-hero__title">{globalHeroTitle}</h1>
+			<p class="global-hero__subtitle">{globalHeroSubtitle}</p>
 		</div>
 	</section>
 
