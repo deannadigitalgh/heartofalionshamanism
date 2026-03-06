@@ -28,8 +28,8 @@ An introduction to the art of shamanic journeying - traveling to invisible world
 
 | Date | Time | Location | Address | Cost | Contact |
 |------|------|----------|---------|------|---------|
-| March 29, 2025 | 12-5 pm | Private Residence | 284 Cozy Valley Lane, Talking Rock, GA 30175 | $60 advance / $65 at door (+$2 credit card) | 410-961-9033 or spiritpoint4u@gmail.com |
-| April 18, 2026 | 12-4 pm | Blairsville Location | 563 Gainesville Hwy, Blairsville, GA 30512 | $50 | 410-961-9033 or spiritpoint4u@gmail.com |
+| March 29, 2025 | 12-5 pm | Private Residence | Blue Ridge, GA | $60 advance / $65 at door (+$2 credit card) | 410-961-9033 or spiritpoint4u@gmail.com |
+| April 18, 2026 | 12-4 pm | Blairsville Location | Blairsville, GA | $50 | 410-961-9033 or spiritpoint4u@gmail.com |
 
 **Registration:**
 - Pre-register to save $5 (March 29 event) and ensure space

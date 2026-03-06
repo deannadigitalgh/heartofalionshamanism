@@ -14,7 +14,7 @@
 |--------|---------|
 | **Email** | spiritpoint4u@gmail.com |
 | **Phone** | 410-961-9033 |
-| **Address (Shamanism)** | 284 Cozy Valley Lane, Talking Rock, GA 30175 |
+| **Address (Shamanism)** | Blue Ridge, GA |
 | **Acupuncture Offices** | Ellijay and Blairsville, GA |
 
 ## Professional Background

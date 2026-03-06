@@ -176,7 +176,7 @@ Implemented on every page:
 **Contact Information:**
 - Phone: 410-961-9033
 - Email: spiritpoint4u@gmail.com
-- Address: 284 Cozy Valley Lane, Talking Rock, GA 30175
+- Address: Blue Ridge, GA
 
 ---
 
@@ -419,6 +419,7 @@ All assets from `/public/` folder have been successfully integrated into the sit
 - [x] Added LocalBusiness schema markup on every page
 - [x] Preserved AA's existing workflow (form → email → call)
 - [x] Zero monthly hosting costs achieved
+- [x] **Domain connected: `https://www.heartofalionshamanism.com` is LIVE**
 
 ### Mission Goals Achieved ✅
 1. **Lead Capture:** Forms capture name, phone, email immediately via Formspree
