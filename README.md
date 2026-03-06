@@ -398,7 +398,17 @@ All assets from `/public/` folder have been successfully integrated into the sit
 
 ---
 
-## ✅ Completion Checklist
+## 🚨 DESIGN & SEO PASS STATUS - MARCH 2026
+
+### ✅ COMPLETED FIXES:
+1. **[FIXED]** robots.txt updated to point to shamanism domain (was pointing to acupuncture site)
+2. **[FIXED]** Sitemap plugin added to Astro config (`@astrojs/sitemap` installed and configured)
+3. **[READY]** OG image generator created at `scripts/og-image-generator.html`
+
+### ⚠️ ACTION REQUIRED BEFORE LAUNCH:
+1. **Formspree Configuration** - Forms currently use invalid endpoint, need actual Form ID from formspree.io
+2. **OG Image Generation** - Must create static `/public/heart-of-lion-og.jpg` (see `scripts/og-image-generator.html`)  
+3. **Test all forms end-to-end** before going live
 
 ---
 
@@ -415,11 +425,134 @@ All assets from `/public/` folder have been successfully integrated into the sit
 - [x] Built core Astro project with shamanic branding
 - [x] Implemented all required pages (Home, About, Services, Workshops, Testimonials)
 - [x] Created 4 service area SEO pages (Blue Ridge, Ellijay, Jasper, Blairsville)
-- [x] Integrated contact forms with Formspree
+- [x] Integrated contact forms with Formspree *(requires endpoint ID update)*
 - [x] Added LocalBusiness schema markup on every page
 - [x] Preserved AA's existing workflow (form → email → call)
 - [x] Zero monthly hosting costs achieved
 - [x] **Domain connected: `https://www.heartofalionshamanism.com` is LIVE**
+
+### Design & SEO Pass v2026 - March 2026 ✅ COMPLETED
+- [x] Fixed robots.txt (was pointing to acupuncture site, now points to shamanism domain)
+- [x] Added sitemap plugin configuration (`@astrojs/sitemap` installed and configured in astro.config.mjs)
+- [x] Created OG image generator tool at `scripts/og-image-generator.html`
+- [x] Generated comprehensive Design & SEO Pass Checklist document
+
+---
+
+## 🚨 PRE-LAUNCH ACTION ITEMS (Must Complete Before Going Live)
+
+### 1. Formspree Configuration - CRITICAL ⭐⭐⭐
+**Issue:** All forms currently use invalid endpoint `https://formspree.io/f/spiritpoint4u@gmail.com`
+
+**Steps to Fix:**
+```
+1. Go to https://formspree.io/ and create a free account (or log in)
+2. Create new form for "Heart Of A Lion Shamanism"
+3. Set notification email to: spiritpoint4u@gmail.com
+4. Copy the Form ID from your dashboard (looks like: xvndqkrl or similar)
+5. Update these files:
+   - /src/pages/index.astro (line ~127)
+   - /src/pages/services.astro (lines ~306 and ~389) 
+
+Replace this line in both locations:
+  FROM: action="https://formspree.io/f/spiritpoint4u@gmail.com"
+  TO:   action="https://formspree.io/f/YOUR_ACTUAL_FORM_ID"
+```
+
+**Test:** Submit a test form and verify email arrives at spiritpoint4u@gmail.com within minutes.
+
+### 2. Generate Open Graph Image - CRITICAL ⭐⭐⭐
+**Issue:** All pages reference `/heart-of-lion-og.jpg` which doesn't exist (social sharing will show broken images)
+
+**Steps to Fix:**
+```
+1. Open: /scripts/og-image-generator.html in Chrome browser
+2. Take a screenshot of the colored gradient box ONLY (not instructions below)
+3. Crop tightly around the canvas area with text
+4. Resize exactly to 1200 x 630 pixels using any image editor:
+   - Photoshop, GIMP, Canva, or even Paint.net
+5. Save as JPG at ~85% quality
+6. Rename: heart-of-lion-og.jpg
+7. Move to project folder: /public/heart-of-lion-og.jpg
+```
+
+**Alternative (Easier):**
+1. Go to https://www.canva.com/create/social-media-images/
+2. Create new design with custom size 1200x630px
+3. Use gradient background (#6B1530 → #8B1E3F → #D4AF37)
+4. Add text: "Heart Of A Lion Shamanism" (Georgia font, white, bold, ~72pt)
+5. Subtitle: "Shamanic Practitioner & Teacher | Licensed Acupuncturist" (italic, ~30pt)
+6. Tagline in gold (#D4AF37): "Shamanic Healing • Workshops • Northern Georgia"
+7. Bottom bar with website URL
+8. Export as JPG → /public/heart-of-lion-og.jpg
+
+**Test:** Share link on Facebook/Twitter and verify preview image displays correctly.
+
+### 3. Test All Forms - HIGH ⭐⭐
+```
+1. Submit test form from homepage (/)
+2. Submit test form from services page (/services) for each service type
+3. Verify email arrives at spiritpoint4u@gmail.com within minutes
+4. Check that all required fields work correctly (name, phone, email, message)
+5. Test on mobile device to ensure forms are usable on phones
+```
+
+### 4. Deploy & Index - MEDIUM ⭐
+```
+1. Commit changes: git add . && git commit -m "Design SEO pass v2026"
+2. Push to GitHub: git push origin main (or your branch)
+3. Cloudflare Pages auto-deploys within 60 seconds
+4. Submit sitemap to Google Search Console:
+   - Go to https://search.google.com/search-console/
+   - Add property: heartofalionshamanism.com
+   - Verify domain ownership via DNS or HTML file upload
+   - Submit sitemap URL: https://heartofalionshamanism.com/sitemap.xml
+5. Request indexing for all pages in Search Console
+```
+
+---
+
+## 📋 Quick Reference Files to Modify
+
+| File | Change Required | Priority |
+|------|-----------------|----------|
+| `/src/pages/index.astro` | Update Formspree endpoint ID (1 location) | 🔴 CRITICAL |
+| `/src/pages/services.astro` | Update Formspree endpoint IDs (2 locations) | 🔴 CRITICAL |
+| `public/heart-of-lion-og.jpg` | **CREATE THIS FILE** - Static OG image for social sharing | 🔴 CRITICAL |
+| `scripts/og-image-generator.html` | Use this to generate OG image via browser screenshot | 🟡 MEDIUM |
+
+---
+
+## ✅ Pre-Launch Verification Checklist
+
+Before announcing the site is "live":
+- [ ] Formspree endpoint IDs updated in all forms (index.astro, services.astro)
+- [ ] Static OG image created and placed at `/public/heart-of-lion-og.jpg`
+- [ ] Test form submission works end-to-end
+- [ ] Social media preview images display correctly (test on Facebook/Twitter)
+- [ ] Sitemap.xml accessible at `https://heartofalionshamanism.com/sitemap.xml`
+- [ ] No 404 errors in browser console when loading pages
+- [ ] Mobile menu opens/closes correctly on phone/tablet
+- [ ] All links navigate to correct destinations
+- [ ] Contact information consistent across all pages (phone, email)
+- [ ] Schema markup validates without errors (use Google Rich Results Test tool)
+
+---
+
+## 📞 Support Resources
+
+**For Technical Questions:**
+- Review: `/DESIGN_SEO_PASS_CHECKLIST.md` for detailed findings and recommendations
+- Check: `scripts/og-image-generator.html` for OG image creation instructions
+- Astro docs: https://docs.astro.build/
+- Formspree help: https://help.formspree.io/
+
+**For Content Updates (Non-Technical):**
+1. Go to GitHub repository on github.com
+2. Navigate to file you want to edit (e.g., `src/pages/index.astro`)
+3. Click pencil icon ✏️ in top-right of editor
+4. Make your changes, commit with message like "Updated workshop date"
+5. Cloudflare auto-deploys within 60 seconds!
 
 ### Mission Goals Achieved ✅
 1. **Lead Capture:** Forms capture name, phone, email immediately via Formspree
