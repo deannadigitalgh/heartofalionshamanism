@@ -266,8 +266,6 @@ a:hover {
 /* Section Spacing */
 .section {
   padding: var(--spacing-20) 0;
-  position: relative;
-  overflow: hidden;
 }
 
 .section::before {
@@ -731,8 +729,12 @@ a:hover {
    HERO SECTIONS
    ============================================ */
 
-/* Global Hero Background (appears on all pages) */
-.global-hero {
+/* Homepage-Only Hero with Mountain Image - Custom Properties for Flexibility */
+.homepage-hero {
+  --hero-bg-image: '/bg/BlueRidgeMountainsBackground1.jpg'; /* Default mountain image, can be overridden inline */
+  --gradient-start: rgba(26, 26, 46, 0.7);                  /* Dark night sky overlay start */
+  --gradient-end: rgba(139, 30, 63, 0.65);                 /* Lion heart red end */
+  
   position: relative;
   padding: var(--spacing-12) 0;
   background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(139, 30, 63, 0.65) 100%), url('/bg/BlueRidgeMountainsBackground1.jpg');
