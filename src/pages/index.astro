@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, formspree, testimonials as allTestimonials, faqs } from '../config/site.js';
 
-const seoTitle = "Heart Of A Lion Shamanism | Shamanic Healing & Workshops in Northern Georgia";
+const seoTitle = `${site.name} | Shamanic Healing & Workshops in Northern Georgia`;
 const seoDescription = "Transformative shamanic healing sessions and workshops in Blue Ridge, Ellijay, Jasper & Blairsville GA with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.";
 
 // Global Hero Section - Only appears on homepage
-const globalHeroTitle = "Heart Of A Lion Shamanism";
+const globalHeroTitle = site.name;
 const globalHeroSubtitle = "Deanna Stennett, L.Ac., MA - Shamanic Practitioner & Teacher";
 
+// Homepage-specific services (simplified from full config)
 const services = [
   {
     title: "Individual Healing Sessions",
@@ -35,37 +37,11 @@ const services = [
   }
 ];
 
-const testimonials = [
-  {
-    text: "Deanna's shamanic work opened doors I didn't know existed. Her guidance helped me connect with my power animal and find clarity in a time of confusion.",
-    author: "M.S., Ellijay, GA"
-  },
-  {
-    text: "The Learn to Journey workshop was life-changing. Deanna creates such a safe, sacred space for transformation. I've been journeying regularly since then.",
-    author: "K.M., Blue Ridge, GA"
-  }
-];
+// Use first 2 testimonials from config for homepage preview
+const homepageTestimonials = allTestimonials.slice(0, 2);
 
-const faqs = [
-  {
-    question: "What is shamanic healing?",
-    answer: "Shamanism is the oldest known spiritual healing system on the planet, dating back 40-100 thousand years. It's a non-religious practice based on traveling to invisible worlds to retrieve information and healing for change in any area of life."
-  },
-  {
-    question: "Do I need prior experience?",
-    answer: "No! All workshops are designed for beginners. Deanna has been teaching shamanism since 1995 and creates a welcoming, accessible environment for all levels."
-  },
-  {
-    question: "How do I know if shamanic healing is right for me?",
-    answer: "If you're seeking deeper spiritual connection, personal transformation, or healing from life challenges, shamanic work can be profoundly beneficial. Many clients report increased clarity, emotional release, and a stronger sense of purpose."
-  }
-];
-
-const contactInfo = {
-  phone: "410-961-9033",
-  email: "spiritpoint4u@gmail.com",
-  address: "Blue Ridge, GA"
-};
+// General FAQs (first 3)
+const generalFaqs = faqs.general.slice(0, 3);
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
@@ -134,7 +110,7 @@ const contactInfo = {
 			<h2 class="text-center mb-8">Client Stories</h2>
 			
 			<div class="testimonials-grid">
-				{testimonials.map(testimonial => (
+				{homepageTestimonials.map(testimonial => (
 					<div class="testimonial-card">
 						<p class="testimonial-card__quote">"{testimonial.text}"</p>
 						<p class="testimonial-card__author">— {testimonial.author}</p>
@@ -150,7 +126,7 @@ const contactInfo = {
 			<h2 class="text-center mb-8">Frequently Asked Questions</h2>
 			
 			<div class="faq-list">
-				{faqs.map(faq => (
+				{generalFaqs.map(faq => (
 					<div class="faq-item">
 						<h3 class="faq-question">{faq.question}</h3>
 						<p class="faq-answer">{faq.answer}</p>
@@ -172,19 +148,19 @@ const contactInfo = {
 				<div class="contact-card">
 					<span class="contact-icon">📞</span>
 					<h3 class="contact-title">Phone</h3>
-					<p style="font-size: var(--text-lg); opacity: 0.9;">{contactInfo.phone}</p>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.phone}</p>
 				</div>
 				
 				<div class="contact-card">
 					<span class="contact-icon">✉️</span>
 					<h3 class="contact-title">Email</h3>
-					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${contactInfo.email}`} style="color: white;">{contactInfo.email}</a></p>
+					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${site.email}`} style="color: white;">{site.email}</a></p>
 				</div>
 				
 				<div class="contact-card">
 					<span class="contact-icon">📍</span>
 					<h3 class="contact-title">Location</h3>
-					<p style="font-size: var(--text-lg); opacity: 0.9;">{contactInfo.address}</p>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.address}</p>
 				</div>
 			</div>
 
@@ -192,7 +168,7 @@ const contactInfo = {
 			<div class="card" style="padding: var(--spacing-10);">
 				<h3 class="text-center mb-6" style="color: var(--color-primary-800); font-size: var(--text-2xl);">Send Deanna a Message</h3>
 				
-				<form action="https://formspree.io/f/xdawonkq" method="POST">
+				<form action={formspree.endpoint} method="POST">
 					<div class="grid grid--2" style="gap: var(--spacing-5); margin-bottom: var(--spacing-5);">
 						<div class="form-group">
 							<label for="firstName" class="form-label">First Name *</label>
@@ -255,7 +231,7 @@ const contactInfo = {
 		</p>
 		<div class="hero__actions">
 			<a href="#contact" class="btn btn--secondary btn--lg">Book a Session Now</a>
-			<a href={`tel:${contactInfo.phone}`} class="btn btn--outline btn--lg">Call {contactInfo.phone}</a>
+			<a href={`tel:${site.phone}`} class="btn btn--outline btn--lg">Call {site.phone}</a>
 		</div>
 	</section>
 
@@ -264,7 +240,7 @@ const contactInfo = {
 		{
 			"@context": "https://schema.org",
 			"@type": "WebPage",
-			"name": "Heart Of A Lion Shamanism - Home",
+			"name": `${site.name} - Home`,
 			"description": "Shamanic healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.",
 			"url": "https://heartofalionshamanism.com"
 		}
