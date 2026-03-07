@@ -1,136 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, credentials, journeyTimeline, shamanicTeachers as teachers, personalStories, bookInfo, specializations } from '../config/site.js';
 
-const seoTitle = "About Dee | Deanna Stennett, L.Ac., MA - Shamanic Practitioner";
+const seoTitle = `About ${site.tagline.split(',')[0]} | Shamanic Practitioner & Teacher`;
 const seoDescription = "Learn about Deanna Stennett's shamanic journey, training with Sandra Ingerman & Foundation for Shamanic Studies, and 30+ years of healing practice in Northern Georgia.";
-
-const credentials = [
-  {
-    title: "Licensed Acupuncturist",
-    details: "Georgia Licensed Acupuncturist (L.Ac., MA), Nationally Certified with NCCAOM"
-  },
-  {
-    title: "Foundation for Shamanic Studies",
-    details: "Graduate of the three-year advanced program in Shamanic Studies"
-  },
-  {
-    title: "Sandra Ingerman Training",
-    details: "Completed Sandra Ingerman's two-year Shamanic Teachers' Training Program"
-  },
-  {
-    title: "Tom Cowan Celtic Shamanism",
-    details: "Graduate of Tom Cowan's two-year program in Celtic Shamanism"
-  },
-  {
-    title: "Ordained Minister",
-    details: "Ordained with Open Ministry, offering rites of passage ceremonies including weddings and funerals"
-  },
-  {
-    title: "Author",
-    details: "Written 'Poetry of the Body: Stories About Acupuncture Points' - available on Amazon in paperback and Kindle"
-  }
-];
-
-const journeyPoints = [
-  {
-    year: "1995",
-    title: "Began Shamanic Practice",
-    description: "Started studying shamanism with the Foundation for Shamanic Studies after learning about it in acupuncture school from Eliot Cowan, author of Plant Spirit Medicine."
-  },
-  {
-    year: "1997-2020",
-    title: "Led Journey Group in Maryland",
-    description: "Founded and led a shamanic journey/drumming group that met weekly in her office for over two decades, until the pandemic closed it."
-  },
-  {
-    year: "1997-Present",
-    title: "Taught Eight Two-Year Training Programs",
-    description: "Has taught eight comprehensive two-year shamanism training programs throughout the Eastern US, training dozens of practitioners."
-  },
-  {
-    year: "2021",
-    title: "Moved to Northern Georgia",
-    description: "Relocated to the southern Appalachian mountains of North Georgia, living in Morganton and continuing her healing work in Ellijay and Blairsville."
-  },
-  {
-    year: "2021-Present",
-    title: "Heart Of A Lion Shamanism",
-    description: "Continues offering shamanic healing sessions, workshops, and training programs throughout Northern Georgia, including the original Wild Women Workshop based on Clarissa Pinkola Estes' work."
-  }
-];
-
-const teachers = [
-  {
-    name: "Michael Harner",
-    organization: "Foundation for Shamanic Studies",
-    description: "Learned core shamanism from Michael Harner, who studied with Tungus shamans who escaped persecution during the Soviet Union era."
-  },
-  {
-    name: "Sandra Ingerman",
-    books: ["Soul Retrieval", "Medicine for the Earth"],
-    description: "Studied since 1995 with Sandra Ingerman, renowned shamanic practitioner and author of many influential books on soul retrieval and shamanic healing."
-  },
-  {
-    name: "Tom Cowan",
-    focus: "Celtic Shamanism",
-    description: "Completed two-year program in Celtic Shamanism with Tom Cowan, exploring the shamanic traditions of Celtic cultures."
-  },
-  {
-    name: "2 Moons (Laquita)",
-    tribe: "Cherokee",
-    description: "Trained weekly one-on-one for five years. During final years, performed healing work on her own teacher to have abilities assessed post-graduation."
-  }
-];
-
-const personalStories = [
-  {
-    title: "Early Connection",
-    story: "Dee originally met her power animal when he came to her in a dream when she was sleeping in the crib. She's been connected to the spirit world since she was at least 2 years old."
-  },
-  {
-    title: "JFK Encounter",
-    story: "She talked to the spirit of JFK when she was 5 years old. Without knowing it, she recognized his New England accent."
-  },
-  {
-    title: "Teacher Validation",
-    story: "One of her teachers, 2 Moons (Laquita, Cherokee), vouches for her shamanic abilities, stating she should have been trained much sooner due to her natural gifts."
-  }
-];
-
-const bookInfo = {
-  title: "Poetry of the Body: Stories About Acupuncture Points",
-  subtitle: "Stories about acupuncture points",
-  description: "Deanna's book contains shamanism and acupuncture, featuring personal stories and patient stories relating to acupuncture points, seasons, and nature. Written for the layperson.",
-  availableOn: ["Amazon Paperback", "Amazon Kindle"]
-};
-
-const specializations = [
-  {
-    title: "Soul Retrieval",
-    description: "Helping clients retrieve lost soul parts caused by trauma, illness, or life challenges to restore wholeness and vitality."
-  },
-  {
-    title: "Power Animal Connection",
-    description: "Guiding individuals to meet their power/totem animal through shamanic journeying for ongoing spiritual support and guidance."
-  },
-  {
-    title: "Energy Clearing",
-    description: "Removing stagnant or negative energy patterns that block healing, relationships, and personal growth."
-  },
-  {
-    title: "Spirit Guidance",
-    description: "Facilitating communication with spirit guides, ancestors, and nature spirits for wisdom and direction in life decisions."
-  },
-  {
-    title: "Rites of Passage Ceremonies",
-    description: "Creating sacred ceremonies for weddings, funerals, coming-of-age celebrations, and other significant life transitions."
-  }
-];
-
-const contactInfo = {
-  phone: "410-961-9033",
-  email: "spiritpoint4u@gmail.com"
-};
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
@@ -139,13 +12,13 @@ const contactInfo = {
 		<div class="hero__content text-center">
 			<img 
 				src="/AA-headshot-dee.jpg" 
-				alt="Deanna Stennett, L.Ac., MA - Shamanic Practitioner" 
+				alt={`${site.tagline}`} 
 				class="about-hero-image"
 				width="200"
 				height="200"
 				style="border-radius: 50%; margin-bottom: var(--spacing-6); border: 4px solid var(--color-gold-500);"
 			/>
-			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Deanna Stennett, L.Ac., MA</h1>
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">{site.tagline}</h1>
 			<p class="lead mb-6" style="opacity: 0.95;">
 				Shamanic Practitioner & Teacher | Licensed Acupuncturist | Author
 			</p>
@@ -203,7 +76,7 @@ const contactInfo = {
 			<div class="timeline-container">
 				<div class="timeline-line"></div>
 				
-				{journeyPoints.map(point => (
+				{journeyTimeline.map(point => (
 					<div class="timeline-item">
 						<span class="timeline-dot"></span>
 						<span class="timeline-year">{point.year}</span>
@@ -291,12 +164,12 @@ const contactInfo = {
 		<div class="container text-center" style="max-width: 900px;">
 			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Connect with Deanna</h2>
 			<p class="lead mb-6" style="opacity: 0.95;">
-				Ready to begin your shamanic journey? Contact Deanna today.
+				Ready to begin your shamanic journey? Contact {site.tagline.split(',')[0]} today.
 			</p>
 			
 			<div class="hero__actions" style="margin-top: var(--spacing-10);">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
+				<a href={`tel:${site.phone}`} class="btn btn--secondary btn--lg">📞 {site.phone}</a>
+				<a href={`mailto:${site.email}`} class="btn btn--outline btn--lg">✉️ {site.email}</a>
 			</div>
 		</div>
 	</section>
@@ -306,7 +179,7 @@ const contactInfo = {
 		{
 			"@context": "https://schema.org",
 			"@type": "WebPage",
-			"name": "About Deanna Stennett - Heart Of A Lion Shamanism",
+			"name": `About ${site.tagline.split(',')[0]} - Heart Of A Lion Shamanism`,
 			"description": "Learn about Deanna Stennett's shamanic journey, training with Sandra Ingerman & Foundation for Shamanic Studies, and 30+ years of healing practice.",
 			"url": "https://heartofalionshamanism.com/about"
 		}

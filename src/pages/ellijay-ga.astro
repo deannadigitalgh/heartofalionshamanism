@@ -1,48 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, faqs } from '../config/site.js';
 
-const seoTitle = "Shamanic Healing Near Me | Ellijay GA - Heart Of A Lion Shamanism";
+const seoTitle = `Shamanic Healing Near Me | Ellijay GA - ${site.name}`;
 const seoDescription = "Shamanic healing sessions and workshops in Ellijay, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses near you.";
 
-const nearbyTowns = [
-  "Ellijay",
-  "Blue Ridge",
-  "Jasper",
-  "Blairsville",
-  "Talking Rock",
-  "Morganton",
-  "Helen",
-  "Gainesville"
-];
-
-const faqs = [
-  {
-    question: "Do you offer shamanic healing in Ellijay, GA?",
-    answer: "Yes! Deanna Stennett serves clients throughout Northern Georgia including Ellijay. She offers both in-person sessions at her offices and can travel to clients by appointment for in-home sessions when needed."
-  },
-  {
-    question: "What shamanic services are available near me?",
-    answer: "Deanna offers individual healing sessions (soul retrieval, energy clearing, power animal connection), workshops (Learn to Journey, Wild Women Series), and special ceremonies throughout Northern Georgia."
-  },
-  {
-    question: "How do I book a shamanic session in Ellijay area?",
-    answer: "Call or text Deanna at 410-961-9033 or email spiritpoint4u@gmail.com. She responds within 24 hours and can schedule sessions at her offices or arrange home visits."
-  }
-];
-
-const contactInfo = {
-  phone: "410-961-9033",
-  email: "spiritpoint4u@gmail.com"
-};
+// Town-specific data from config
+const townName = "Ellijay";
+const nearbyTownsList = ["Blue Ridge", "Jasper", "Blairsville", "Talking Rock", "Morganton"]
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
 	<section class="hero">
 		<div class="hero__content text-center">
-			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Near Me - Ellijay, GA</h1>
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Near Me - {townName}, GA</h1>
 			<p class="lead mb-6" style="opacity: 0.95;">
-				Transformative shamanic healing sessions and workshops serving Ellijay and surrounding Northern Georgia communities
+				Transformative shamanic healing sessions and workshops serving {townName} and surrounding Northern Georgia communities
 			</p>
 			<div class="hero__actions">
 				<a href="#contact" class="btn btn--secondary btn--lg">Book a Session</a>
@@ -51,32 +25,48 @@ const contactInfo = {
 		</div>
 	</section>
 
+	<!-- Branding Logo Section -->
+	<section class="section section--light" style="padding: var(--spacing-12) 0;">
+		<div class="container text-center">
+			<img 
+				src="/logo-large.svg" 
+				alt={`${site.name} - ${site.tagline}`} 
+				width="300"
+				height="100"
+				style="margin-bottom: var(--spacing-6);"
+			/>
+			<p class="lead" style="max-width: 700px; margin: 0 auto;">
+				Serving {townName} and surrounding Northern Georgia communities with authentic shamanic healing, workshops, and training programs.
+			</p>
+		</div>
+	</section>
+
 	<!-- Local SEO Content -->
 	<section class="section">
 		<div class="container" style="max-width: 900px;">
-			<h2 class="mb-6" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Shamanic Healing Services in Ellijay, Georgia</h2>
+			<h2 class="mb-6" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Shamanic Healing Services in {townName}, Georgia</h2>
 
 			<p class="lead mb-4">
-				Are you searching for <strong>"shamanic healing near me"</strong> in Ellijay, GA? Deanna Stennett, L.Ac., MA brings over 30 years of shamanic practice to the Ellijay community, offering transformative healing sessions and workshops that awaken your inner wisdom and connect you with the healing power of the spirit world.
+				Are you searching for <strong>"shamanic healing near me"</strong> in {townName}, GA? Deanna Stennett, L.Ac., MA brings over 30 years of shamanic practice to the {townName} community, offering transformative healing sessions and workshops that awaken your inner wisdom and connect you with the healing power of the spirit world.
 			</p>
 
 			<p class="lead mb-4">
-				Ellijay, known as the "Apple Blossom Capital of Georgia," provides a beautiful mountain setting for shamanic work that honors nature and spirit. Deanna serves clients throughout Northern Georgia, including Ellijay, Blue Ridge, Jasper, Blairsville, and surrounding communities.
+				Located in the beautiful southern Appalachian mountains, {townName} provides a perfect setting for shamanic work that honors nature and spirit. Deanna serves clients throughout Northern Georgia, including Blue Ridge, Ellijay, Jasper, Blairsville, and surrounding communities.
 			</p>
 
-			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Why Choose Shamanic Healing in Ellijay?</h3>
+			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Why Choose Shamanic Healing in {townName}?</h3>
 
 			<ul class="local-list" style="list-style: none; display: grid; gap: var(--spacing-4); margin-bottom: var(--spacing-8);">
 				<li class="local-list__item" style="display: flex; align-items: start;">
 					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🦁</span>
 					<div>
-						<strong style="color: var(--color-primary-800);">Deep Spiritual Connection:</strong> Connect with your power animal, spirit guides, and nature spirits in the sacred mountains of Ellijay.
+						<strong style="color: var(--color-primary-800);">Deep Spiritual Connection:</strong> Connect with your power animal, spirit guides, and nature spirits in the sacred mountains of {townName}.
 					</div>
 				</li>
 				<li class="local-list__item" style="display: flex; align-items: start;">
-					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🍎</span>
+					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🌿</span>
 					<div>
-						<strong style="color: var(--color-primary-800);">Nature-Based Healing:</strong> The natural beauty of Ellijay's orchards and mountains enhances shamanic work, creating powerful opportunities for transformation.
+						<strong style="color: var(--color-primary-800);">Nature-Based Healing:</strong> The natural beauty of {townName} enhances shamanic work, creating powerful opportunities for transformation and healing.
 					</div>
 				</li>
 				<li class="local-list__item" style="display: flex; align-items: start;">
@@ -88,7 +78,7 @@ const contactInfo = {
 				<li class="local-list__item" style="display: flex; align-items: start;">
 					<span class="local-list__icon" style="color: var(--color-gold-500); font-size: var(--text-xl); margin-right: var(--spacing-3);">🏠</span>
 					<div>
-						<strong style="color: var(--color-primary-800);">Flexible Service Options:</strong> Sessions available at Deanna's offices in Ellijay/Blairsville or by appointment for in-home visits throughout Ellijay area.
+						<strong style="color: var(--color-primary-800);">Flexible Service Options:</strong> Sessions available at Deanna's offices in Ellijay/Blairsville or by appointment for in-home visits throughout {townName} area.
 					</div>
 				</li>
 			</ul>
@@ -112,14 +102,14 @@ const contactInfo = {
 				</div>
 			</div>
 
-			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Serving Ellijay and Surrounding Communities</h3>
+			<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-top: var(--spacing-8); margin-bottom: var(--spacing-4);">Serving {townName} and Surrounding Communities</h3>
 
 			<p class="mb-6">
-				Deanna serves clients throughout Northern Georgia, making shamanic healing accessible to residents of Ellijay and nearby towns including Blue Ridge, Jasper, Blairsville, Talking Rock, Morganton, Helen, and Gainesville.
+				Deanna serves clients throughout Northern Georgia, making shamanic healing accessible to residents of {townName} and nearby towns including Blue Ridge, Jasper, Blairsville, Talking Rock, Morganton.
 			</p>
 
 			<div class="service-area-links" style="margin-top: var(--spacing-6);">
-				{nearbyTowns.map(town => (
+				{[townName, ...nearbyTownsList].map(town => (
 					<span class="service-area-link">📍 {town}, GA</span>
 				))}
 			</div>
@@ -129,13 +119,13 @@ const contactInfo = {
 	<!-- FAQ Section -->
 	<section class="section section--light">
 		<div class="container" style="max-width: 900px;">
-			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions - Ellijay Area</h2>
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions - {townName} Area</h2>
 
 			<div class="faq-list">
-				{faqs.map(faq => (
+				{faqs.ellijay.map(faq => (
 					<div class="faq-item">
 						<h3 class="faq-question">{faq.question}</h3>
-						<p class="faq-answer">{faq.answer}</p>
+						<p class="faq-answer">{faq.answer.replace('{site.phone}', site.phone).replace('{site.email}', site.email)}</p>
 					</div>
 				))}
 			</div>
@@ -145,18 +135,18 @@ const contactInfo = {
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
 		<div class="container text-center" style="max-width: 900px;">
-			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your Ellijay Area Session</h2>
+			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your {townName} Area Session</h2>
 			<p class="lead mb-6" style="opacity: 0.95;">
-				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or workshop in the Ellijay area.
+				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or workshop in the {townName} area.
 			</p>
 
 			<div class="hero__actions" style="margin-top: var(--spacing-10);">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
+				<a href={`tel:${site.phone}`} class="btn btn--secondary btn--lg">📞 {site.phone}</a>
+				<a href={`mailto:${site.email}`} class="btn btn--outline btn--lg">✉️ {site.email}</a>
 			</div>
 
 			<p class="mt-6" style="opacity: 0.9;">
-				In-home sessions available by appointment throughout Ellijay and surrounding communities.
+				In-home sessions available by appointment throughout {townName} and surrounding communities.
 			</p>
 		</div>
 	</section>
@@ -166,9 +156,9 @@ const contactInfo = {
 		{
 			"@context": "https://schema.org",
 			"@type": "WebPage",
-			"name": "Shamanic Healing Near Me - Ellijay GA",
-			"description": "Shamanic healing sessions and workshops in Ellijay, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses.",
-			"url": "https://heartofalionshamanism.com/ellijay-ga"
+			"name": `Shamanic Healing Near Me - ${townName} GA`,
+			"description": "Shamanic healing sessions and workshops in {townName}, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses.",
+			"url": `https://heartofalionshamanism.com/ellijay-ga`
 		}
 	</script>
 
@@ -176,14 +166,14 @@ const contactInfo = {
 		{
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
-			"name": "Heart Of A Lion Shamanism - Ellijay GA",
-			"description": "Shamanic healing sessions and workshops serving Ellijay, Georgia with Deanna Stennett, L.Ac., MA.",
+			"name": `${site.name} - ${townName} GA`,
+			"description": `Shamanic healing sessions and workshops serving ${townName}, Georgia with Deanna Stennett, L.Ac., MA.`,
 			"areaServed": {
 				"@type": "City",
-				"name": "Ellijay",
+				"name": "{townName}",
 				"addressRegion": "GA"
 			},
-			"url": "https://heartofalionshamanism.com/ellijay-ga"
+			"url": `https://heartofalionshamanism.com/ellijay-ga`
 		}
 	</script>
 </Layout>

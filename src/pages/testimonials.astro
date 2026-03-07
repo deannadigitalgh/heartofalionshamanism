@@ -1,82 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site, testimonials as allTestimonials, statistics } from '../config/site.js';
 
-const seoTitle = "Shamanic Healing Testimonials | Client Stories - Heart Of A Lion Shamanism";
+const seoTitle = `${site.name} | Shamanic Healing Testimonials - Client Stories`;
 const seoDescription = "Read transformative client stories and testimonials about shamanic healing sessions and workshops with Deanna Stennett, L.Ac., MA in Northern Georgia.";
-
-const testimonials = [
-  {
-    text: "Deanna's shamanic work opened doors I didn't know existed. Her guidance helped me connect with my power animal and find clarity in a time of confusion.",
-    author: "M.S.",
-    location: "Ellijay, GA",
-    service: "Individual Healing Session"
-  },
-  {
-    text: "The Learn to Journey workshop was life-changing. Deanna creates such a safe, sacred space for transformation. I've been journeying regularly since then.",
-    author: "K.M.",
-    location: "Blue Ridge, GA",
-    service: "Learn to Journey Workshop"
-  },
-  {
-    text: "Working with Deanna on soul retrieval work helped me heal from trauma I thought was impossible to release. Her combination of shamanic and acupuncture knowledge is truly unique.",
-    author: "J.R.",
-    location: "Blairsville, GA",
-    service: "Soul Retrieval Session"
-  },
-  {
-    text: "The Wild Women series gave me a community of women who understand. Deanna's wisdom and gentle guidance helped me awaken parts of myself I'd forgotten existed.",
-    author: "L.T.",
-    location: "Jasper, GA",
-    service: "Wild Women Series"
-  },
-  {
-    text: "I was skeptical about shamanism at first, but Deanna's approach is so grounded and practical. The energy clearing session completely shifted my perspective on healing.",
-    author: "P.W.",
-    location: "Ellijay, GA",
-    service: "Energy Clearing Session"
-  },
-  {
-    text: "Deanna's solstice ceremony was one of the most powerful spiritual experiences I've ever had. 38 people gathered and felt such deep connection. She has a gift for creating sacred space.",
-    author: "Anonymous",
-    location: "Northern Georgia",
-    service: "Solstice Celebration"
-  },
-  {
-    text: "After years of feeling stuck, Deanna's power animal session helped me connect with my totem and understand my life purpose. I've never felt more aligned.",
-    author: "S.H.",
-    location: "Blue Ridge, GA",
-    service: "Power Animal Connection"
-  },
-  {
-    text: "The Messages from Nature workshop changed how I see the world forever. Now when I walk in the mountains around Ellijay, I feel like I'm having conversations with everything.",
-    author: "D.K.",
-    location: "Ellijay, GA",
-    service: "Messages from Nature Workshop"
-  }
-];
-
-const categories = [
-  {
-    title: "Individual Healing Sessions",
-    count: 45,
-    description: "Soul retrieval, energy clearing, power animal connection"
-  },
-  {
-    title: "Workshops & Training",
-    count: 200,
-    description: "Learn to Journey, Wild Women Series, special ceremonies"
-  },
-  {
-    title: "Years of Practice",
-    count: 31,
-    description: "Teaching shamanism since 1995"
-  }
-];
-
-const contactInfo = {
-  phone: "410-961-9033",
-  email: "spiritpoint4u@gmail.com"
-};
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
@@ -99,13 +26,13 @@ const contactInfo = {
 		<div class="container text-center">
 			<img 
 				src="/logo-large.svg" 
-				alt="Heart Of A Lion Shamanism - Deanna Stennett, L.Ac., MA" 
+				alt={`${site.name} - ${site.tagline}`} 
 				width="300"
 				height="100"
 				style="margin-bottom: var(--spacing-6);"
 			/>
 			<p class="lead" style="max-width: 700px; margin: 0 auto;">
-				Hundreds of clients throughout Northern Georgia have experienced profound healing and transformation through shamanic work with Deanna.
+				Hundreds of clients throughout Northern Georgia have experienced profound healing and transformation through shamanic work with {site.tagline.split(',')[0]}.
 			</p>
 		</div>
 	</section>
@@ -114,7 +41,7 @@ const contactInfo = {
 	<section class="section">
 		<div class="container">
 			<div class="grid grid--3" style="gap: var(--spacing-8);">
-				{categories.map(stat => (
+				{statistics.map(stat => (
 					<div class="stat-card">
 						<h3 style="font-size: var(--text-5xl); color: var(--color-gold-500); margin-bottom: var(--spacing-2);">{stat.count}</h3>
 						<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">{stat.title}</p>
@@ -131,7 +58,7 @@ const contactInfo = {
 			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">What Clients Are Saying</h2>
 
 			<div class="testimonials-grid">
-				{testimonials.map(testimonial => (
+				{allTestimonials.map(testimonial => (
 					<div class="testimonial-card">
 						<span style="font-size: 4rem; color: var(--color-gold-500); margin-bottom: var(--spacing-3); display: block;">"</span>
 						<p class="mb-6" style="font-size: var(--text-lg); line-height: 1.8; font-style: italic;">
@@ -161,7 +88,7 @@ const contactInfo = {
 				{["Blue Ridge", "Ellijay", "Jasper", "Blairsville", "Talking Rock", "Morganton"].map(town => (
 					<div class="community-card">
 						<h3 style="color: var(--color-gold-500); font-size: var(--text-lg); margin-bottom: var(--spacing-2);">{town}, GA</h3>
-						<p>Clients from {town} and surrounding areas have experienced profound transformation through Deanna's shamanic work.</p>
+						<p>Clients from {town} and surrounding areas have experienced profound transformation through shamanic work.</p>
 					</div>
 				))}
 			</div>
@@ -180,12 +107,12 @@ const contactInfo = {
 		<div class="container text-center" style="max-width: 900px;">
 			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Create Your Own Transformation Story</h2>
 			<p class="lead mb-6" style="opacity: 0.95;">
-				Join hundreds of clients who have experienced profound healing and transformation through shamanic work with Deanna.
+				Join hundreds of clients who have experienced profound healing and transformation through shamanic work with {site.tagline.split(',')[0]}.
 			</p>
 
 			<div class="hero__actions" style="margin-top: var(--spacing-10);">
-				<a href={`tel:${contactInfo.phone}`} class="btn btn--secondary btn--lg">📞 {contactInfo.phone}</a>
-				<a href={`mailto:${contactInfo.email}`} class="btn btn--outline btn--lg">✉️ {contactInfo.email}</a>
+				<a href={`tel:${site.phone}`} class="btn btn--secondary btn--lg">📞 {site.phone}</a>
+				<a href={`mailto:${site.email}`} class="btn btn--outline btn--lg">✉️ {site.email}</a>
 			</div>
 
 			<p class="mt-6" style="opacity: 0.9;">
@@ -199,7 +126,7 @@ const contactInfo = {
 		{
 			"@context": "https://schema.org",
 			"@type": "WebPage",
-			"name": "Shamanic Healing Testimonials - Heart Of A Lion Shamanism",
+			"name": `${site.name} - Testimonials`,
 			"description": "Read transformative client stories and testimonials about shamanic healing sessions with Deanna Stennett, L.Ac., MA.",
 			"url": "https://heartofalionshamanism.com/testimonials"
 		}
