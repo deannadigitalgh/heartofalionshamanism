@@ -1,1 +1,416 @@
-title: "Learn to Journey Workshop",\ndescription: "Five-hour introductory workshop teaching the ancient art of shamanic journeying. Meet your power animal and discover the invisible worlds.",\nduration: "5 hours (12-5 pm)", // Updated from 4 hours (12-4 pm)\n// (rest of file remains unchanged)
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Shamanic Healing Services | Deanna Stennett, L.Ac., MA - Northern Georgia";
+const seoDescription = "Individual shamanic healing sessions, workshops, and training programs in Blue Ridge, Ellijay & Blairsville GA. Soul retrieval, energy work, learn to journey courses.";
+
+const individualSessions = [
+  {
+    title: "Individual Shamanic Healing Session",
+    duration: "60 minutes",
+    price: "$150-200",
+    description: "A personalized shamanic healing session tailored to your unique needs and intentions. This sacred space allows for deep transformation and healing.",
+    includes: [
+      "Soul retrieval work to restore wholeness",
+      "Energy clearing and balancing",
+      "Power animal connection and guidance",
+      "Spirit guide communication",
+      "Personalized healing recommendations"
+    ],
+    idealFor: ["Trauma healing", "Life transitions", "Spiritual awakening", "Emotional blockages", "Finding life purpose"]
+  },
+  {
+    title: "Energy Clearing Session",
+    duration: "60 minutes",
+    price: "$150-200",
+    description: "Remove stagnant or negative energy patterns that are blocking your healing, relationships, and personal growth.",
+    includes: [
+      "Energy field assessment",
+      "Removal of energetic blockages",
+      "Chakra balancing",
+      "Protective energy work",
+      "Follow-up recommendations"
+    ],
+    idealFor: ["Feeling drained or stuck", "Relationship challenges", "Recurring patterns", "Stress and anxiety"]
+  },
+  {
+    title: "Power Animal Connection Session",
+    duration: "60 minutes",
+    price: "$150-200",
+    description: "Meet your power/totem animal through shamanic journeying and establish an ongoing relationship for spiritual support.",
+    includes: [
+      "Shamanic journey to meet power animal",
+      "Understanding power animal messages",
+      "Creating ongoing connection practices",
+      "Integration guidance",
+      "Journey recording (if desired)"
+    ],
+    idealFor: ["Seeking guidance", "Spiritual protection", "Personal growth", "Connection to nature spirits"]
+  }
+];
+
+const workshops = [
+  {
+    title: "Learn to Journey Workshop",
+    description: "Five-hour introductory workshop teaching the ancient art of shamanic journeying. Meet your power animal and discover the invisible worlds.",
+    duration: "4 hours (12-4 pm)",
+    price: "$50 in advance, $65 at door",
+    location: "Various locations throughout Northern Georgia",
+    includes: [
+      "Overview of shamanism and its history",
+      "Understanding the shamanic view of illness and healing",
+      "Learn to do a shamanic journey",
+      "Meet your power (or totem) animal",
+      "Connection with nature spirits",
+      "Post-workshop food and community gathering"
+    ],
+    nextDate: "Contact for upcoming dates",
+    registration: "Pre-register at 410-961-9033 or spiritpoint4u@gmail.com to save $5"
+  },
+  {
+    title: "Wild Women Series",
+    description: "Six-part transformative series for women exploring wild archetypes through shamanic journeying, art, poetry, song, and dance. Based on Clarissa Pinkola Estes' work.",
+    duration: "6 sessions (2nd Saturday of each month)",
+    price: "$540 total ($90/session) or $100 per session",
+    location: "Inner Awakenings, Blairsville, GA",
+    includes: [
+      "Shamanic journeys to explore wild archetypes",
+      "Creative expression (art, song, dance)",
+      "Poetry and storytelling",
+      "Ceremony and ritual work",
+      "Healing friendships and support building",
+      "Outdoor fire ceremony at final meeting"
+    ],
+    idealFor: ["Women seeking to awaken their wildness", "Connecting with intuitive self", "Building community with other women"],
+    note: "Participants must be fully committed. If you miss more than one meeting, you cannot continue."
+  },
+  {
+    title: "Messages from Nature Workshop",
+    description: "Explore the messages from the Creator through nature using shamanic journeying and intuition. Never look at a tree, flower, or bird the same way again.",
+    duration: "Full day workshop",
+    price: "$60 in advance, $65 at door",
+    location: "Various natural settings in Northern Georgia",
+    includes: [
+      "Shamanic journeying techniques",
+      "Intuition development exercises",
+      "Nature spirit communication",
+      "Outdoor ceremony",
+      "Shared meal with other participants"
+    ],
+    idealFor: ["Nature lovers", "Seeking spiritual connection through nature", "Developing intuition"]
+  }
+];
+
+const ceremonies = [
+  {
+    title: "New Moon Ceremonies",
+    description: "Monthly ceremonies to set intentions, release what no longer serves you, and connect with the feminine divine.",
+    frequency: "Monthly (New Moon)",
+    price: "$40-60"
+  },
+  {
+    title: "Full Moon Ceremonies",
+    description: "Powerful gatherings for celebration, gratitude, and releasing. Connect with lunar energy for transformation.",
+    frequency: "Monthly (Full Moon)",
+    price: "$40-60"
+  },
+  {
+    title: "Solstice Celebrations",
+    description: "Seasonal ceremonies honoring the sun's journey. Recent Solstice Celebration had 38 people gathering to honor the return of the sun.",
+    frequency: "Summer and Winter Solstices",
+    price: "$50-75"
+  },
+  {
+    title: "Rites of Passage Ceremonies",
+    description: "Custom ceremonies for weddings, funerals, coming-of-age celebrations, graduations, and other significant life transitions.",
+    frequency: "By appointment",
+    price: "Varies by ceremony type"
+  }
+];
+
+const faqs = [
+  {
+    question: "What should I expect during an individual healing session?",
+    answer: "Your session begins with a conversation about your intentions and concerns. Then Deanna will guide you through shamanic journeying work, which may include soul retrieval, energy clearing, or power animal connection. You'll remain fully conscious throughout, and many clients experience deep relaxation, emotional release, or profound insights."
+  },
+  {
+    question: "How do I know if shamanic healing is right for me?",
+    answer: "If you're seeking deeper spiritual connection, personal transformation, or healing from life challenges, shamanic work can be profoundly beneficial. Many clients report increased clarity, emotional release, stronger sense of purpose, and improved relationships."
+  },
+  {
+    question: "Do I need prior experience with shamanism?",
+    answer: "No! All workshops are designed for beginners. Deanna has been teaching since 1995 and creates a welcoming, accessible environment for all levels of experience."
+  },
+  {
+    question: "What is the difference between shamanic healing and acupuncture?",
+    answer: "While both practices aim to restore balance and promote healing, they work on different levels. Acupuncture works primarily with the physical body's energy meridians, while shamanic healing addresses spiritual and energetic dimensions. Many clients benefit from both practices working together."
+  },
+  {
+    question: "How do I prepare for a workshop?",
+    answer: "Wear comfortable clothing that allows movement. Bring an open heart and mind. Some workshops include outdoor time, so dress appropriately for the weather. A water bottle and snacks are recommended. For the Wild Women Series, bring items for creative expression if you have them."
+  }
+];
+
+const contactInfo = {
+  phone: "410-961-9033",
+  email: "spiritpoint4u@gmail.com"
+};
+---
+
+<Layout title={seoTitle} seoDescription={seoDescription}>
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="hero__content text-center">
+			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Services</h1>
+			<p class="lead mb-6" style="opacity: 0.95;">
+				Transformative healing sessions and workshops in Northern Georgia with Deanna Stennett, L.Ac., MA
+			</p>
+			<div class="hero__actions">
+				<a href="#individual" class="btn btn--secondary btn--lg">Individual Sessions</a>
+				<a href="/workshops" class="btn btn--outline btn--lg">Workshops</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Branding Logo Section -->
+	<section class="section section--light" style="padding: var(--spacing-12) 0;">
+		<div class="container text-center">
+			<img 
+				src="/logo-large.svg" 
+				alt="Heart Of A Lion Shamanism - Deanna Stennett, L.Ac., MA" 
+				width="300"
+				height="100"
+				style="margin-bottom: var(--spacing-6);"
+			/>
+			<p class="lead" style="max-width: 700px; margin: 0 auto;">
+				Serving Northern Georgia with authentic shamanic healing, workshops, and training programs since 1995.
+			</p>
+		</div>
+	</section>
+
+	<!-- Individual Sessions Section -->
+	<section id="individual" class="section">
+		<div class="container">
+			<h2 class="text-center mb-4" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Individual Healing Sessions</h2>
+			<p class="lead text-center mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+				Personalized shamanic healing tailored to your unique needs and intentions. Each session creates a sacred space for deep transformation and restoration.
+			</p>
+
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
+				{individualSessions.map(session => (
+					<div class="card service-card">
+						<div class="service-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-6);">
+							<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: 0;">{session.title}</h3>
+							<div class="service-price" style="text-align: right;">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg);">{session.price}</p>
+								<p style="color: var(--color-text-muted);">{session.duration}</p>
+							</div>
+						</div>
+
+						<p class="mb-4" style="font-size: var(--text-lg); line-height: 1.8;">
+							{session.description}
+						</p>
+
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+						<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
+							{session.includes.map(item => (
+								<li class="service-list__item" style="display: flex; align-items: center;">
+									<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
+								</li>
+							))}
+						</ul>
+
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Ideal For:</h4>
+						<p>{session.idealFor.join(" • ")}</p>
+
+						<div class="mt-6 text-center">
+							<a href="#contact" class="btn btn--primary">Book This Session</a>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Workshops Section -->
+	<section id="workshops" class="section section--light">
+		<div class="container">
+			<h2 class="text-center mb-4" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Workshops & Training</h2>
+			<p class="lead text-center mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+				Transformative group experiences designed to awaken your inner wisdom and connect you with the healing power of shamanism.
+			</p>
+
+			<div class="grid grid--2" style="gap: var(--spacing-8);">
+				{workshops.map(workshop => (
+					<div class="card workshop-card">
+						<div class="service-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-6);">
+							<h3 style="color: var(--color-gold-500); font-size: var(--text-2xl); margin-bottom: 0;">{workshop.title}</h3>
+							<div class="service-price" style="text-align: right;">
+								<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); font-size: var(--text-lg);">{workshop.price}</p>
+								<p style="color: var(--color-text-muted);">{workshop.duration}</p>
+							</div>
+						</div>
+
+						<p class="mb-4" style="font-size: var(--text-lg); line-height: 1.8;">
+							{workshop.description}
+						</p>
+
+						{workshop.location && (
+							<p class="mb-4"><strong>📍 {workshop.location}</strong></p>
+						)}
+
+						<h4 style="color: var(--color-primary-800); font-size: var(--text-lg); margin-bottom: var(--spacing-3);">Includes:</h4>
+						<ul class="service-list" style="list-style: none; display: grid; gap: var(--spacing-2); margin-bottom: var(--spacing-6);">
+							{workshop.includes.map(item => (
+								<li class="service-list__item" style="display: flex; align-items: center;">
+									<span class="service-list__icon" style="color: var(--color-gold-500); margin-right: var(--spacing-3);">✓</span> {item}
+								</li>
+							))}
+						</ul>
+
+						{workshop.nextDate && (
+							<p class="info-box" style="background-color: var(--color-bg-secondary); padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
+								<strong>📅 Next Date:</strong> {workshop.nextDate}
+							</p>
+						)}
+
+						{workshop.registration && (
+							<p class="info-box" style="background-color: #E8F4FD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
+								<strong>📞 Registration:</strong> {workshop.registration}
+							</p>
+						)}
+
+						{workshop.note && (
+							<p class="info-box" style="background-color: #FFF3CD; padding: var(--spacing-4); border-radius: var(--radius-md); margin-bottom: var(--spacing-6);">
+								<strong>⚠️ Note:</strong> {workshop.note}
+							</p>
+						)}
+
+						<div class="mt-6 text-center">
+							<a href="#contact" class="btn btn--primary">Register for This Workshop</a>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Ceremonies Section -->
+	<section id="ceremonies" class="section">
+		<div class="container">
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Special Ceremonies</h2>
+
+			<div class="grid grid--3" style="gap: var(--spacing-8);">
+				{ceremonies.map(ceremony => (
+					<div class="card card--icon ceremony-card">
+						<h3 style="color: var(--color-gold-500); font-size: var(--text-xl); margin-bottom: var(--spacing-4);">{ceremony.title}</h3>
+						<p style="line-height: 1.6; margin-bottom: var(--spacing-2);">{ceremony.description}</p>
+						<p style="font-weight: var(--font-semibold); color: var(--color-primary-800); margin-bottom: var(--spacing-2);">{ceremony.frequency}</p>
+						<p style="color: var(--color-gold-500); font-size: var(--text-lg);">{ceremony.price}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="section section--light">
+		<div class="container" style="max-width: 900px;">
+			<h2 class="text-center mb-8" style="color: var(--color-primary-800); font-size: var(--text-3xl);">Frequently Asked Questions</h2>
+
+			<div class="faq-list">
+				{faqs.map(faq => (
+					<div class="faq-item">
+						<h3 class="faq-question">{faq.question}</h3>
+						<p class="faq-answer">{faq.answer}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="section section--dark">
+		<div class="container" style="max-width: 900px;">
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your Session or Workshop</h2>
+			<p class="lead text-center mb-8" style="opacity: 0.95;">
+				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or register for a workshop.
+			</p>
+
+			<div class="grid grid--2" style="gap: var(--spacing-8); max-width: 600px; margin: 0 auto;">
+				<div class="card" style="padding: var(--spacing-10);">
+					<h3 class="text-center mb-6" style="color: var(--color-primary-800); font-size: var(--text-2xl);">Send Deanna a Message</h3>
+
+					<form action="https://formspree.io/f/xdawonkq" method="POST">
+						<div class="grid grid--2" style="gap: var(--spacing-5); margin-bottom: var(--spacing-6);">
+							<div class="form-group">
+								<label for="firstName" class="form-label">First Name *</label>
+								<input type="text" id="firstName" name="first_name" required class="form-input" placeholder="Your first name" />
+							</div>
+
+							<div class="form-group">
+								<label for="lastName" class="form-label">Last Name *</label>
+								<input type="text" id="lastName" name="last_name" required class="form-input" placeholder="Your last name" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="form-label">Email Address *</label>
+							<input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com" />
+						</div>
+
+						<div class="form-group">
+							<label for="phone" class="form-label">Phone Number *</label>
+							<input type="tel" id="phone" name="phone" required class="form-input" placeholder="(123) 456-7890" />
+						</div>
+
+						<div class="form-group">
+							<label for="serviceType" class="form-label">Interested In *</label>
+							<select id="serviceType" name="service_type" required class="form-input">
+								<option value="">Select a service...</option>
+								<option value="Individual Healing Session">Individual Healing Session</option>
+								<option value="Energy Clearing">Energy Clearing Session</option>
+								<option value="Power Animal Connection">Power Animal Connection</option>
+								<option value="Learn to Journey Workshop">Learn to Journey Workshop</option>
+								<option value="Wild Women Series">Wild Women Series</option>
+								<option value="Messages from Nature Workshop">Messages from Nature Workshop</option>
+								<option value="Special Ceremony">Special Ceremony</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="message" class="form-label">Message *</label>
+							<textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Tell me about what brings you to shamanic healing..."></textarea>
+						</div>
+
+						<button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
+					</form>
+
+					<p class="text-center mt-6 text-muted" style="font-size: var(--text-sm);">
+						Deanna will respond to your message within 24 hours. For immediate assistance, please call or text directly.
+					</p>
+				</div>
+
+				<div class="contact-info-card" style="text-align: center;">
+					<p style="font-size: var(--text-lg); margin-bottom: var(--spacing-3);"><strong>📞 Phone/Text:</strong></p>
+					<a href={`tel:${contactInfo.phone}`} style="font-size: var(--text-2xl); color: var(--color-gold-500); font-weight: var(--font-bold);">{contactInfo.phone}</a>
+
+					<p style="font-size: var(--text-lg); margin-top: var(--spacing-6); margin-bottom: var(--spacing-2);"><strong>✉️ Email:</strong></p>
+					<a href={`mailto:${contactInfo.email}`} style="font-size: var(--text-lg); color: var(--color-gold-500);">{contactInfo.email}</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "Shamanic Healing Services - Heart Of A Lion Shamanism",
+			"description": "Individual shamanic healing sessions, workshops, and training programs in Northern Georgia with Deanna Stennett, L.Ac., MA.",
+			"url": "https://heartofalionshamanism.com/services"
+		}
+	</script>
+</Layout>
