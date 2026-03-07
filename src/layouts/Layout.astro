@@ -8,7 +8,11 @@ import '../styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon - Multiple sizes for better compatibility -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/icon256.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/icon64.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- Primary Meta Tags -->
@@ -43,8 +47,8 @@ import '../styles/global.css';
 				"email": "spiritpoint4u@gmail.com",
 				"address": {
 					"@type": "PostalAddress",
-					"streetAddress": "284 Cozy Valley Lane",
-					"addressLocality": "Talking Rock",
+					"streetAddress": "Blue Ridge, GA",
+					"addressLocality": "Blue Ridge",
 					"addressRegion": "GA",
 					"postalCode": "30175",
 					"addressCountry": "US"
@@ -135,7 +139,8 @@ import '../styles/global.css';
 		<nav class="navbar" aria-label="Main navigation">
 			<div class="navbar__container">
 				<a href="/" class="navbar__logo" aria-label="Heart Of A Lion Shamanism Home">
-					🦁 Heart Of A Lion Shamanism
+					<img src="/logo-med.svg" alt="" width="160" height="53" />
+					<span class="navbar__logo-text">Heart Of A Lion Shamanism</span>
 				</a>
 				
 				<button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu">
@@ -152,10 +157,12 @@ import '../styles/global.css';
 			</div>
 		</nav>
 
-		<!-- Main Content -->
-		<main id="main-content">
-			<slot />
-		</main>
+	<!-- Global Hero Background (removed from layout to prevent duplication) -->
+	
+	<!-- Main Content -->
+	<main id="main-content">
+		<slot />
+	</main>
 
 		<!-- Mobile CTA Bar -->
 		<div class="mobile-cta-bar" role="navigation" aria-label="Mobile actions">
@@ -173,12 +180,13 @@ import '../styles/global.css';
 		<footer class="site-footer" aria-label="Site footer">
 			<div class="container">
 				<div class="footer-grid">
-					<div class="footer-section">
-						<h3 class="footer-title">Heart Of A Lion Shamanism</h3>
-						<p class="footer-text">Deanna Stennett, L.Ac., MA<br />
-						Nationally Certified NCCAOM<br />
-						Shamanic Practitioner & Teacher</p>
-					</div>
+				<div class="footer-section">
+					<img src="/AA-headshot-dee.jpg" alt="" width="80" height="80" style="margin-bottom: var(--spacing-3); border-radius: 50%; border: 3px solid var(--color-gold-500);" />
+					<h3 class="footer-title">Heart Of A Lion Shamanism</h3>
+					<p class="footer-text">Deanna Stennett, L.Ac., MA<br />
+					Nationally Certified NCCAOM<br />
+					Shamanic Practitioner & Teacher</p>
+				</div>
 					
 					<div class="footer-section">
 						<h3 class="footer-title">Services</h3>
@@ -204,7 +212,7 @@ import '../styles/global.css';
 						<h3 class="footer-title">Contact</h3>
 						<p class="footer-text">📞 410-961-9033<br />
 						✉️ spiritpoint4u@gmail.com<br />
-						📍 284 Cozy Valley Lane, Talking Rock, GA 30175</p>
+						📍 Blue Ridge, GA</p>
 					</div>
 				</div>
 				

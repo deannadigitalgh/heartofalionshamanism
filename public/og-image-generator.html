@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Image Generator - Heart Of A Lion Shamanism</title>
+  <style>
+    body { 
+      margin: 0; 
+      padding: 20px; 
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 { color: #333; margin-bottom: 20px; }
+    .instructions {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .instructions h2 { color: #8B1E3F; margin-top: 0; }
+    .instructions ol { text-align: left; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+    .canvas-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    canvas { 
+      border: 2px solid #D4AF37; 
+      max-width: 100%;
+      height: auto;
+    }
+    .download-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      background: #8B1E3F;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .download-btn:hover {
+      background: #6B1530;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🦁 Heart Of A Lion Shamanism - OG Image Generator</h1>
+    
+    <div class="instructions">
+      <h2>How to Save This as a PNG:</h2>
+      <ol>
+        <li><strong>Right-click</strong> on the canvas image below</li>
+        <li>Select <strong>"Save Image As..."</strong> or <strong>"Save Picture As..."</strong></li>
+        <li>Name it <code>heart-of-lion-og.png</code></li>
+        <li>Move it to: <code>/public/heart-of-lion-og.png</code></li>
+      </ol>
+      
+      <p style="margin-top: 20px; color: #666;">
+        <strong>Dimensions:</strong> 1200 x 630 pixels (perfect for Facebook, Twitter, LinkedIn)<br>
+        <strong>Format:</strong> PNG with transparent background support<br>
+        <strong>Colors:</strong> Deep red (#8B1E3F) to gold (#D4AF37) gradient
+      </p>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="canvas" width="1200" height="630"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Gradient background - Deep red to gold (lion heart colors)
+    const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+    gradient.addColorStop(0, '#8B1E3F');
+    gradient.addColorStop(1, '#D4AF37');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 1200, 630);
+    
+    // Add subtle texture overlay for depth
+    ctx.globalAlpha = 0.05;
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, 1200, 630);
+    ctx.globalAlpha = 1.0;
+    
+    // Main title - Heart Of A Lion Shamanism
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = 'bold 72px Georgia, serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Heart Of A Lion Shamanism', 600, 280);
+    
+    // Subtitle - Deanna Stennett credentials
+    ctx.font = '42px Helvetica Neue, Arial, sans-serif';
+    ctx.fillStyle = '#FDFBF7';
+    ctx.fillText('Deanna Stennett, L.Ac., MA', 600, 350);
+    
+    // Tagline - Services description
+    ctx.font = '32px Georgia, serif';
+    ctx.fillStyle = '#D4AF37';
+    ctx.fillText('Shamanic Healing & Workshops in Northern Georgia', 600, 420);
+    
+    // Add decorative elements (lion heart symbol approximation)
+    ctx.strokeStyle = '#FFFFFF';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(600, 150, 80, 0, Math.PI * 2);
+    ctx.stroke();
+    
+    // Add website URL at bottom
+    ctx.font = '24px Helvetica Neue, Arial, sans-serif';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.globalAlpha = 0.8;
+    ctx.fillText('heartofalionshamanism.com', 600, 550);
+    ctx.globalAlpha = 1.0;
+    
+    // Add download button functionality
+    canvas.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.download = 'heart-of-lion-og.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+  </script>
+</body>
+</html>

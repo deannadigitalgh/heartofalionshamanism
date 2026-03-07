@@ -148,8 +148,9 @@ The following can be **copied directly** with minimal changes:
 
 ### Option A: Separate Repository (Recommended)
 - Create new GitHub repo: `projaa-shaman` or `heart-of-a-lion-shamanism`
-- Deploy to separate Cloudflare Pages site: `heartofalionshamanism.pages.dev`
-- Custom domain: `heartofalionshamanism.com` (if available)
+- Deployed to Cloudflare Pages: https://heartofalionshamanism.pages.dev ✅
+- Custom domain connected: https://heartofalionshamanism.com ✅
+- Redirect configured from .pages.dev to custom domain
 - **Pros:** Clean separation, distinct analytics, easier to manage independently
 
 ### Option B: Subdirectory on Same Domain
