@@ -9,4 +9,5 @@ export default defineConfig({
   title: 'Heart Of A Lion Shamanism | Deanna Stennett, L.Ac., MA',
   integrations: [sitemap()],
   adapter: cloudflare(),
+  imageService: "compile",
 });
