@@ -1,6 +1,7 @@
 ---
 // Import global stylesheet for all pages using this layout
 import '../styles/global.css';
+import Logo from '../components/Logo.astro';
 ---
 
 <!doctype html>
@@ -116,7 +117,7 @@ import '../styles/global.css';
 					"Shamanic Journeying",
 					"Medicine Wheel Ceremonies",
 					"Spirit Animal Communication",
-		 	 "Acupuncture",
+	 	 "Acupuncture",
 		 	 "NAET Allergy Elimination Technique"
 		 	 ],
 				"hasOccupation": {
@@ -139,7 +140,7 @@ import '../styles/global.css';
 		<nav class="navbar" aria-label="Main navigation">
 			<div class="navbar__container">
 				<a href="/" class="navbar__logo" aria-label="Heart Of A Lion Shamanism Home">
-					<img src="/logo-med.svg" alt="" width="160" height="53" />
+					<Logo variant="navbar" />
 					<span class="navbar__logo-text">Heart Of A Lion Shamanism</span>
 				</a>
 				
@@ -180,8 +181,8 @@ import '../styles/global.css';
 		<footer class="site-footer" aria-label="Site footer">
 			<div class="container">
 				<div class="footer-grid">
-				<div class="footer-section">
-					<img src="/AA-headshot-dee.jpg" alt="" width="80" height="80" style="margin-bottom: var(--spacing-3); border-radius: 50%; border: 3px solid var(--color-gold-500);" />
+			<div class="footer-section">
+				<img src="/AA-headshot-dee.jpg" alt="" width="80" height="80" class="headshot-circle footer-headshot" style="margin-bottom: var(--spacing-3);" />
 					<h3 class="footer-title">Heart Of A Lion Shamanism</h3>
 					<p class="footer-text">Deanna Stennett, L.Ac., MA<br />
 					Nationally Certified NCCAOM<br />

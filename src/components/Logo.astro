@@ -1,0 +1,30 @@
+---
+interface Props {
+  variant?: 'navbar' | 'footer' | 'hero';
+}
+
+const { variant = 'navbar' } = Astro.props;
+
+// Logo variants from config
+const logoPaths = {
+  navbar: '/logo-med.svg',
+  footer: '/icon.svg',
+  hero: '/logo-large.svg'
+};
+
+const sizes = {
+  navbar: { width: '160', height: '53' },
+  footer: { width: '80', height: '27' },
+  hero: { width: '300', height: '100' }
+};
+
+const currentLogo = logoPaths[variant];
+const currentSize = sizes[variant];
+---
+
+<img 
+  src={currentLogo} 
+  alt="Heart Of A Lion Shamanism" 
+  width={currentSize.width}
+  height={currentSize.height}
+/>

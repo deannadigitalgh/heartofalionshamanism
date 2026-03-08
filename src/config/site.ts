@@ -44,6 +44,40 @@ export const nearbyTowns = [
 ];
 
 /* -----------------------------
+   SERVICE AREA NEARBY TOWNS (Town-Specific)
+   Each town page has slightly different nearby towns for localized SEO
+   ----------------------------- */
+export const serviceAreaNearbyTowns = {
+  blueRidge: [
+    "Ellijay",
+    "Jasper",
+    "Blairsville",
+    "Talking Rock",
+    "Morganton",
+    "Helen",
+    "Gainesville"
+  ],
+  ellijay: [
+    "Blue Ridge",
+    "Jasper",
+    "Blairsville",
+    "Talking Rock",
+    "Morganton"
+  ],
+  jasper: [
+    "Blue Ridge",
+    "Ellijay",
+    "Blairsville",
+    "Talking Rock"
+  ],
+  blairsville: [
+    "Blue Ridge",
+    "Ellijay",
+    "Jasper"
+  ]
+};
+
+/* -----------------------------
    TESTIMONIALS DATA (Single Source)
    Used on homepage and testimonials page - prevents duplication
    ----------------------------- */
@@ -578,7 +612,7 @@ export const specializations = [
   },
   {
     title: "Rites of Passage Ceremonies",
-    description: "Creating sacred ceremonies for weddings, funerals, coming-of-age celebrations, and other significant life transitions."
+    description: "Creating sacred ceremonies for weddings, funerals, coming-of-age celebrations, graduations, and other significant life transitions."
   }
 ];
 
@@ -601,6 +635,7 @@ export default {
   formspree,
   primaryServiceAreas,
   nearbyTowns,
+  serviceAreaNearbyTowns,
   testimonials,
   faqs,
   individualSessions,

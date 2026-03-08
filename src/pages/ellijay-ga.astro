@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { site, faqs } from '../config/site.js';
+import Logo from '../components/Logo.astro';
+import { site, faqs, serviceAreaNearbyTowns } from '../config/site.js';
 
 const seoTitle = `Shamanic Healing Near Me | Ellijay GA - ${site.name}`;
 const seoDescription = "Shamanic healing sessions and workshops in Ellijay, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses near you.";
 
 // Town-specific data from config
 const townName = "Ellijay";
-const nearbyTownsList = ["Blue Ridge", "Jasper", "Blairsville", "Talking Rock", "Morganton"]
+const nearbyTownsList = serviceAreaNearbyTowns.ellijay
 ---
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
@@ -28,13 +29,7 @@ const nearbyTownsList = ["Blue Ridge", "Jasper", "Blairsville", "Talking Rock", 
 	<!-- Branding Logo Section -->
 	<section class="section section--light" style="padding: var(--spacing-12) 0;">
 		<div class="container text-center">
-			<img 
-				src="/logo-large.svg" 
-				alt={`${site.name} - ${site.tagline}`} 
-				width="300"
-				height="100"
-				style="margin-bottom: var(--spacing-6);"
-			/>
+			<Logo variant="hero" />
 			<p class="lead" style="max-width: 700px; margin: 0 auto;">
 				Serving {townName} and surrounding Northern Georgia communities with authentic shamanic healing, workshops, and training programs.
 			</p>

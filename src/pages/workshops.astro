@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
 import { site, upcomingWorkshops as allUpcomingWorkshops, seriesPrograms, pastWorkshops, faqs } from '../config/site.js';
 
 const seoTitle = `${site.name} | Shamanic Workshops & Training - Northern Georgia`;
@@ -24,13 +25,7 @@ const seoDescription = "Upcoming shamanic workshops and training programs in Blu
 	<!-- Branding Logo Section -->
 	<section class="section section--light" style="padding: var(--spacing-12) 0;">
 		<div class="container text-center">
-			<img 
-				src="/logo-large.svg" 
-				alt={`${site.name} - ${site.tagline}`} 
-				width="300"
-				height="100"
-				style="margin-bottom: var(--spacing-6);"
-			/>
+			<Logo variant="hero" />
 			<p class="lead" style="max-width: 700px; margin: 0 auto;">
 				Transformative group experiences designed to awaken your inner wisdom and connect you with the healing power of shamanism.
 			</p>
