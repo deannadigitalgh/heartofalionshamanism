@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
+import LionHeartCarousel from '../components/LionHeartCarousel.astro';
 import { site, credentials, journeyTimeline, shamanicTeachers as teachers, personalStories, bookInfo, specializations } from '../config/site.js';
 import { heroConfig, getHeroStyles } from '../config/hero.js';
 
@@ -11,14 +12,8 @@ const seoDescription = "Learn about Deanna Stennett's shamanic journey, training
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
 	<section class="hero" style={getHeroStyles()}>
-		<div class="hero__content text-center" style={`color: ${heroConfig.textColor};`}>
-			<img 
-				src="/AA-headshot-dee.jpg" 
-				alt={`${site.tagline}`} 
-				class="headshot-circle about-hero-image"
-				width="200"
-				height="200"
-			/>
+		<div class="hero__content text-center" style={`color: ${heroConfig.textColor}; display: flex; flex-direction: column; align-items: center;`}>
+			<LionHeartCarousel altText={`${site.tagline}`} />
 			<h1 style={`font-size: var(--text-5xl); margin-bottom: var(--spacing-5); color: ${heroConfig.textColor}; font-weight: 700;`}>{site.tagline}</h1>
 			<p class="lead mb-6" style={`color: ${heroConfig.textColor};`}>
 				Shamanic Practitioner & Teacher | Licensed Acupuncturist | Author

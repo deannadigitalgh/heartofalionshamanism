@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
+import LionHeartCarousel from '../components/LionHeartCarousel.astro';
 import { site, formspree, testimonials as allTestimonials, faqs } from '../config/site.js';
 import { heroConfig, getHeroStyles } from '../config/hero.js';
 
@@ -64,14 +65,8 @@ const generalFaqs = faqs.general.slice(0, 3);
 
 	<!-- About Section -->
 	<section class="section section--light">
-		<div class="container text-center" style="max-width: 1000px;">
-			<img 
-				src="/AA-headshot-dee.jpg" 
-				alt="Deanna Stennett, L.Ac., MA - Shamanic Practitioner" 
-				class="headshot-circle homepage-headshot"
-				width="250"
-				height="250"
-			/>
+		<div class="container text-center" style="max-width: 1000px; display: flex; flex-direction: column; align-items: center;">
+			<LionHeartCarousel altText="Deanna Stennett - Shamanic Practitioner & Teacher" />
 			<h2 class="mb-6">Welcome to Heart Of A Lion Shamanism</h2>
 			<p class="lead mb-6">
 				Shamanism is a spiritual practice that is not religiously affiliated with any one belief system. It is the oldest known spiritual healing system on the planet, dating back 40-100 thousand years based on archaeological studies.
