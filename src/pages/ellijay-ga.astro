@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import ContactForm from '../components/ContactForm.astro';
 import { site, faqs, serviceAreaNearbyTowns } from '../config/site.js';
+import { heroConfig, getHeroStyles } from '../config/hero.js';
 
 const seoTitle = `Shamanic Healing Near Me | Ellijay GA - ${site.name}`;
 const seoDescription = "Shamanic healing sessions and workshops in Ellijay, GA with Deanna Stennett, L.Ac., MA. Soul retrieval, energy work, learn to journey courses near you.";
@@ -13,10 +15,10 @@ const nearbyTownsList = serviceAreaNearbyTowns.ellijay
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section class="hero">
-		<div class="hero__content text-center">
-			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Near Me - {townName}, GA</h1>
-			<p class="lead mb-6" style="opacity: 0.95;">
+	<section class="hero" style={getHeroStyles()}>
+		<div class="hero__content text-center" style={`color: ${heroConfig.textColor};`}>
+			<h1 style={`font-size: var(--text-5xl); margin-bottom: var(--spacing-5); color: ${heroConfig.textColor}; font-weight: 700;`}>Shamanic Healing Near Me - {townName}, GA</h1>
+			<p class="lead mb-6" style={`color: ${heroConfig.textColor};`}>
 				Transformative shamanic healing sessions and workshops serving {townName} and surrounding Northern Georgia communities
 			</p>
 			<div class="hero__actions">
@@ -129,20 +131,38 @@ const nearbyTownsList = serviceAreaNearbyTowns.ellijay
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container text-center" style="max-width: 900px;">
-			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your {townName} Area Session</h2>
-			<p class="lead mb-6" style="opacity: 0.95;">
-				Ready to begin your shamanic journey? Contact Deanna today to schedule your session or workshop in the {townName} area.
+		<div class="container" style="max-width: 900px;">
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Contact Deanna</h2>
+			<p class="text-center lead mb-8">
+				Ready to begin your shamanic journey? Fill out the form below or call/text directly.
 			</p>
 
-			<div class="hero__actions" style="margin-top: var(--spacing-10);">
-				<a href={`tel:${site.phone}`} class="btn btn--secondary btn--lg">📞 {site.phone}</a>
-				<a href={`mailto:${site.email}`} class="btn btn--outline btn--lg">✉️ {site.email}</a>
+			<div class="contact-info-grid" style="margin-bottom: var(--spacing-10);">
+				<div class="contact-card">
+					<span class="contact-icon">📞</span>
+					<h3 class="contact-title">Phone</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.phone}</p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">✉️</span>
+					<h3 class="contact-title">Email</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${site.email}`} style="color: white;">{site.email}</a></p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">📍</span>
+					<h3 class="contact-title">Location</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.address}</p>
+				</div>
 			</div>
 
-			<p class="mt-6" style="opacity: 0.9;">
-				In-home sessions available by appointment throughout {townName} and surrounding communities.
-			</p>
+			<!-- Contact Form -->
+			<ContactForm 
+				title="Send Deanna a Message"
+				showServiceDropdown={true}
+				buttonText="Book Your Session"
+			/>
 		</div>
 	</section>
 

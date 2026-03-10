@@ -64,6 +64,13 @@ heart-of-a-lion-shamanism/
   - Night sky: `#1A1A2E`
   - Warm off-white background: `#FDFBF7`
 
+### Logo Usage Across Both Practices ✅
+**The yin-yang/spiritual symbol logo is the unified branding for both of Deanna's practices:**
+- **Heart Of A Lion Shamanism** website (this site)
+- **Acupuncture In North Georgia** website (acupunctureinnorthgeorgia.com)
+
+This consistent logo usage across all client media creates brand recognition and reinforces that both practices are offered by the same practitioner, Deanna Stennett, L.Ac., MA.
+
 ### Key Differentiators from Acupuncture Practice
 | Aspect | Acupuncture Site | Shamanism Site |
 |--------|------------------|----------------|
@@ -356,7 +363,19 @@ All assets from `/public/` folder have been successfully integrated into the sit
 
 ---
 
-## 🌟 Global Design Enhancements (v2.1)
+## 🌟 Global Design Enhancements (v2.2) - March 2026
+
+### Centralized Hero Configuration System ✅ NEW
+**Created `src/config/hero.ts` as single source of truth for all hero sections:**
+- Controls background image, gradient overlay opacity, and text color centrally
+- Applied to ALL pages: Homepage, About, Services, Workshops, Testimonials, 4 service area pages
+- Easy maintenance - modify one file to update all page heroes
+- Current settings: 50% gradient at top, 40% at bottom, white text for maximum readability
+
+### Contact Section Contrast Fix ✅ NEW
+**Fixed poor text contrast in contact sections on dark backgrounds:**
+- Added CSS rules to ensure contact card text is white with 95% opacity on `.section--dark` backgrounds
+- All contact info (phone, email, location) now clearly readable against dark section backgrounds
 
 ### Logo & Background Fixes (v2.1.1)
 

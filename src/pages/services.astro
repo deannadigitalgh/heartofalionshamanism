@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
 import ContactForm from '../components/ContactForm.astro';
 import { site, individualSessions as allIndividualSessions, workshops as allWorkshops, ceremonies, faqs } from '../config/site.js';
+import { heroConfig, getHeroStyles } from '../config/hero.js';
 
 const seoTitle = `${site.name} | Shamanic Healing Services - Northern Georgia`;
 const seoDescription = "Individual shamanic healing sessions, workshops, and training programs in Blue Ridge, Ellijay & Blairsville GA. Soul retrieval, energy work, learn to journey courses.";
@@ -10,10 +11,10 @@ const seoDescription = "Individual shamanic healing sessions, workshops, and tra
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section class="hero">
-		<div class="hero__content text-center">
-			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Shamanic Healing Services</h1>
-			<p class="lead mb-6" style="opacity: 0.95;">
+	<section class="hero" style={getHeroStyles()}>
+		<div class="hero__content text-center" style={`color: ${heroConfig.textColor};`}>
+			<h1 style={`font-size: var(--text-5xl); margin-bottom: var(--spacing-5); color: ${heroConfig.textColor}; font-weight: 700;`}>Shamanic Healing Services</h1>
+			<p class="lead mb-6" style={`color: ${heroConfig.textColor}; font-weight: 400; line-height: 1.6;`}>
 				Transformative healing sessions and workshops in Northern Georgia with {site.tagline}
 			</p>
 			<div class="hero__actions">
@@ -177,26 +178,37 @@ const seoDescription = "Individual shamanic healing sessions, workshops, and tra
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
 		<div class="container" style="max-width: 900px;">
-			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Book Your Session or Workshop</h2>
-			<p class="lead text-center mb-8" style="opacity: 0.95;">
-				Ready to begin your shamanic journey? Contact {site.tagline.split(',')[0]} today to schedule your session or register for a workshop.
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Contact Deanna</h2>
+			<p class="text-center lead mb-8">
+				Ready to begin your shamanic journey? Fill out the form below or call/text directly.
 			</p>
 
-			<div class="grid grid--2" style="gap: var(--spacing-8); max-width: 600px; margin: 0 auto;">
-				<ContactForm 
-					title="Send {site.tagline.split(',')[0]} a Message"
-					showServiceDropdown={true}
-					buttonText="Send Message"
-				/>
-
-				<div class="contact-info-card" style="text-align: center;">
-					<p style="font-size: var(--text-lg); margin-bottom: var(--spacing-3);"><strong>📞 Phone/Text:</strong></p>
-					<a href={`tel:${site.phone}`} style="font-size: var(--text-2xl); color: var(--color-gold-500); font-weight: var(--font-bold);">{site.phone}</a>
-
-					<p style="font-size: var(--text-lg); margin-top: var(--spacing-6); margin-bottom: var(--spacing-2);"><strong>✉️ Email:</strong></p>
-					<a href={`mailto:${site.email}`} style="font-size: var(--text-lg); color: var(--color-gold-500);">{site.email}</a>
+			<div class="contact-info-grid" style="margin-bottom: var(--spacing-10);">
+				<div class="contact-card">
+					<span class="contact-icon">📞</span>
+					<h3 class="contact-title">Phone</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.phone}</p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">✉️</span>
+					<h3 class="contact-title">Email</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${site.email}`} style="color: white;">{site.email}</a></p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">📍</span>
+					<h3 class="contact-title">Location</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.address}</p>
 				</div>
 			</div>
+
+			<!-- Contact Form -->
+			<ContactForm 
+				title="Send Deanna a Message"
+				showServiceDropdown={true}
+				buttonText="Book Your Session"
+			/>
 		</div>
 	</section>
 

@@ -397,11 +397,11 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-/* Outline Button - Dark Night with White Text for Better Contrast */
+/* Outline Button - White Border with White Text for Better Contrast */
 .btn--outline {
   background-color: transparent;
-  border: 2px solid var(--color-night-900);
-  color: var(--color-night-900);
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
   font-weight: var(--font-semibold);
 }
 
@@ -973,6 +973,21 @@ a:hover {
   color: var(--color-gold-500);
   font-size: var(--text-xl);
   margin-bottom: var(--spacing-2);
+}
+
+/* Contact section text - ensure good contrast on dark background */
+.section--dark .contact-card p,
+.section--dark .contact-info-grid p {
+  color: white;
+  opacity: 0.95;
+}
+
+/* Form labels in contact sections - must be white for readability on dark backgrounds */
+.section--dark .form-group .form-label,
+.section--dark label[for] {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-weight: var(--font-semibold);
 }
 
 /* ============================================

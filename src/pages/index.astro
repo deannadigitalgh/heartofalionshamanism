@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
 import { site, formspree, testimonials as allTestimonials, faqs } from '../config/site.js';
+import { heroConfig, getHeroStyles } from '../config/hero.js';
 
 const seoTitle = `${site.name} | Shamanic Healing & Workshops in Northern Georgia`;
 const seoDescription = "Transformative shamanic healing sessions and workshops in Blue Ridge, Ellijay, Jasper & Blairsville GA with Deanna Stennett, L.Ac., MA. Learn shamanic journeying, energy work, and spiritual transformation.";
@@ -47,10 +48,12 @@ const generalFaqs = faqs.general.slice(0, 3);
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Homepage Hero with Mountain Background -->
-	<section class="homepage-hero" style="--hero-bg-image: '/bg/BlueRidgeMountainsBackground1.jpg'; --gradient-start: rgba(26, 26, 46, 0.7); --gradient-end: rgba(139, 30, 63, 0.65);" aria-hidden="true">
-		<div class="global-hero__content">
-			<h1 class="global-hero__title">{globalHeroTitle}</h1>
-			<p class="global-hero__subtitle">{globalHeroSubtitle}</p>
+	<section class="homepage-hero" style={getHeroStyles()} aria-hidden="true">
+		<div class="global-hero__content" style={`color: ${heroConfig.textColor};`}>
+			<h1 class="global-hero__title" style={`font-size: var(--text-5xl); margin-bottom: var(--spacing-5); color: ${heroConfig.textColor}; font-weight: 700;`}>{globalHeroTitle}</h1>
+			<p class="global-hero__subtitle" style={`color: ${heroConfig.textColor};`}>
+				{globalHeroSubtitle}
+			</p>
 		</div>
 	<!-- Quick Action Buttons - Top Priority CTAs -->
 	<div style="margin-top: var(--spacing-8); display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">

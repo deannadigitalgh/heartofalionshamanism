@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import ContactForm from '../components/ContactForm.astro';
 import { site, testimonials as allTestimonials, statistics } from '../config/site.js';
+import { heroConfig, getHeroStyles } from '../config/hero.js';
 
 const seoTitle = `${site.name} | Shamanic Healing Testimonials - Client Stories`;
 const seoDescription = "Read transformative client stories and testimonials about shamanic healing sessions and workshops with Deanna Stennett, L.Ac., MA in Northern Georgia.";
@@ -9,10 +11,10 @@ const seoDescription = "Read transformative client stories and testimonials abou
 
 <Layout title={seoTitle} seoDescription={seoDescription}>
 	<!-- Hero Section -->
-	<section class="hero">
-		<div class="hero__content text-center">
-			<h1 style="color: var(--color-earth-900); font-size: var(--text-5xl); margin-bottom: var(--spacing-5);">Client Stories</h1>
-			<p class="lead mb-6" style="opacity: 0.95;">
+	<section class="hero" style={getHeroStyles()}>
+		<div class="hero__content text-center" style={`color: ${heroConfig.textColor};`}>
+			<h1 style={`font-size: var(--text-5xl); margin-bottom: var(--spacing-5); color: ${heroConfig.textColor}; font-weight: 700;`}>Client Stories</h1>
+			<p class="lead mb-6" style={`color: ${heroConfig.textColor};`}>
 				Transformative experiences from clients throughout Northern Georgia
 			</p>
 			<div class="hero__actions">
@@ -99,20 +101,34 @@ const seoDescription = "Read transformative client stories and testimonials abou
 
 	<!-- Contact Section -->
 	<section id="contact" class="section section--dark">
-		<div class="container text-center" style="max-width: 900px;">
-			<h2 class="mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Create Your Own Transformation Story</h2>
-			<p class="lead mb-6" style="opacity: 0.95;">
-				Join hundreds of clients who have experienced profound healing and transformation through shamanic work with {site.tagline.split(',')[0]}.
+		<div class="container" style="max-width: 900px;">
+			<h2 class="text-center mb-4" style="color: var(--color-gold-500); font-size: var(--text-3xl);">Contact Deanna</h2>
+			<p class="text-center lead mb-8">
+				Ready to begin your shamanic journey? Fill out the form below or call/text directly.
 			</p>
 
-			<div class="hero__actions" style="margin-top: var(--spacing-10);">
-				<a href={`tel:${site.phone}`} class="btn btn--secondary btn--lg">📞 {site.phone}</a>
-				<a href={`mailto:${site.email}`} class="btn btn--outline btn--lg">✉️ {site.email}</a>
+			<div class="contact-info-grid" style="margin-bottom: var(--spacing-10);">
+				<div class="contact-card">
+					<span class="contact-icon">📞</span>
+					<h3 class="contact-title">Phone</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.phone}</p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">✉️</span>
+					<h3 class="contact-title">Email</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;"><a href={`mailto:${site.email}`} style="color: white;">{site.email}</a></p>
+				</div>
+				
+				<div class="contact-card">
+					<span class="contact-icon">📍</span>
+					<h3 class="contact-title">Location</h3>
+					<p style="font-size: var(--text-lg); opacity: 0.9;">{site.address}</p>
+				</div>
 			</div>
 
-			<p class="mt-6" style="opacity: 0.9;">
-				Deanna responds to all inquiries within 24 hours. For immediate assistance, call or text directly.
-			</p>
+			<!-- Contact Form -->
+			<ContactForm />
 		</div>
 	</section>
 
